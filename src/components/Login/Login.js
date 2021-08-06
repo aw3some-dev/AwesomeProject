@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TextInput, Image, Button } from 'react-native';
+import { View, Text, TextInput, Image, TouchableWithoutFeedback } from 'react-native';
 
 import { StyleSheet } from 'react-native';
 
@@ -55,11 +55,18 @@ const login = ({ navigation }) => {
                     <Text style={styles.fingerprintText}>LOGIN WITH FINGERPRINT</Text>
                 </View>
 
-                <Button style={[styles.loginBtn]} color="#043171" title="LOGIN" onPress={() => navigation.navigate('Dashboard', { name: 'Dashboard' })} />
+                {/* <Button color="#043171" title="LOGIN" /> */}
+                <View style={{ alignItems: 'center' }}>
+                    <TouchableWithoutFeedback onPress={() => navigation.navigate('Dashboard', { name: 'Dashboard' })}>
+                        <View style={[styles.loginBtn]}>
+                            <Text style={{ fontFamily: 'open-sans-bold', color: '#ffffff', textAlign: 'center' }}>LOGIN</Text>
+                        </View>
+                    </TouchableWithoutFeedback>
+                </View>
 
                 <View style={{ alignItems: 'center', marginTop: 10 }}>
                     <Text style={{ fontFamily: 'open-sans' }}>
-                        New to NobleServe? 
+                        New to NobleServe?
                         <Text style={{ color: '#043171', fontFamily: 'open-sans' }}> Create Account</Text>
                     </Text>
                 </View>

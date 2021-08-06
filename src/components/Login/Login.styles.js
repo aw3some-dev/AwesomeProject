@@ -47,11 +47,13 @@ const styles = StyleSheet.create({
         fontSize: 12,
         textAlign: 'center',
         fontFamily: 'open-sans'
+    },
+    loginBtn: {
+        backgroundColor: '#043171',
+        padding: 20,
+        borderRadius: 4,
+        width: '100%'
     }
-    // loginBtn: {
-    //     backgroundColor: '#043171',
-    //     padding: 40
-    // }
 });
 
 export default styles;
