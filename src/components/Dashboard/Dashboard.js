@@ -1,10 +1,10 @@
 import React from 'react';
-import { View, Text, Image } from 'react-native';
+import { View, Text, Image, TouchableWithoutFeedback } from 'react-native';
 
 import styles from './Dashboard.styles';
 import containerStyles from '../../../App.styles';
 
-const dashboard = () => {
+const dashboard = ({ navigation }) => {
     return (
         <View style={{ height: '100%' }}>
             <View style={containerStyles.dashboardHeader}>
@@ -29,18 +29,18 @@ const dashboard = () => {
                     </View>
 
                     <View style={styles.balanceView}>
-                        <Text style={[ styles.fadedText, { fontSize: 11 } ]}>BALANCE</Text>
-                        <Text style={[ styles.baseText, { fontSize: 20, fontFamily: 'open-sans-bold' } ]}>NGN 10,000,000.00</Text>
+                        <Text style={[styles.fadedText, { fontSize: 11 }]}>BALANCE</Text>
+                        <Text style={[styles.baseText, { fontSize: 20, fontFamily: 'open-sans-bold' }]}>NGN 10,000,000.00</Text>
                     </View>
 
                     <View style={styles.profileFooter}>
                         <View>
-                            <Text style={[ styles.fadedText, { fontSize: 11 } ]}>MONTHLY REPAYMENT</Text>
-                            <Text style={[ styles.baseText, { fontSize: 18, fontFamily: 'open-sans-bold' } ]}>10,000</Text>
+                            <Text style={[styles.fadedText, { fontSize: 11 }]}>MONTHLY REPAYMENT</Text>
+                            <Text style={[styles.baseText, { fontSize: 18, fontFamily: 'open-sans-bold' }]}>10,000</Text>
                         </View>
 
                         <View style={styles.walletLink}>
-                            <Text style={[ styles.baseText, { fontSize: 11, fontFamily: 'open-sans' } ]}>Top up Wallet</Text>
+                            <Text style={[styles.baseText, { fontSize: 11, fontFamily: 'open-sans' }]}>Top up Wallet</Text>
                         </View>
                     </View>
                 </View>
@@ -48,8 +48,10 @@ const dashboard = () => {
 
             <View style={styles.dashboardContent}>
                 <View style={styles.dashboardItem}>
-                    <Image source={require('../../../assets/wallet.png')}
-                        style={{ width: 100, height: 100 }} />
+                    <TouchableWithoutFeedback onPress={() => navigation.navigate('Wallet', { name: 'Wallet' })}>
+                        <Image source={require('../../../assets/wallet.png')}
+                            style={{ width: 100, height: 100 }} />
+                    </TouchableWithoutFeedback>
                 </View>
                 <View style={styles.dashboardItem}>
                     <Image source={require('../../../assets/invest.png')}
@@ -68,15 +70,15 @@ const dashboard = () => {
             <View style={styles.navBar}>
                 <View style={styles.navItem}>
                     <Image source={require('../../../assets/home.png')} />
-                    <Text style={[ styles.baseText, { fontSize: 11, fontFamily: 'open-sans', color: '#043171' } ]}>Home</Text>
+                    <Text style={[styles.baseText, { fontSize: 11, fontFamily: 'open-sans', color: '#043171' }]}>Home</Text>
                 </View>
                 <View style={styles.navItem}>
                     <Image source={require('../../../assets/history.png')} />
-                    <Text style={[ styles.baseText, { fontSize: 11, fontFamily: 'open-sans', color: '#777777' } ]}>History</Text>
+                    <Text style={[styles.baseText, { fontSize: 11, fontFamily: 'open-sans', color: '#777777' }]}>History</Text>
                 </View>
                 <View style={styles.navItem}>
                     <Image source={require('../../../assets/user-circle.png')} />
-                    <Text style={[ styles.baseText, { fontSize: 11, fontFamily: 'open-sans', color: '#777777' } ]}>Profile</Text>
+                    <Text style={[styles.baseText, { fontSize: 11, fontFamily: 'open-sans', color: '#777777' }]}>Profile</Text>
                 </View>
             </View>
         </View>

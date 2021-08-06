@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { View, Text, Button } from 'react-native';
+import { View, Text, Button, Image } from 'react-native';
 
 import styles from './LoginOptions.styles';
 
@@ -14,7 +14,7 @@ const containerStyles = StyleSheet.create({
         // justifyContent: 'center',
         height: '100%',
         width: '100%',
-        paddingTop: 40,
+        paddingTop: 80,
         paddingLeft: 40,
         paddingRight: 40,
         fontFamily: 'Open Sans'
@@ -34,6 +34,8 @@ const loginOptions = ({ navigation }) => {
 
                 <View style={styles.card}>
                     <View style={styles.cardIcon}>
+                        <Image source={require('../../../assets/grin-alt.png')}
+                            style={{ height: 15, width: 15 }} />
                     </View>
 
                     <View style={styles.cardContent}>
@@ -44,6 +46,8 @@ const loginOptions = ({ navigation }) => {
 
                 <View style={[styles.card, { marginBottom: 50 }]}>
                     <View style={styles.cardIcon}>
+                        <Image source={require('../../../assets/fingerprint-alt.png')}
+                            style={{ height: 15, width: 15 }} />
                     </View>
 
                     <View style={styles.cardContent}>

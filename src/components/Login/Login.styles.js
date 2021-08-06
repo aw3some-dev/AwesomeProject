@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         fontFamily: 'open-sans-bold',
         color: '#000000',
-        
+
     },
     subHeader: {
         fontSize: 12,
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
         fontSize: 12,
         textAlign: 'center',
         fontFamily: 'open-sans'
-    },
+    }
     // loginBtn: {
     //     backgroundColor: '#043171',
     //     padding: 40

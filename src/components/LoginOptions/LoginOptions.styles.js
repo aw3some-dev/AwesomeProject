@@ -5,13 +5,14 @@ const styles = StyleSheet.create({
         marginBottom: 40
     },
     header: {
-        fontWeight: '700',
         fontSize: 18,
         width: 150,
-        marginBottom: 10
+        marginBottom: 10,
+        fontFamily: 'open-sans-bold'
     },
     subHeader: {
         fontSize: 12,
+        fontFamily: 'open-sans'
     },
     card: {
         backgroundColor: 'rgba(255, 255, 255, 1)',
@@ -21,7 +22,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: 'rgba(147, 147, 147, .3)',
         borderStyle: 'solid',
-        flex: .5,
+        flex: .1,
         justifyContent: 'space-between',
         alignItems: 'center',
         marginBottom: 30,
@@ -31,7 +32,10 @@ const styles = StyleSheet.create({
         width: 30,
         height: 30,
         backgroundColor: '#ccc',
-        borderRadius: 50
+        borderRadius: 50,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginRight: 10
     },
     cardContent: {
         width: 270
@@ -40,11 +44,13 @@ const styles = StyleSheet.create({
     },
     cardHeader: {
         fontSize: 14,
-        fontWeight: '700'
+        // fontWeight: '700',
+        fontFamily: 'open-sans-bold'
     },
     cardSubHeader: {
         fontSize: 12,
-        fontWeight: '400'
+        fontWeight: '400',
+        fontFamily: 'open-sans'
     }
 });
 

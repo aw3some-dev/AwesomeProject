@@ -44,18 +44,25 @@ const login = ({ navigation }) => {
 
                 <View style={styles.inputField}>
                     <Text style={styles.inputLabel}>Password</Text>
-                    <TextInput style={styles.inputText} placeholder="email@domain.com" />
+                    <TextInput style={styles.inputText} />
                 </View>
 
                 <Text style={{ ...styles.subHeader, marginBottom: 70, fontFamily: 'open-sans' }}>Unlink this device</Text>
 
-                <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', marginBottom: 75, }}>
+                <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', marginBottom: 65, }}>
                     <Image source={require('../../../assets/fingerprint.png')}
                         style={{ height: 20, width: 20, marginRight: 10 }} />
                     <Text style={styles.fingerprintText}>LOGIN WITH FINGERPRINT</Text>
                 </View>
 
-                <Button style={styles.loginBtn} color="#043171" title="LOGIN" onPress={() => navigation.navigate('Dashboard', { name: 'Dashboard' })} />
+                <Button style={[styles.loginBtn]} color="#043171" title="LOGIN" onPress={() => navigation.navigate('Dashboard', { name: 'Dashboard' })} />
+
+                <View style={{ alignItems: 'center', marginTop: 10 }}>
+                    <Text style={{ fontFamily: 'open-sans' }}>
+                        New to NobleServe? 
+                        <Text style={{ color: '#043171', fontFamily: 'open-sans' }}> Create Account</Text>
+                    </Text>
+                </View>
             </View>
         </View>
     );

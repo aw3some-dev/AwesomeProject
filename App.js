@@ -12,6 +12,7 @@ import AppLoading from 'expo-app-loading';
 import Splash from './src/components/Splash/Splash';
 import Login from './src/components/Login/Login';
 import Dashboard from './src/components/Dashboard/Dashboard';
+import Wallet from './src/components/Wallet/Wallet';
 import LoginOptions from './src/components/LoginOptions/LoginOptions';
 import TransactionPin from './src/components/TransactionPin/TransactionPin';
 
@@ -19,8 +20,8 @@ const Stack = createStackNavigator();
 
 const fetchFonts = () => {
   return Font.loadAsync({
-    'open-sans': require('./assets/fonts/OpenSans-Regular.ttf'),
-    'open-sans-bold': require('./assets/fonts/OpenSans-Bold.ttf')
+    'open-sans': require('./assets/fonts/Gilroy-Light.otf'),
+    'open-sans-bold': require('./assets/fonts/Gilroy-ExtraBold.otf')
   });
 }
 
@@ -39,10 +40,11 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
         {/* <Stack.Screen name="Splash" component={Splash} options={{ headerShown: false }}></Stack.Screen> */}
+        <Stack.Screen name="TransactionPin" component={TransactionPin} options={{ headerShown: false }}></Stack.Screen>
+        <Stack.Screen name="LoginOptions" component={LoginOptions} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} ></Stack.Screen>
+        <Stack.Screen name="Wallet" component={Wallet} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="Dashboard" component={Dashboard} options={{ headerShown: false }}></Stack.Screen>
-        <Stack.Screen name="LoginOptions" component={LoginOptions}></Stack.Screen>
-        <Stack.Screen name="TransactionPin" component={TransactionPin}></Stack.Screen>
       </Stack.Navigator>
 
       {/* <View style={styles.container}>

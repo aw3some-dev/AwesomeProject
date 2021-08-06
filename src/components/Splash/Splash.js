@@ -4,13 +4,12 @@ import { ImageBackground } from 'react-native';
 
 import styles from './Splash.styles';
 
-const logo = require('../../../assets/squash.png');
+// const logo = require('../../../assets/squash.png');
 
 const splash = ({ navigation }) => {
     return (
         <View style={{ height: '100%', width: '100%' }}>
-            <ImageBackground source={logo} style={styles.splashBg} resizeMode="cover">
-                {/* <Text>Inside</Text> */}
+            {/* <ImageBackground source={logo} style={styles.splashBg} resizeMode="cover">
             </ImageBackground>
             <Image
                 source={logo}
@@ -18,7 +17,7 @@ const splash = ({ navigation }) => {
             />
 
             <Button title="TO LOGIN" onPress={() => navigation.navigate('Login', { name: 'Login' })}>
-            </Button>
+            </Button> */}
         </View>
     );
 };

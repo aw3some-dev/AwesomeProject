@@ -11,7 +11,7 @@ const containerStyles = StyleSheet.create({
         // backgroundColor: 'red',
         // alignItems: 'center',
         // justifyContent: 'center',
-        paddingTop: 40,
+        paddingTop: 80,
         paddingLeft: 40,
         paddingRight: 40,
         fontFamily: 'Open Sans'
@@ -37,7 +37,7 @@ const transactionPin = ({ navigation }) => {
                 <TextInput style={styles.inputText} placeholder="Enter New PIN" />
             </View>
 
-            <Button title="Change PIN"></Button>
+            <Button title="Change Pin"></Button>
         </View>
     );
 };
