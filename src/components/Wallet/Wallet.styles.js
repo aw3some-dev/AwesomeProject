@@ -13,6 +13,7 @@ const styles = StyleSheet.create({
         fontFamily: 'open-sans',
     },
     header: {
+        fontFamily: 'open-sans-bold',
         fontSize: 16,
     },
     subHeader: {

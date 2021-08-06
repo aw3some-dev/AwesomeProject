@@ -54,8 +54,10 @@ const dashboard = ({ navigation }) => {
                     </TouchableWithoutFeedback>
                 </View>
                 <View style={styles.dashboardItem}>
-                    <Image source={require('../../../assets/invest.png')}
-                        style={{ width: 100, height: 100 }} />
+                    <TouchableWithoutFeedback onPress={() => navigation.navigate('Investment', { name: 'Investment' })}>
+                        <Image source={require('../../../assets/invest.png')}
+                            style={{ width: 100, height: 100 }} />
+                    </TouchableWithoutFeedback>
                 </View>
                 <View style={styles.dashboardItem}>
                     <Image source={require('../../../assets/apply.png')}

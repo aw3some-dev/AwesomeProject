@@ -13,6 +13,7 @@ import Splash from './src/components/Splash/Splash';
 import Login from './src/components/Login/Login';
 import Dashboard from './src/components/Dashboard/Dashboard';
 import Wallet from './src/components/Wallet/Wallet';
+import Investment from './src/components/Investment/Investment';
 import LoginOptions from './src/components/LoginOptions/LoginOptions';
 import TransactionPin from './src/components/TransactionPin/TransactionPin';
 
@@ -43,6 +44,7 @@ export default function App() {
         <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} ></Stack.Screen>
         <Stack.Screen name="Dashboard" component={Dashboard} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="Wallet" component={Wallet} options={{ headerShown: false }}></Stack.Screen>
+        <Stack.Screen name="Investment" component={Investment} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="LoginOptions" component={LoginOptions} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="TransactionPin" component={TransactionPin} options={{ headerShown: false }}></Stack.Screen>
       </Stack.Navigator>

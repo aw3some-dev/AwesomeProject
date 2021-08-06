@@ -1,10 +1,10 @@
 import React from 'react';
-import { View, Text, Image, Button } from 'react-native';
+import { View, Text, Image, Button, TouchableWithoutFeedback } from 'react-native';
 
-import styles from './Wallet.styles';
+import styles from './Investment.styles';
 import containerStyles from '../../../App.styles';
 
-const wallet = () => {
+const wallet = ({ navigation }) => {
     return (
         <View style={{ height: '100%' }}>
             <View style={containerStyles.dashboardHeader}>
@@ -22,55 +22,53 @@ const wallet = () => {
                         </View>
 
                         <View>
-                            <Image source={require('../../../assets/close.png')}
-                                style={{ width: 15, height: 15 }} />
+                            <TouchableWithoutFeedback onPress={() => navigation.navigate('Dashboard', { name: 'Dashboard ' })}>
+                                <Image source={require('../../../assets/close.png')}
+                                    style={{ width: 15, height: 15 }} />
+                            </TouchableWithoutFeedback>
                         </View>
                     </View>
 
                     <View style={styles.balanceView}>
-                        <Text style={[styles.baseText, { fontSize: 11 }]}>WALLET BALANCE</Text>
+                        <Text style={[styles.baseText, { fontSize: 11 }]}>INVESTMENT VALUE</Text>
                         <Text style={[styles.baseText, { fontSize: 20, fontFamily: 'open-sans-bold' }]}>NGN 10,000,000.00</Text>
                     </View>
 
                     <View style={styles.profileFooter}>
                         <Text style={[styles.baseText, { fontSize: 11, fontFamily: 'open-sans', textTransform: 'uppercase' }]}>
-                            Top up Wallet
+                            INVESTMENT OPTIONS
                         </Text>
                     </View>
                 </View>
             </View>
 
             <View style={styles.dashboardContent}>
-                <View style={styles.dashboardItem}>
-                    <Image source={require('../../../assets/transfer.png')}
-                        style={{ width: 45, height: 45, marginBottom: 25 }} />
-                    <View style={{ alignItems: 'center' }}>
-                        <Text style={styles.contentTitle}>Transfer</Text>
-                        <Text style={styles.contentBody}>Send money to friends</Text>
-                    </View>
+                <View>
+                    <Text style={styles.dashboardHeader}>MY PORTFOLIO</Text>
                 </View>
-                <View style={styles.dashboardItem}>
-                    <Image source={require('../../../assets/buy.png')}
-                        style={{ width: 45, height: 45, marginBottom: 25 }} />
-                    <View style={{ alignItems: 'center' }}>
-                        <Text style={styles.contentTitle}>Buy airtime</Text>
-                        <Text style={styles.contentBody}>MTN, Glo, 9Mobile, Airtel</Text>
+
+                <View style={styles.dashboardGrid}>
+
+                    <View style={styles.dashboardItem}>
+                        <Image source={require('../../../assets/amazon-prime.png')}
+                            style={{ width: 45, height: 45, marginRight: 10 }} />
+                        <View style={{ alignItems: 'center' }}>
+                            <Text style={styles.contentTitle}>Amazon Prime</Text>
+                        </View>
                     </View>
-                </View>
-                <View style={styles.dashboardItem}>
-                    <Image source={require('../../../assets/pay.png')}
-                        style={{ width: 45, height: 45, marginBottom: 25 }} />
-                    <View style={{ alignItems: 'center' }}>
-                        <Text style={styles.contentTitle}>Pay bills</Text>
-                        <Text style={styles.contentBody}>DSTV, Electricity etc.</Text>
+                    <View style={styles.dashboardItem}>
+                        <Image source={require('../../../assets/spotify.png')}
+                            style={{ width: 45, height: 45, marginRight: 10 }} />
+                        <View style={{ alignItems: 'center' }}>
+                            <Text style={styles.contentTitle}>Spotify</Text>
+                        </View>
                     </View>
-                </View>
-                <View style={styles.dashboardItem}>
-                    <Image source={require('../../../assets/chat.png')}
-                        style={{ width: 45, height: 45, marginBottom: 25 }} />
-                    <View style={{ alignItems: 'center' }}>
-                        <Text style={styles.contentTitle}>Chat bot</Text>
-                        <Text style={styles.contentBody}>Send money to friends</Text>
+                    <View style={styles.dashboardItem}>
+                        <Image source={require('../../../assets/netflix.png')}
+                            style={{ width: 45, height: 45, marginRight: 10 }} />
+                        <View style={{ alignItems: 'center' }}>
+                            <Text style={styles.contentTitle}>Netflix</Text>
+                        </View>
                     </View>
                 </View>
             </View>
