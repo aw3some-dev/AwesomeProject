@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { View, Image, Button } from 'react-native';
 import { ImageBackground } from 'react-native';
 

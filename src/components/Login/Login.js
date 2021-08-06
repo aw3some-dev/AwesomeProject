@@ -5,14 +5,15 @@ import { StyleSheet } from 'react-native';
 
 import styles from './Login.styles';
 
-const logo = require('../../../assets/logo.png');
+const logo = require('../../../assets/landing-logo.png');
 
 const containerStyles = StyleSheet.create({
     container: {
         // flex: 1,
-        // backgroundColor: 'red',
+        backgroundColor: '#ffffff',
         // alignItems: 'center',
         // justifyContent: 'center',
+        height: '100%',
         paddingTop: 120,
         paddingLeft: 40,
         paddingRight: 40,
@@ -27,7 +28,7 @@ const login = ({ navigation }) => {
                 <View style={styles.headerContent}>
                     <Image
                         source={logo}
-                        style={{ width: 120, height: 60, marginBottom: 30 }}
+                        style={{ width: 55, height: 40, marginBottom: 30 }}
                     />
 
                     <Text style={styles.header}>
@@ -46,11 +47,15 @@ const login = ({ navigation }) => {
                     <TextInput style={styles.inputText} placeholder="email@domain.com" />
                 </View>
 
-                <Text style={{ ...styles.subHeader, marginBottom: 70 }}>Unlink this device</Text>
+                <Text style={{ ...styles.subHeader, marginBottom: 70, fontFamily: 'open-sans' }}>Unlink this device</Text>
 
-                <Text style={styles.fingerprintText}>LOGIN WITH FINGERPRINT</Text>
+                <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', marginBottom: 75, }}>
+                    <Image source={require('../../../assets/fingerprint.png')}
+                        style={{ height: 20, width: 20, marginRight: 10 }} />
+                    <Text style={styles.fingerprintText}>LOGIN WITH FINGERPRINT</Text>
+                </View>
 
-                <Button title="LOGIN" onPress={() => navigation.navigate('LoginOptions', { name: 'LoginOptions' })}></Button>
+                <Button style={styles.loginBtn} color="#043171" title="LOGIN" onPress={() => navigation.navigate('Dashboard', { name: 'Dashboard' })} />
             </View>
         </View>
     );

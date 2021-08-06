@@ -1,4 +1,3 @@
-import React from 'react';
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
@@ -10,35 +9,49 @@ const styles = StyleSheet.create({
         marginBottom: 40
     },
     header: {
-        fontWeight: '700',
+        // fontWeight: '700',
         fontSize: 18,
         width: 150,
-        marginBottom: 10
+        marginBottom: 10,
+        fontFamily: 'open-sans-bold',
+        color: '#000000',
+        
     },
     subHeader: {
         fontSize: 12,
+        fontFamily: 'open-sans',
+        color: '#000000'
     },
     inputField: {
         marginBottom: 30
     },
     inputLabel: {
-        fontSize: 14,
+        fontSize: 13,
         marginBottom: 10,
-        color: 'rgba(142, 142, 142, 1)'
+        color: 'rgba(142, 142, 142, 1)',
+        fontFamily: 'open-sans',
+        color: '#777777'
+
     },
     inputText: {
         height: 40,
         // borderWidth: 1,
         // borderColor: 'rgba(0, 0, 0, .3)',
         // borderStyle: 'solid',
-        backgroundColor: 'rgba(207, 207, 207, .3)',
-        paddingLeft: 10
+        backgroundColor: '#F1F1F1',
+        paddingLeft: 10,
+        fontFamily: 'open-sans',
+        color: '#777777'
     },
     fingerprintText: {
         fontSize: 12,
         textAlign: 'center',
-        marginBottom: 90
-    }
+        fontFamily: 'open-sans'
+    },
+    // loginBtn: {
+    //     backgroundColor: '#043171',
+    //     padding: 40
+    // }
 });
 
 export default styles;
