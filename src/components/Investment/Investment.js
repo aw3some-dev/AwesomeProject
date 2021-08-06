@@ -1,10 +1,10 @@
 import React from 'react';
-import { View, Text, Image, Button, TouchableWithoutFeedback } from 'react-native';
+import { View, Text, Image, Button } from 'react-native';
 
 import styles from './Wallet.styles';
 import containerStyles from '../../../App.styles';
 
-const wallet = ({ navigation }) => {
+const wallet = () => {
     return (
         <View style={{ height: '100%' }}>
             <View style={containerStyles.dashboardHeader}>
@@ -16,16 +16,14 @@ const wallet = ({ navigation }) => {
                                 style={{ width: 40, height: 30, marginRight: 10 }}
                             />
                             <View>
-                                <Text style={[styles.baseText, styles.header]}>Wallet</Text>
+                                <Text style={[styles.baseText, styles.header]}>Investment</Text>
                                 <Text style={[styles.baseText, styles.subHeader]}>Select an option to continue</Text>
                             </View>
                         </View>
 
                         <View>
-                            <TouchableWithoutFeedback onPress={() => navigation.navigate('Dashboard', { name: 'Dashboard '})}>
-                                <Image source={require('../../../assets/close.png')}
-                                    style={{ width: 15, height: 15 }} />
-                            </TouchableWithoutFeedback>
+                            <Image source={require('../../../assets/close.png')}
+                                style={{ width: 15, height: 15 }} />
                         </View>
                     </View>
 
@@ -77,20 +75,6 @@ const wallet = ({ navigation }) => {
                 </View>
             </View>
 
-            {/* <View style={styles.navBar}>
-                <View style={styles.navItem}>
-                    <Image source={require('../../../assets/home.png')} />
-                    <Text style={[styles.baseText, { fontSize: 11, fontFamily: 'open-sans', color: '#043171' }]}>Home</Text>
-                </View>
-                <View style={styles.navItem}>
-                    <Image source={require('../../../assets/history.png')} />
-                    <Text style={[styles.baseText, { fontSize: 11, fontFamily: 'open-sans', color: '#777777' }]}>History</Text>
-                </View>
-                <View style={styles.navItem}>
-                    <Image source={require('../../../assets/user-circle.png')} />
-                    <Text style={[styles.baseText, { fontSize: 11, fontFamily: 'open-sans', color: '#777777' }]}>Profile</Text>
-                </View>
-            </View> */}
         </View>
     );
 }
