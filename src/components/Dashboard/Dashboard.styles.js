@@ -85,6 +85,15 @@ const styles = StyleSheet.create({
     navItem: {
         alignItems: 'center',
         justifyContent: 'space-around'
+    },
+    contentTitle: {
+        fontFamily: 'open-sans-bold',
+        fontSize: 14
+    },
+    contentBody: {
+        fontFamily: 'open-sans',
+        fontSize: 12,
+        textAlign: 'center'
     }
 });
 

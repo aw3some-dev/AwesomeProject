@@ -1,9 +1,7 @@
 import React from 'react';
-
 import { View, Text, Button, Image } from 'react-native';
 
 import styles from './LoginOptions.styles';
-
 import { StyleSheet } from 'react-native';
 
 const containerStyles = StyleSheet.create({

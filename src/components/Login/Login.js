@@ -2,7 +2,6 @@ import React from 'react';
 import { View, Text, TextInput, Image, TouchableWithoutFeedback } from 'react-native';
 
 import { StyleSheet } from 'react-native';
-
 import styles from './Login.styles';
 
 const logo = require('../../../assets/landing-logo.png');
