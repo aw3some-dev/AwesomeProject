@@ -80,7 +80,7 @@ const dashboard = ({ navigation }) => {
                         <Text style={styles.contentBody}>Borrow money</Text>
                     </View>
                 </View>
-                
+
                 <View style={styles.dashboardItem}>
                     <Image source={require('../../../assets/wallet.png')}
                         style={{ width: 35, height: 35 }} />
@@ -97,10 +97,12 @@ const dashboard = ({ navigation }) => {
                     <Image source={require('../../../assets/home.png')} />
                     <Text style={[styles.baseText, { fontSize: 11, fontFamily: 'open-sans', color: '#043171' }]}>Home</Text>
                 </View>
-                <View style={styles.navItem}>
-                    <Image source={require('../../../assets/history.png')} />
-                    <Text style={[styles.baseText, { fontSize: 11, fontFamily: 'open-sans', color: '#777777' }]}>History</Text>
-                </View>
+                <TouchableWithoutFeedback onPress={() => navigation.navigate('TransactionHistory', { name: 'TransactionHistory' })}>
+                    <View style={styles.navItem}>
+                        <Image source={require('../../../assets/history.png')} />
+                        <Text style={[styles.baseText, { fontSize: 11, fontFamily: 'open-sans', color: '#777777' }]}>History</Text>
+                    </View>
+                </TouchableWithoutFeedback>
                 <View style={styles.navItem}>
                     <Image source={require('../../../assets/user-circle.png')} />
                     <Text style={[styles.baseText, { fontSize: 11, fontFamily: 'open-sans', color: '#777777' }]}>Profile</Text>

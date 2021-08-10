@@ -16,6 +16,7 @@ import Wallet from './src/components/Wallet/Wallet';
 import Investment from './src/components/Investment/Investment';
 import LoginOptions from './src/components/LoginOptions/LoginOptions';
 import TransactionPin from './src/components/TransactionPin/TransactionPin';
+import TransactionHistory from './src/components/TransactionHistory/TransactionHistory';
 
 const Stack = createStackNavigator();
 
@@ -47,6 +48,7 @@ export default function App() {
         <Stack.Screen name="Investment" component={Investment} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="LoginOptions" component={LoginOptions} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="TransactionPin" component={TransactionPin} options={{ headerShown: false }}></Stack.Screen>
+        <Stack.Screen name="TransactionHistory" component={TransactionHistory} options={{ headerShown: false }}></Stack.Screen>
       </Stack.Navigator>
 
       {/* <View style={styles.container}>
