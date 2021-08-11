@@ -34,7 +34,7 @@ const newLoans = ({ navigation }) => {
                         </View>
                     </View> */}
                     <View style={styles.bar}>
-                        <TouchableWithoutFeedback onPress={() => navigation.navigate('Loans', {name: 'Loans'})}>
+                        <TouchableWithoutFeedback onPress={() => navigation.navigate('Loans', { name: 'Loans' })}>
                             <View>
                                 <Image source={require('../../../assets/back.png')}
                                     style={{ height: 20, width: 40, marginTop: 35 }}
@@ -50,35 +50,38 @@ const newLoans = ({ navigation }) => {
                 </View>
 
                 <View style={styles.card}>
-                    <View style={styles.cardIcon}>
-                        <Image source={require('../../../assets/building.png')}
-                            style={{ height: 15, width: 15 }} />
-                    </View>
+                    <TouchableWithoutFeedback style={{ flexDirection: 'row' }} onPress={() => navigation.navigate('CorporateBorrow', { name: 'CorporateBorrow' })}>
+                        <View style={styles.cardIcon}>
+                            <Image source={require('../../../assets/building.png')}
+                                style={{ height: 15, width: 15 }} />
+                        </View>
 
-                    <View style={styles.cardContent}>
-                        <Text style={styles.cardHeader}>Corporate Loan</Text>
-                        <Text style={styles.cardSubHeader}>For Companies</Text>
-                    </View>
+                        <View style={styles.cardContent}>
+                            <Text style={styles.cardHeader}>Corporate Loan</Text>
+                            <Text style={styles.cardSubHeader}>For Companies</Text>
+                        </View>
 
-                    <TouchableWithoutFeedback onPress={() => navigation.navigate('BorrowMoney', {name: 'BorrowMoney'})}>
                         <View style={styles.vector}>
                             <Image source={require('../../../assets/Vector.png')}
                                 style={{ marginTop: 5 }} />
                         </View>
+
                     </TouchableWithoutFeedback>
                 </View>
 
-                <View style={styles.card}>
-                    <View style={styles.cardIcon}>
-                        <Image source={require('../../../assets/user.png')}
-                            style={{ height: 15, width: 15 }} />
-                    </View>
 
-                    <View style={styles.cardContent}>
-                        <Text style={styles.cardHeader}>Retail Loan</Text>
-                        <Text style={styles.cardSubHeader}>For Individuals</Text>
-                    </View>
-                    <TouchableWithoutFeedback onPress={() => navigation.navigate('BorrowMoney', {name: 'BorrowMoney'})}>
+                <View style={styles.card}>
+                    <TouchableWithoutFeedback style={{ flexDirection: 'row' }} onPress={() => navigation.navigate('RetailBorrow', { name: 'RetailBorrow' })}>
+                        <View style={styles.cardIcon}>
+                            <Image source={require('../../../assets/user.png')}
+                                style={{ height: 15, width: 15 }} />
+                        </View>
+
+                        <View style={styles.cardContent}>
+                            <Text style={styles.cardHeader}>Retail Loan</Text>
+                            <Text style={styles.cardSubHeader}>For Individuals</Text>
+                        </View>
+
                         <View style={styles.vector}>
                             <Image source={require('../../../assets/Vector.png')}
                                 style={{ marginTop: 5 }} />

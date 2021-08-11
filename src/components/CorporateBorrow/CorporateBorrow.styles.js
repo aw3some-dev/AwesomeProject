@@ -7,10 +7,20 @@ const styles = StyleSheet.create({
   header: {
     fontSize: 20,
     width: 150,
-    marginTop: 35,
-    marginLeft: 40,
+    marginTop: 5,
+    marginLeft: 30,
     fontFamily: "open-sans-bold",
     color: '#ffffff'
+  },
+
+  header1: {
+    fontSize: 20,
+    width: 150,
+    // marginTop: 5,
+    marginBottom: 10,
+    // marginLeft: 5,
+    fontFamily: "open-sans-bold",
+    color: 'rgb(66, 65, 65)'
   },
   subHeader: {
     fontSize: 14,
@@ -30,6 +40,16 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     textAlign: 'center',
     // justifyContent: 'center'
+  },
+
+  card1: {
+    backgroundColor: "#ffffff",
+    height: 50,
+    width: "100%",
+    borderRadius: 8,
+    textAlign: 'center',
+    // justifyContent: 'center'
+    marginTop: 20
   },
   cardIcon1: {
     width: 30,
@@ -58,7 +78,8 @@ const styles = StyleSheet.create({
   cardIcon3: {
     width: 90,
     height: 35,
-    backgroundColor: "#ccc",
+    backgroundColor: "#0A84FF",
+    // backgroundColor: "#ccc",
     borderRadius: 20,
     justifyContent: "center",
     alignItems: "center",
@@ -116,13 +137,43 @@ const styles = StyleSheet.create({
   },
 
   bar: {
-    backgroundColor: 'black',
+    backgroundColor: 'rgb(66, 65, 65)',
     width: '100%',
     height: 90,
     // padding: 60,
-    paddingTop: 10,
+    // padding/Top: 10,
     marginBottom: 20,
-    flexDirection: "row"
+    flexDirection: "row",
+    alignItems: 'center',
+    borderRadius: 5
+    // justifyContent: "center"
+},
+
+picker:{
+  fontSize: 12,
+},
+
+profileFooter: {
+  flexDirection: "row",
+  justifyContent: "center",
+  alignItems: "center",
+  backgroundColor: "#0A84FF",
+  padding: 10,
+  borderRadius: 4,
+  width: 255,
+  height: 48,
+  marginLeft: 20,  
+  marginTop: 20,
+},
+
+input: {
+  height: 50,
+  // width: '100%',
+  margin: 12,
+  borderWidth: 1,
+  padding: 10,
+  borderColor: 'rgb(222, 233, 243);',
+  backgroundColor: '#ffffff'
 },
 
 });
