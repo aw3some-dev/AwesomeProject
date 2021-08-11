@@ -88,6 +88,7 @@ const styles = StyleSheet.create({
         fontFamily: 'open-sans-bold',
         fontSize: 14
     },
+
     contentBody: {
         fontFamily: 'open-sans',
         fontSize: 12
@@ -105,6 +106,10 @@ const styles = StyleSheet.create({
     navItem: {
         alignItems: 'center',
         justifyContent: 'space-around'
+    },
+    eye:{
+        width: 20,
+        height: 18
     }
 });
 

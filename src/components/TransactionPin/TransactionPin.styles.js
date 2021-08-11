@@ -15,6 +15,14 @@ const styles = StyleSheet.create({
         fontSize: 12,
         fontFamily: 'open-sans',
     },
+
+    backHeader: {
+        fontSize: 14,
+        fontFamily: "open-sans",
+        color: "gray",
+        marginRight: 10
+      },
+
     inputField: {
         marginBottom: 30
     },

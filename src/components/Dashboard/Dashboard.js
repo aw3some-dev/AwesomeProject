@@ -53,7 +53,7 @@ const dashboard = ({ navigation }) => {
                             style={{ width: 35, height: 35 }} />
 
                         <View style={{ alignItems: 'center' }}>
-                            <Text style={styles.contentTitle}>Transfer</Text>
+                            <Text style={styles.contentTitle}>Wallet</Text>
                             <Text style={styles.contentBody}>Send money to friends</Text>
                         </View>
                     </View>
@@ -63,7 +63,6 @@ const dashboard = ({ navigation }) => {
                     <View style={styles.dashboardItem}>
                         <Image source={require('../../../assets/invest.png')}
                             style={{ width: 35, height: 35 }} />
-
                         <View style={{ alignItems: 'center' }}>
                             <Text style={styles.contentTitle}>Investment</Text>
                             <Text style={styles.contentBody}>Send money to friends</Text>
@@ -71,21 +70,22 @@ const dashboard = ({ navigation }) => {
                     </View>
                 </TouchableWithoutFeedback>
 
-                <View style={styles.dashboardItem}>
-                    <Image source={require('../../../assets/apply.png')}
+                <TouchableWithoutFeedback onPress={() => navigation.navigate('Loans', {name: 'Loans'})}>
+                    <View style={styles.dashboardItem}>
+                        <Image source={require('../../../assets/apply.png')}
                         style={{ width: 35, height: 35 }} />
-
-                    <View style={{ alignItems: 'center' }}>
-                        <Text style={styles.contentTitle}>Apply for loan</Text>
-                        <Text style={styles.contentBody}>Borrow money</Text>
+                        <View style={{ alignItems: 'center' }}>
+                            <Text style={styles.contentTitle}>Apply for loan</Text>
+                            <Text style={styles.contentBody}>Borrow money</Text>
+                        </View>
                     </View>
-                </View>
+                </TouchableWithoutFeedback>
 
                 <View style={styles.dashboardItem}>
-                    <Image source={require('../../../assets/wallet.png')}
-                        style={{ width: 35, height: 35 }} />
+                    {/* <Image source={require('../../../assets/wallet.png')}
+                        style={{ width: 35, height: 35 }} /> */}
 
-                    <View style={{ alignItems: 'center' }}>
+                    <View style={{ alignItems: 'center', marginTop: 40 }}>
                         <Text style={styles.contentTitle}>Space for AD</Text>
                         <Text style={styles.contentBody}>Learn more</Text>
                     </View>

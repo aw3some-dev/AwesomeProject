@@ -14,6 +14,7 @@ const styles = StyleSheet.create({
         fontSize: 12,
         fontFamily: 'open-sans'
     },
+
     card: {
         backgroundColor: 'rgba(255, 255, 255, 1)',
         paddingTop: 10,

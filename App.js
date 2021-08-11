@@ -16,6 +16,13 @@ import Wallet from './src/components/Wallet/Wallet';
 import Investment from './src/components/Investment/Investment';
 import LoginOptions from './src/components/LoginOptions/LoginOptions';
 import TransactionPin from './src/components/TransactionPin/TransactionPin';
+import AccountOptions from './src/components/AccountOptions/AccountOptions';
+import NewLoans from './src/components/NewLoans/NewLoans'
+import Loans from './src/components/Loans/Loans';
+import CorporateBorrow from './src/components/CorporateBorrow/CorporateBorrow'
+import RetailBorrow from './src/components/RetailBorrow/RetailBorrow'
+import RetailDetailsPage from './src/components/RetailDetailsPage/RetailDetailsPage'
+import CorporateDetailsPage from './src/components/CorporateDetailsPage/CorporateDetailsPage'
 import TransactionHistory from './src/components/TransactionHistory/TransactionHistory';
 
 const Stack = createStackNavigator();
@@ -46,8 +53,15 @@ export default function App() {
         <Stack.Screen name="Dashboard" component={Dashboard} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="Wallet" component={Wallet} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="Investment" component={Investment} options={{ headerShown: false }}></Stack.Screen>
+        <Stack.Screen name="Loans" component={Loans} options={{headerShown: false}}></Stack.Screen>
+        <Stack.Screen name="NewLoans" component={NewLoans} options={{ headerShown: false }}></Stack.Screen>
+        <Stack.Screen name="CorporateBorrow" component={CorporateBorrow} options={{ headerShown: false }}></Stack.Screen>
+        <Stack.Screen name="RetailBorrow" component={RetailBorrow} options={{ headerShown: false }}></Stack.Screen>
+        <Stack.Screen name="RetailDetailsPage" component={RetailDetailsPage} options={{ headerShown: false }}></Stack.Screen>
+        <Stack.Screen name="CorporateDetailsPage" component={CorporateDetailsPage} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="LoginOptions" component={LoginOptions} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="TransactionPin" component={TransactionPin} options={{ headerShown: false }}></Stack.Screen>
+        <Stack.Screen name="AccountOptions" component={AccountOptions} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="TransactionHistory" component={TransactionHistory} options={{ headerShown: false }}></Stack.Screen>
       </Stack.Navigator>
 
