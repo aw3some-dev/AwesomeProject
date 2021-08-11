@@ -100,6 +100,10 @@ const styles = StyleSheet.create({
     navItem: {
         alignItems: 'center',
         justifyContent: 'space-around'
+    },
+    eye:{
+        width: 20,
+        height: 18
     }
 });
 

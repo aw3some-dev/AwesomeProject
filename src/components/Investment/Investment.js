@@ -30,8 +30,20 @@ const wallet = ({ navigation }) => {
                     </View>
 
                     <View style={styles.balanceView}>
-                        <Text style={[styles.baseText, { fontSize: 11 }]}>INVESTMENT VALUE</Text>
-                        <Text style={[styles.baseText, { fontSize: 20, fontFamily: 'open-sans-bold' }]}>NGN 10,000,000.00</Text>
+                        <View>
+                            <Text style={[styles.baseText, { fontSize: 11 }]}>INVESTMENT VALUE</Text>
+                        </View>
+
+                        <View style={{ flexDirection: "row" }}>
+                            <View>
+                                <Text style={[styles.baseText, { fontSize: 20, fontFamily: 'open-sans-bold' }]}>NGN 10,000,000.00</Text>
+                            </View>
+
+                            <View style={{ marginLeft: 100 }}>
+                                <Image source={require('../../../assets/eye-slash1.png')}
+                                    style={styles.eye} />
+                            </View>
+                        </View>
                     </View>
 
                     <View style={styles.profileFooter}>

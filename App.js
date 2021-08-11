@@ -16,6 +16,10 @@ import Wallet from './src/components/Wallet/Wallet';
 import Investment from './src/components/Investment/Investment';
 import LoginOptions from './src/components/LoginOptions/LoginOptions';
 import TransactionPin from './src/components/TransactionPin/TransactionPin';
+import AccountOptions from './src/components/AccountOptions/AccountOptions';
+import NewLoans from './src/components/NewLoans/NewLoans'
+import Loans from './src/components/Loans/Loans';
+import BorrowMoney from './src/components/BorrowMoney/BorrowMoney'
 
 const Stack = createStackNavigator();
 
@@ -45,8 +49,12 @@ export default function App() {
         <Stack.Screen name="Dashboard" component={Dashboard} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="Wallet" component={Wallet} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="Investment" component={Investment} options={{ headerShown: false }}></Stack.Screen>
+        <Stack.Screen name="Loans" component={Loans} options={{headerShown: false}}></Stack.Screen>
+        <Stack.Screen name="NewLoans" component={NewLoans} options={{ headerShown: false }}></Stack.Screen>
+        <Stack.Screen name="BorrowMoney" component={BorrowMoney} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="LoginOptions" component={LoginOptions} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="TransactionPin" component={TransactionPin} options={{ headerShown: false }}></Stack.Screen>
+        <Stack.Screen name="AccountOptions" component={AccountOptions} options={{ headerShown: false }}></Stack.Screen>
       </Stack.Navigator>
 
       {/* <View style={styles.container}>
