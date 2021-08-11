@@ -20,6 +20,7 @@ import AccountOptions from './src/components/AccountOptions/AccountOptions';
 import NewLoans from './src/components/NewLoans/NewLoans'
 import Loans from './src/components/Loans/Loans';
 import BorrowMoney from './src/components/BorrowMoney/BorrowMoney'
+import TransactionHistory from './src/components/TransactionHistory/TransactionHistory';
 
 const Stack = createStackNavigator();
 
@@ -55,6 +56,7 @@ export default function App() {
         <Stack.Screen name="LoginOptions" component={LoginOptions} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="TransactionPin" component={TransactionPin} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="AccountOptions" component={AccountOptions} options={{ headerShown: false }}></Stack.Screen>
+        <Stack.Screen name="TransactionHistory" component={TransactionHistory} options={{ headerShown: false }}></Stack.Screen>
       </Stack.Navigator>
 
       {/* <View style={styles.container}>
