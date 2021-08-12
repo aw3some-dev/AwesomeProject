@@ -67,7 +67,7 @@ const retailBorrow = ({ navigation }) => {
                         </View>
                     </View>
 
-                    <View style={{ flexDirection: 'row', marginTop: 20 }}>
+                    <View style={{ flexDirection: 'row', marginTop: 5 }}>
                         <View style={styles.cardIcon3}>
                             <Text style={{ color: '#ffffff', textAlign: 'center' }}>N20,000</Text>
                         </View>
@@ -80,12 +80,12 @@ const retailBorrow = ({ navigation }) => {
                     </View>
 
                     <View style={{ flexDirection: 'row' }}>
-                        <View style={{ marginTop: 40, marginLeft: 10 }}>
+                        <View style={{ marginTop: 20, marginLeft: 10 }}>
                             <Text style={styles.cardSubHeader}>Current Loan Balance</Text>
                             <Text style={styles.cardHeader}>N2,500,000</Text>
                         </View>
 
-                        <View style={{ marginTop: 40, marginLeft: 30, fontSize: 16 }}>
+                        <View style={{ marginTop: 20, marginLeft: 30, fontSize: 16 }}>
                             <Text style={styles.cardSubHeader}>Interest Rate</Text>
                             <Text style={styles.cardHeader}>13%</Text>
                         </View>
@@ -120,10 +120,11 @@ const retailBorrow = ({ navigation }) => {
                     <Picker.Item label="48" value="48" />
                 </Picker> */}
 
-                <SafeAreaView style={{ marginTop: 20 }}>
+                <SafeAreaView style={{ marginTop: 5 }}>
                     <TextInput
                         style={styles.input}
                         onChangeText={onChangeText}
+                        value={text}
                         placeholder="Select loan tenure"
                     />
                 </SafeAreaView>
@@ -131,6 +132,7 @@ const retailBorrow = ({ navigation }) => {
                     <TextInput
                         style={styles.input}
                         onChangeText={onChangeText}
+                        value={text}
                         placeholder="Enter repayment option"
                     />
                 </SafeAreaView>
@@ -138,11 +140,12 @@ const retailBorrow = ({ navigation }) => {
                     <TextInput
                         style={styles.input}
                         onChangeText={onChangeText}
+                        value={text}
                         placeholder="Enter repayment amount"
                     />
                 </SafeAreaView>
 
-                <TouchableWithoutFeedback onPress={() => navigation.navigate('RetailDetailsPage', {name: 'RetailDetailsPage'})}>
+                <TouchableWithoutFeedback onPress={() => navigation.navigate('RetailDetailsPage', { name: 'RetailDetailsPage' })}>
                     <View style={styles.profileFooter}>
                         <Text style={{ fontFamily: 'open-sans-bold', color: '#ffffff', textAlign: 'center' }}>
                             Apply for Loan

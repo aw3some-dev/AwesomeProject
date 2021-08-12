@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
 
   card: {
     backgroundColor: "#ffffff",
-    height: 220,
+    height: 430,
     width: "100%",
     borderRadius: 8,
     textAlign: 'center',
@@ -73,6 +73,11 @@ const styles = StyleSheet.create({
     marginLeft: 40,
     marginRight: 20,
     marginTop: 20
+  },
+
+  baseText1: {
+    color: "black",
+    fontFamily: "open-sans",
   },
 
   cardIcon3: {
@@ -137,13 +142,12 @@ const styles = StyleSheet.create({
   },
 
   bar: {
-    // backgroundColor: 'rgb(66, 65, 65)',
-    backgroundColor: 'black',
+    backgroundColor: 'rgb(66, 65, 65)',
     width: '100%',
     height: 90,
     // padding: 60,
     // padding/Top: 10,
-    marginBottom: 15,
+    marginBottom: 20,
     flexDirection: "row",
     alignItems: 'center',
     borderRadius: 5
@@ -164,18 +168,23 @@ profileFooter: {
   width: 255,
   height: 48,
   marginLeft: 20,  
-  marginTop: 5,
+  marginTop: 20,
 },
 
 input: {
   height: 50,
-  // width: '100%',
+   width: '100%',
   margin: 12,
   borderWidth: 1,
-  padding: 10,
+  padding: 15,
   borderColor: 'rgb(222, 233, 243);',
   backgroundColor: '#ffffff'
 },
+
+section: {
+    alignItems: 'center',
+    margin: 16,
+  },
 
 });
 

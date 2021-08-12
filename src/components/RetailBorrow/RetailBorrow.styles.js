@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
 
   card: {
     backgroundColor: "#ffffff",
-    height: 250,
+    height: 220,
     width: "100%",
     borderRadius: 8,
     textAlign: 'center',
@@ -143,7 +143,7 @@ const styles = StyleSheet.create({
     height: 90,
     // padding: 60,
     // padding/Top: 10,
-    marginBottom: 20,
+    marginBottom: 15,
     flexDirection: "row",
     alignItems: 'center',
     borderRadius: 5
@@ -164,7 +164,7 @@ profileFooter: {
   width: 255,
   height: 48,
   marginLeft: 20,  
-  marginTop: 20,
+  marginTop: 5,
 },
 
 input: {

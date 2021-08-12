@@ -27,7 +27,7 @@ const corporateDetailsPage = ({ navigation }) => {
             <View style={containerStyles.container}>
                 <View style={styles.headerContent}>
                     <View style={styles.bar}>
-                        <TouchableWithoutFeedback onPress={() => navigation.navigate('NewLoans', { name: 'NewLoans' })}>
+                        <TouchableWithoutFeedback onPress={() => navigation.navigate('CorporateBorrow', { name: 'CorporateBorrow' })}>
                             <View>
                                 <Image source={require('../../../assets/back.png')}
                                     style={{ height: 20, width: 40, marginTop: 10 }}
@@ -38,11 +38,11 @@ const corporateDetailsPage = ({ navigation }) => {
                         <Text style={styles.header1}>Apply for Loan</Text>
                     </View>
 
-                    <View style = {{marginLeft: 20}}>
+                    <View style={{ marginLeft: 20 }}>
                         <Text style={styles.header}>Corporate Loan</Text>
                         <Text style={styles.subHeader}>For companies</Text>
                     </View>
-                </View>    
+                </View>
 
                 {/* <Picker
                     selectedValue={selectedOption}
@@ -118,11 +118,14 @@ const corporateDetailsPage = ({ navigation }) => {
                     />
                 </SafeAreaView>
 
-                <View style={styles.profileFooter}>
-                    <Text style={{ fontFamily: 'open-sans-bold', color: '#ffffff', textAlign: 'center' }}>
-                        Submit
-                    </Text>
-                </View>
+                <TouchableWithoutFeedback onPress={() => navigation.navigate('CorporateConfirmation', {name: 'CorporateConfirmation'})}>
+                    <View style={styles.profileFooter}>
+                        <Text style={{ fontFamily: 'open-sans-bold', color: '#ffffff', textAlign: 'center' }}>
+                            Submit
+                        </Text>
+                    </View>
+                </TouchableWithoutFeedback>
+
             </View>
 
         </View>

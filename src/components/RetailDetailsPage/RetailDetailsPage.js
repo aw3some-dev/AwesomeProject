@@ -109,11 +109,13 @@ const retailDetailsPage = ({ navigation }) => {
                     />
                 </SafeAreaView>
 
-                <View style={styles.profileFooter}>
-                    <Text style={{ fontFamily: 'open-sans-bold', color: '#ffffff', textAlign: 'center' }}>
-                        Submit
-                    </Text>
-                </View>
+                <TouchableWithoutFeedback onPress={() => navigation.navigate('RetailConfirmation', {name: 'RetailConfirmation'})}>
+                    <View style={styles.profileFooter}>
+                        <Text style={{ fontFamily: 'open-sans-bold', color: '#ffffff', textAlign: 'center' }}>
+                            Submit
+                        </Text>
+                    </View>
+                </TouchableWithoutFeedback>
             </View>
 
         </View>
