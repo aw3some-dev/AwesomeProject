@@ -28,6 +28,7 @@ import RetailConfirmation from './src/components/RetailConfirmation/RetailConfir
 import PinVerification from './src/components/PinVerification/PinVerification'
 import SuccessConfirm from './src/components/SuccessConfirm/SuccessConfirm'
 import TransactionHistory from './src/components/TransactionHistory/TransactionHistory';
+import LoanHistory from './src/components/LoanHistory/LoanHistory';
 
 const Stack = createStackNavigator();
 
@@ -53,6 +54,7 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
         {/* <Stack.Screen name="Splash" component={Splash} options={{ headerShown: false }}></Stack.Screen> */}
+        <Stack.Screen name="LoanHistory" component={LoanHistory} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} ></Stack.Screen>
         <Stack.Screen name="Dashboard" component={Dashboard} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="Wallet" component={Wallet} options={{ headerShown: false }}></Stack.Screen>
