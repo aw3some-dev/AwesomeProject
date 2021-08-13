@@ -23,6 +23,10 @@ import CorporateBorrow from './src/components/CorporateBorrow/CorporateBorrow'
 import RetailBorrow from './src/components/RetailBorrow/RetailBorrow'
 import RetailDetailsPage from './src/components/RetailDetailsPage/RetailDetailsPage'
 import CorporateDetailsPage from './src/components/CorporateDetailsPage/CorporateDetailsPage'
+import CorporateConfirmation from './src/components/CorporateConfirmation/CorporateConfirmation'
+import RetailConfirmation from './src/components/RetailConfirmation/RetailConfirmation'
+import PinVerification from './src/components/PinVerification/PinVerification'
+import SuccessConfirm from './src/components/SuccessConfirm/SuccessConfirm'
 import TransactionHistory from './src/components/TransactionHistory/TransactionHistory';
 
 const Stack = createStackNavigator();
@@ -59,6 +63,10 @@ export default function App() {
         <Stack.Screen name="RetailBorrow" component={RetailBorrow} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="RetailDetailsPage" component={RetailDetailsPage} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="CorporateDetailsPage" component={CorporateDetailsPage} options={{ headerShown: false }}></Stack.Screen>
+        <Stack.Screen name="CorporateConfirmation" component={CorporateConfirmation} options={{ headerShown: false }}></Stack.Screen>
+        <Stack.Screen name="RetailConfirmation" component={RetailConfirmation} options={{ headerShown: false }}></Stack.Screen>
+        <Stack.Screen name="PinVerification" component={PinVerification} options={{ headerShown: false }}></Stack.Screen>
+        <Stack.Screen name="SuccessConfirm" component={SuccessConfirm} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="LoginOptions" component={LoginOptions} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="TransactionPin" component={TransactionPin} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="AccountOptions" component={AccountOptions} options={{ headerShown: false }}></Stack.Screen>

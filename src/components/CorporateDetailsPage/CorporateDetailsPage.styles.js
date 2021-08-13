@@ -12,6 +12,11 @@ const styles = StyleSheet.create({
         fontFamily: "open-sans-bold",
       },
 
+      baseText1: {
+        color: "black",
+        fontFamily: "open-sans",
+      },
+
       header1: {
         fontSize: 20,
         width: 150,
