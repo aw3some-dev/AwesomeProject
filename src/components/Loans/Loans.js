@@ -95,7 +95,7 @@ const loans = ({ navigation }) => {
       </View>
 
       <View style={styles.dashboardContent}>
-        <TouchableWithoutFeedback onPress={() => navigation.navigate('NewLoans', {name: 'NewLoans'})}>
+        <TouchableWithoutFeedback onPress={() => navigation.navigate('NewLoans', { name: 'NewLoans' })}>
           <View style={styles.dashboardItem}>
             <Image source={require('../../../assets/pay1.png')}
               style={{ width: 41, height: 41, marginBottom: 25 }} />
@@ -105,7 +105,7 @@ const loans = ({ navigation }) => {
             </View>
           </View>
         </TouchableWithoutFeedback>
-       
+
         <View style={styles.dashboardItem}>
           <Image source={require('../../../assets/accounting1.png')}
             style={{ width: 45, height: 45, marginBottom: 25 }} />
@@ -114,14 +114,16 @@ const loans = ({ navigation }) => {
             <Text style={styles.contentBody}>Tap and Learn More</Text>
           </View>
         </View>
-        <View style={styles.dashboardItem}>
-          <Image source={require('../../../assets/clock1.png')}
-            style={{ width: 45, height: 45, marginBottom: 25 }} />
-          <View style={{ alignItems: 'center' }}>
-            <Text style={styles.contentTitle}>Loan History</Text>
-            <Text style={styles.contentBody}>All History</Text>
+        <TouchableWithoutFeedback onPress={() => navigation.navigate('LoanHistory', {name: 'LoanHistory'})}>
+          <View style={styles.dashboardItem}>
+            <Image source={require('../../../assets/clock1.png')}
+              style={{ width: 45, height: 45, marginBottom: 25 }} />
+            <View style={{ alignItems: 'center' }}>
+              <Text style={styles.contentTitle}>Loan History</Text>
+              <Text style={styles.contentBody}>All History</Text>
+            </View>
           </View>
-        </View>
+        </TouchableWithoutFeedback>
         <View style={styles.dashboardItem}>
           {/* <Image source={require('../../../assets/chat.png')}
                         style={{ width: 45, height: 45, marginBottom: 25 }} /> */}

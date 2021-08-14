@@ -32,7 +32,8 @@ const styles = StyleSheet.create({
         marginRight: 10
       },
       bar: {
-        backgroundColor: 'rgb(66, 65, 65)',
+        backgroundColor: 'black',
+        // backgroundColor: 'rgb(66, 65, 65)',
         width: '100%',
         height: 90,
         // padding: 60,
@@ -68,11 +69,11 @@ const styles = StyleSheet.create({
         color: '#0000006B',
         fontFamily: 'open-sans',
     },
-    header: {
-        fontFamily: 'open-sans-bold',
-        fontSize: 20,
-        marginBottom: 20,
-    },
+    // header: {
+    //     fontFamily: 'open-sans-bold',
+    //     fontSize: 20,
+    //     marginBottom: 20,
+    // },
     subHeader: {
         fontSize: 14,
     },

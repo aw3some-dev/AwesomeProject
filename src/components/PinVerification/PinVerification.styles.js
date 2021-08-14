@@ -142,7 +142,8 @@ const styles = StyleSheet.create({
   },
 
   bar: {
-    backgroundColor: 'rgb(66, 65, 65)',
+    backgroundColor: 'black',
+    // backgroundColor: 'rgb(66, 65, 65)',
     width: '100%',
     height: 90,
     // padding: 60,
