@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, Button, TouchableWithoutFeedback } from 'react-native';
+import { View, Text, Image, Button, TouchableWithoutFeedback, TouchableNativeFeedback } from 'react-native';
 import styles from './Wallet.styles';
 import containerStyles from '../../../App.styles';
 
@@ -40,7 +40,7 @@ const wallet = ({ navigation }) => {
 
                             <View style={{ marginLeft: 100 }}>
                                 <Image source={require('../../../assets/eye-slash-white.png')}
-                                style={styles.eye} />
+                                    style={styles.eye} />
                             </View>
                         </View>
                     </View>
@@ -56,14 +56,17 @@ const wallet = ({ navigation }) => {
             </View>
 
             <View style={styles.dashboardContent}>
-                <View style={styles.dashboardItem}>
-                    <Image source={require('../../../assets/transfer.png')}
-                        style={{ width: 45, height: 45, marginBottom: 25 }} />
-                    <View style={{ alignItems: 'center' }}>
-                        <Text style={styles.contentTitle}>Transfer</Text>
-                        <Text style={styles.contentBody}>Send money to friends</Text>
+                <TouchableNativeFeedback onPress={() => navigation.navigate('Transfer')}>
+                    <View style={styles.dashboardItem}>
+                        <Image source={require('../../../assets/transfer.png')}
+                            style={{ width: 45, height: 45, marginBottom: 25 }} />
+                        <View style={{ alignItems: 'center' }}>
+                            <Text style={styles.contentTitle}>Transfer</Text>
+                            <Text style={styles.contentBody}>Send money to friends</Text>
+                        </View>
                     </View>
-                </View>
+                </TouchableNativeFeedback>
+
                 <View style={styles.dashboardItem}>
                     <Image source={require('../../../assets/buy.png')}
                         style={{ width: 45, height: 45, marginBottom: 25 }} />

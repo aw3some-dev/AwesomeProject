@@ -33,6 +33,8 @@ import LoanRepayment from './src/components/LoanHistory/LoanRepayment/LoanRepaym
 import LoanCalculator from './src/components/LoanCalculator/LoanCalculator';
 import ProcessLoan from './src/components/LoanCalculator/ProcessLoan/ProcessLoan';
 
+import Transfer from './src/components/Wallet/Transfers/Transfer';
+
 const Stack = createStackNavigator();
 
 const fetchFonts = () => {
@@ -84,6 +86,8 @@ export default function App() {
         <Stack.Screen name="LoginOptions" component={LoginOptions} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="TransactionPin" component={TransactionPin} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="AccountOptions" component={AccountOptions} options={{ headerShown: false }}></Stack.Screen>
+
+        <Stack.Screen name="Transfer" component={Transfer} options={{ headerShown: false }}></Stack.Screen>
         {/* <Stack.Screen name="Header" component={Header} options={{ headerShown: false }} ></Stack.Screen> */}
       </Stack.Navigator>
 
