@@ -29,7 +29,7 @@ import PinVerification from './src/components/PinVerification/PinVerification'
 import SuccessConfirm from './src/components/SuccessConfirm/SuccessConfirm'
 import TransactionHistory from './src/components/TransactionHistory/TransactionHistory';
 import LoanHistory from './src/components/LoanHistory/LoanHistory';
-import Header from './src/components/Header/Header';
+import LoanRepayment from './src/components/LoanHistory/LoanRepayment/LoanRepayment';
 
 const Stack = createStackNavigator();
 
@@ -64,6 +64,7 @@ export default function App() {
         <Stack.Screen name="Dashboard" component={Dashboard} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="Wallet" component={Wallet} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="Investment" component={Investment} options={{ headerShown: false }}></Stack.Screen>
+        <Stack.Screen name="TransactionHistory" component={TransactionHistory} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="Loans" component={Loans} options={{headerShown: false}}></Stack.Screen>
         <Stack.Screen name="LoanHistory" component={LoanHistory} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="NewLoans" component={NewLoans} options={{ headerShown: false }}></Stack.Screen>
@@ -75,10 +76,10 @@ export default function App() {
         <Stack.Screen name="RetailConfirmation" component={RetailConfirmation} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="PinVerification" component={PinVerification} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="SuccessConfirm" component={SuccessConfirm} options={{ headerShown: false }}></Stack.Screen>
+        <Stack.Screen name="LoanRepayment" component={LoanRepayment} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="LoginOptions" component={LoginOptions} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="TransactionPin" component={TransactionPin} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="AccountOptions" component={AccountOptions} options={{ headerShown: false }}></Stack.Screen>
-        <Stack.Screen name="TransactionHistory" component={TransactionHistory} options={{ headerShown: false }}></Stack.Screen>
         {/* <Stack.Screen name="Header" component={Header} options={{ headerShown: false }} ></Stack.Screen> */}
       </Stack.Navigator>
 

@@ -37,9 +37,11 @@ const loanHistory = ({ navigation }) => {
 
                 <View>
                     {
-                        transactions.map(trans => {
+                        transactions.map((trans, index) => {
                             return (
-                                <TouchableWithoutFeedback>
+                                <TouchableWithoutFeedback 
+                                    key={index}
+                                    onPress={() => navigation.navigate('LoanRepayment', { title: trans.title, type: trans.type, status: trans.status })}>
                                     <View style={styles.listItem}>
                                         <View style={styles.listItemDetails}>
                                             <Image
