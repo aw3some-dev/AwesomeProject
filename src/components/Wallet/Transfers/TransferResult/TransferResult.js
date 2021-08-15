@@ -40,7 +40,7 @@ const transferResult = ({ navigation }) => {
                     </View>
                 </View>
 
-                <TouchableWithoutFeedback onPress={() => navigation.navigate('Loans', { name: 'Loans' })}>
+                <TouchableWithoutFeedback onPress={() => navigation.navigate('Wallet', { name: 'Wallet' })}>
                     <View style={styles.button}>
                         <Text style={{ fontFamily: 'gilroy-extra-bold', fontSize: 18, color: '#ffffff', textAlign: 'center' }}>
                             Done

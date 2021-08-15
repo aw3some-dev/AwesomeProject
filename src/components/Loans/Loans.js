@@ -38,7 +38,7 @@ const loans = ({ navigation }) => {
                   <Text style={[styles.cardHeader]}>CURRENT LOAN</Text>
                 </View>
 
-                <View style={{ flexDirection: 'row' }}>
+                <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                   <View>
                     <Text style={styles.figure}>N4,000,000</Text>
                   </View>
