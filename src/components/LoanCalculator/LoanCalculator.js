@@ -1,10 +1,10 @@
-import React, { useState, useRef } from 'react';
+import React from 'react';
 import { SafeAreaView, View, Text, Image, TextInput, StyleSheet } from 'react-native';
 import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
 
 import { Picker } from '@react-native-picker/picker';
 
-import styles from './RetailBorrow.styles';
+import styles from './LoanCalculator.styles';
 import Header from '../Header/Header';
 
 const containerStyles = StyleSheet.create({
@@ -16,23 +16,15 @@ const containerStyles = StyleSheet.create({
     }
 });
 
-const retailBorrow = ({ navigation }) => {
-    const [selectedOption, setSelectedOption] = useState()
-    const [text, onChangeText] = React.useState();
-
-    let data = [
-        { value: 'Banana', },
-        { value: 'Mango', },
-        { value: 'Pear', }];
-
+const loanCalculator = ({ navigation }) => {
     return (
         <View>
-            <Header nav={navigation} title="Retail Loan" returnNavLink="NewLoans" />
+            <Header nav={navigation} title="Loan Calculator" returnNavLink="Loans" />
 
             <View style={containerStyles.container}>
                 <View style={styles.headerContent}>
-                    <Text style={styles.header}>Borrow Money</Text>
-                    <Text style={styles.subHeader}>Select Amount</Text>
+                    <Text style={styles.header}>Loan Calculator</Text>
+                    <Text style={styles.subHeader}>See how your loan will be charged</Text>
                 </View>
 
                 <View style={styles.card}>
@@ -83,40 +75,10 @@ const retailBorrow = ({ navigation }) => {
                     </View>
                 </View>
 
-                {/* <Picker
-                    selectedValue={selectedOption}
-                    onValueChange={(itemValue, itemIndex) =>
-                        setSelectedOption(itemValue)
-                    }>
-                    <Picker.Item style={styles.picker} label="--Select Loan Tenure--" value="" />
-                    <Picker.Item label="12" value="12" />
-                    <Picker.Item label="48" value="48" />
-                </Picker>
-                <Picker
-                    selectedValue={selectedOption}
-                    onValueChange={(itemValue, itemIndex) =>
-                        setSelectedOption(itemValue)
-                    }>
-                    <Picker.Item style={styles.picker} label="--Select Loan Tenure--" value="" />
-                    <Picker.Item label="12" value="12" />
-                    <Picker.Item label="48" value="48" />
-                </Picker>
-                <Picker
-                    selectedValue={selectedOption}
-                    onValueChange={(itemValue, itemIndex) =>
-                        setSelectedOption(itemValue)
-                    }>
-                    <Picker.Item style={styles.picker} label="--Select Loan Tenure--" value="" />
-                    <Picker.Item label="12" value="12" />
-                    <Picker.Item label="48" value="48" />
-                </Picker> */}
-
                 <View style={styles.inputContainer}>
                     <SafeAreaView>
                         <TextInput
                             style={styles.input}
-                            onChangeText={onChangeText}
-                            value={text}
                             placeholder="Select loan tenure"
                         />
                     </SafeAreaView>
@@ -124,8 +86,6 @@ const retailBorrow = ({ navigation }) => {
                     <SafeAreaView>
                         <TextInput
                             style={styles.input}
-                            onChangeText={onChangeText}
-                            value={text}
                             placeholder="Enter repayment option"
                         />
                     </SafeAreaView>
@@ -133,14 +93,12 @@ const retailBorrow = ({ navigation }) => {
                     <SafeAreaView>
                         <TextInput
                             style={styles.input}
-                            onChangeText={onChangeText}
-                            value={text}
                             placeholder="Enter repayment amount"
                         />
                     </SafeAreaView>
                 </View>
 
-                <TouchableWithoutFeedback onPress={() => navigation.navigate('RetailDetailsPage', { name: 'RetailDetailsPage' })}>
+                <TouchableWithoutFeedback onPress={() => navigation.navigate('ProcessLoan', { name: 'ProcessLoan' })}>
                     <View style={styles.button}>
                         <Text style={{ fontFamily: 'gilroy-extra-bold', color: '#ffffff', textAlign: 'center' }}>
                             Apply for Loan
@@ -154,19 +112,4 @@ const retailBorrow = ({ navigation }) => {
     );
 };
 
-export default retailBorrow;
-
-
-
-
-                    {/* <View style={styles.bar}>
-                        <TouchableWithoutFeedback onPress={() => navigation.navigate('NewLoans', { name: 'NewLoans' })}>
-                            <View>
-                                <Image source={require('../../../assets/back.png')}
-                                    style={{ height: 20, width: 40, marginTop: 10 }}
-                                />
-                            </View>
-                        </TouchableWithoutFeedback>
-
-                        <Text style={styles.header}>Retail Loan</Text>
-                    </View> */}
+export default loanCalculator;

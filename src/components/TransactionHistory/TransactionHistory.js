@@ -12,14 +12,21 @@ const transactionHistory = ({ navigation }) => {
         <View style={styles.container}>
             <View>
                 <TouchableWithoutFeedback onPress={() => navigation.navigate('Dashboard', { name: 'Dashboard ' })}>
-                    <Image source={require('../../../assets/back.png')}
-                        style={{ height: 16, width: 23, marginBottom: 15 }} />
+                    <Image source={require('../../../assets/back-arrow.png')}
+                        style={{ height: 18, width: 23, marginBottom: 15 }} />
                 </TouchableWithoutFeedback>
             </View>
 
             <Text style={styles.header}>Transaction History</Text>
 
-            <Text style={{ ...styles.fadedText, marginBottom: 30 }}>MY TRANSACTIONS</Text>
+            <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 15 }}>
+                <Text style={{ ...styles.fadedText }}>MY TRANSACTIONS</Text>
+
+                <View style={styles.dropdown}>
+                    <Text style={{ ...styles.baseText, color: '#1D1D1D' }}>This month</Text>
+                    <Image source={require('../../../assets/dropdown-caret.png')} />
+                </View>
+            </View>
 
             <View style={styles.listItem}>
                 <View style={styles.listItemDetails}>

@@ -5,7 +5,7 @@ import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
 import { Picker } from '@react-native-picker/picker';
 
 import styles from './RetailDetailsPage.styles';
-import Header from '../Header/Header';
+import Header from '../../Header/Header';
 
 const containerStyles = StyleSheet.create({
     container: {

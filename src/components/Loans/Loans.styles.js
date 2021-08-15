@@ -93,7 +93,8 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     flexWrap: 'wrap',
-    marginTop: 80
+    marginTop: 80,
+    height: 500
   },
   dashboardItem: {
     width: '48%',

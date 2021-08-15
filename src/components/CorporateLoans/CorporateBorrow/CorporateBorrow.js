@@ -5,7 +5,7 @@ import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
 import { Picker } from '@react-native-picker/picker';
 
 import styles from './CorporateBorrow.styles';
-import Header from '../Header/Header';
+import Header from '../../Header/Header';
 
 const containerStyles = StyleSheet.create({
     container: {
@@ -38,14 +38,14 @@ const corporateBorrow = ({ navigation }) => {
                     <View style={styles.calcWrapper}>
                         <View style={styles.calcRow}>
                             <View style={styles.calcIcon}>
-                                <Image source={require('../../../assets/minus.png')}
+                                <Image source={require('../../../../assets/minus.png')}
                                 />
                             </View>
                             <View>
                                 <Text style={styles.figure}>N20,000</Text>
                             </View>
                             <View style={styles.calcIcon}>
-                                <Image source={require('../../../assets/plus.png')}
+                                <Image source={require('../../../../assets/plus.png')}
                                 />
                             </View>
                         </View>

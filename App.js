@@ -19,17 +19,19 @@ import TransactionPin from './src/components/TransactionPin/TransactionPin';
 import AccountOptions from './src/components/AccountOptions/AccountOptions';
 import NewLoans from './src/components/NewLoans/NewLoans'
 import Loans from './src/components/Loans/Loans';
-import CorporateBorrow from './src/components/CorporateBorrow/CorporateBorrow'
-import RetailBorrow from './src/components/RetailBorrow/RetailBorrow'
-import RetailDetailsPage from './src/components/RetailDetailsPage/RetailDetailsPage'
-import CorporateDetailsPage from './src/components/CorporateDetailsPage/CorporateDetailsPage'
-import CorporateConfirmation from './src/components/CorporateConfirmation/CorporateConfirmation'
-import RetailConfirmation from './src/components/RetailConfirmation/RetailConfirmation'
-import PinVerification from './src/components/PinVerification/PinVerification'
-import SuccessConfirm from './src/components/SuccessConfirm/SuccessConfirm'
+import CorporateBorrow from './src/components/CorporateLoans/CorporateBorrow/CorporateBorrow';
+import CorporateDetailsPage from './src/components/CorporateLoans/CorporateDetailsPage/CorporateDetailsPage';
+import CorporateConfirmation from './src/components/CorporateLoans/CorporateConfirmation/CorporateConfirmation';
+import RetailBorrow from './src/components/RetailLoans/RetailBorrow/RetailBorrow';
+import RetailDetailsPage from './src/components/RetailLoans/RetailDetailsPage/RetailDetailsPage';
+import RetailConfirmation from './src/components/RetailLoans/RetailConfirmation/RetailConfirmation';
+import PinVerification from './src/components/PinVerification/PinVerification';
+import SuccessConfirm from './src/components/SuccessConfirm/SuccessConfirm';
 import TransactionHistory from './src/components/TransactionHistory/TransactionHistory';
 import LoanHistory from './src/components/LoanHistory/LoanHistory';
 import LoanRepayment from './src/components/LoanHistory/LoanRepayment/LoanRepayment';
+import LoanCalculator from './src/components/LoanCalculator/LoanCalculator';
+import ProcessLoan from './src/components/LoanCalculator/ProcessLoan/ProcessLoan';
 
 const Stack = createStackNavigator();
 
@@ -66,7 +68,6 @@ export default function App() {
         <Stack.Screen name="Investment" component={Investment} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="TransactionHistory" component={TransactionHistory} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="Loans" component={Loans} options={{headerShown: false}}></Stack.Screen>
-        <Stack.Screen name="LoanHistory" component={LoanHistory} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="NewLoans" component={NewLoans} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="CorporateBorrow" component={CorporateBorrow} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="RetailBorrow" component={RetailBorrow} options={{ headerShown: false }}></Stack.Screen>
@@ -76,7 +77,10 @@ export default function App() {
         <Stack.Screen name="RetailConfirmation" component={RetailConfirmation} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="PinVerification" component={PinVerification} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="SuccessConfirm" component={SuccessConfirm} options={{ headerShown: false }}></Stack.Screen>
+        <Stack.Screen name="LoanHistory" component={LoanHistory} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="LoanRepayment" component={LoanRepayment} options={{ headerShown: false }}></Stack.Screen>
+        <Stack.Screen name="LoanCalculator" component={LoanCalculator} options={{ headerShown: false }}></Stack.Screen>
+        <Stack.Screen name="ProcessLoan" component={ProcessLoan} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="LoginOptions" component={LoginOptions} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="TransactionPin" component={TransactionPin} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="AccountOptions" component={AccountOptions} options={{ headerShown: false }}></Stack.Screen>

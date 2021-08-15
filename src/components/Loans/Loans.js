@@ -97,14 +97,16 @@ const loans = ({ navigation }) => {
           </View>
         </TouchableWithoutFeedback>
 
-        <View style={styles.dashboardItem}>
-          <Image source={require('../../../assets/accounting1.png')}
-            style={{ width: 40, height: 40, marginBottom: 25 }} />
-          <View style={{ alignItems: 'center' }}>
-            <Text style={styles.contentTitle}>Loan Calculator</Text>
-            <Text style={styles.contentBody}>Tap and Learn More</Text>
+        <TouchableWithoutFeedback onPress={() => navigation.navigate('LoanCalculator', { name: 'LoanCalculator' })}>
+          <View style={styles.dashboardItem}>
+            <Image source={require('../../../assets/accounting1.png')}
+              style={{ width: 40, height: 40, marginBottom: 25 }} />
+            <View style={{ alignItems: 'center' }}>
+              <Text style={styles.contentTitle}>Loan Calculator</Text>
+              <Text style={styles.contentBody}>Tap and Learn More</Text>
+            </View>
           </View>
-        </View>
+        </TouchableWithoutFeedback>
 
         <TouchableWithoutFeedback onPress={() => navigation.navigate('LoanHistory', { name: 'LoanHistory' })}>
           <View style={styles.dashboardItem}>

@@ -1,11 +1,11 @@
-import React, { useState, useRef } from 'react';
-import { View, Text, Image, StyleSheet, ScrollView, SafeAreaView, StatusBar } from 'react-native';
+import React from 'react';
+import { View, Text, Image, ScrollView, SafeAreaView, StatusBar, StyleSheet } from 'react-native';
 import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
 
 import { Picker } from '@react-native-picker/picker';
 
-import styles from './CorporateConfirmation.styles';
-import Header from '../Header/Header';
+import styles from './RetailConfirmation.styles';
+import Header from '../../Header/Header';
 
 const containerStyles = StyleSheet.create({
     container: {
@@ -16,10 +16,10 @@ const containerStyles = StyleSheet.create({
     }
 });
 
-const corporateConfirm = ({ navigation }) => {
+const retailConfirm = ({ navigation }) => {
     return (
         <View>
-            <Header nav={navigation} title="Corporate Loan" returnNavLink="CorporateDetailsPage" />
+            <Header nav={navigation} title="Retail Loan" returnNavLink="RetailDetailsPage" />
 
             <View style={containerStyles.container}>
                 <View style={styles.headerContent}>
@@ -102,24 +102,11 @@ const corporateConfirm = ({ navigation }) => {
                         </Text>
                     </View>
                 </TouchableWithoutFeedback>
-
             </View>
         </View>
     );
+
 };
 
 
-export default corporateConfirm
-
-
-{/* <View style={styles.bar}>
-<TouchableWithoutFeedback onPress={() => navigation.navigate('CorporateDetailsPage', { name: 'CorporateDetailsPage' })}>
-    <View>
-        <Image source={require('../../../assets/back.png')}
-            style={{ height: 20, width: 40, marginTop: 10 }}
-        />
-    </View>
-</TouchableWithoutFeedback>
-
-<Text style={styles.header}>Corporate Loan</Text>
-</View> */}
+export default retailConfirm;
