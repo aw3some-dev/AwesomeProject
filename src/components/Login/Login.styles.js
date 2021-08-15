@@ -13,13 +13,13 @@ const styles = StyleSheet.create({
         fontSize: 18,
         width: 150,
         marginBottom: 10,
-        fontFamily: 'open-sans-bold',
+        fontFamily: 'gilroy-extra-bold',
         color: '#000000',
 
     },
     subHeader: {
         fontSize: 12,
-        fontFamily: 'open-sans',
+        fontFamily: 'gilroy-light',
         color: '#000000'
     },
     inputField: {
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
         fontSize: 13,
         marginBottom: 10,
         color: 'rgba(142, 142, 142, 1)',
-        fontFamily: 'open-sans',
+        fontFamily: 'gilroy-light',
         color: '#777777'
 
     },
@@ -40,13 +40,13 @@ const styles = StyleSheet.create({
         // borderStyle: 'solid',
         backgroundColor: '#F1F1F1',
         paddingLeft: 10,
-        fontFamily: 'open-sans',
+        fontFamily: 'gilroy-light',
         color: '#777777'
     },
     fingerprintText: {
         fontSize: 12,
         textAlign: 'center',
-        fontFamily: 'open-sans'
+        fontFamily: 'gilroy-light'
     },
     loginBtn: {
         backgroundColor: '#043171',

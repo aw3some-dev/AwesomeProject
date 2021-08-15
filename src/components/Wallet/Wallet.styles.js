@@ -6,14 +6,14 @@ const styles = StyleSheet.create({
     },
     baseText: {
         color: '#ffffff',
-        fontFamily: 'open-sans',
+        fontFamily: 'gilroy-light',
     },
     fadedText: {
         color: '#ffffff52',
-        fontFamily: 'open-sans',
+        fontFamily: 'gilroy-light',
     },
     header: {
-        fontFamily: 'open-sans-bold',
+        fontFamily: 'gilroy-extra-bold',
         fontSize: 16,
     },
     subHeader: {
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     profileText: {
         color: 'white',
         fontSize: 12,
-        fontFamily: 'open-sans',
+        fontFamily: 'gilroy-light',
     },
     balanceView: {
         marginBottom: 40
@@ -80,11 +80,11 @@ const styles = StyleSheet.create({
         shadowColor: '#00000014'
     },
     contentTitle: {
-        fontFamily: 'open-sans',
+        fontFamily: 'gilroy-light',
         fontSize: 13
     },
     contentBody: {
-        fontFamily: 'open-sans',
+        fontFamily: 'gilroy-light',
         fontSize: 12
     },
     navBar: {

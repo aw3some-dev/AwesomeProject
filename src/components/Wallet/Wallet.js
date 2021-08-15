@@ -35,11 +35,11 @@ const wallet = ({ navigation }) => {
 
                         <View style={{ flexDirection: "row" }}>
                             <View>
-                                <Text style={[styles.baseText, { fontSize: 20, fontFamily: 'open-sans-bold' }]}>NGN 10,000,000.00</Text>
+                                <Text style={[styles.baseText, { fontSize: 20, fontFamily: 'gilroy-extra-bold' }]}>NGN 10,000,000.00</Text>
                             </View>
 
                             <View style={{ marginLeft: 100 }}>
-                                <Image source={require('../../../assets/eye-slash1.png')}
+                                <Image source={require('../../../assets/eye-slash-white.png')}
                                 style={styles.eye} />
                             </View>
                         </View>
@@ -48,7 +48,7 @@ const wallet = ({ navigation }) => {
 
 
                     <View style={styles.profileFooter}>
-                        <Text style={[styles.baseText, { fontSize: 11, fontFamily: 'open-sans', textTransform: 'uppercase' }]}>
+                        <Text style={[styles.baseText, { fontSize: 11, fontFamily: 'gilroy-light', textTransform: 'uppercase' }]}>
                             Top up Wallet
                         </Text>
                     </View>
@@ -93,15 +93,15 @@ const wallet = ({ navigation }) => {
             {/* <View style={styles.navBar}>
                 <View style={styles.navItem}>
                     <Image source={require('../../../assets/home.png')} />
-                    <Text style={[styles.baseText, { fontSize: 11, fontFamily: 'open-sans', color: '#043171' }]}>Home</Text>
+                    <Text style={[styles.baseText, { fontSize: 11, fontFamily: 'gilroy-light', color: '#043171' }]}>Home</Text>
                 </View>
                 <View style={styles.navItem}>
                     <Image source={require('../../../assets/history.png')} />
-                    <Text style={[styles.baseText, { fontSize: 11, fontFamily: 'open-sans', color: '#777777' }]}>History</Text>
+                    <Text style={[styles.baseText, { fontSize: 11, fontFamily: 'gilroy-light', color: '#777777' }]}>History</Text>
                 </View>
                 <View style={styles.navItem}>
                     <Image source={require('../../../assets/user-circle.png')} />
-                    <Text style={[styles.baseText, { fontSize: 11, fontFamily: 'open-sans', color: '#777777' }]}>Profile</Text>
+                    <Text style={[styles.baseText, { fontSize: 11, fontFamily: 'gilroy-light', color: '#777777' }]}>Profile</Text>
                 </View>
             </View> */}
         </View>

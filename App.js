@@ -29,13 +29,19 @@ import PinVerification from './src/components/PinVerification/PinVerification'
 import SuccessConfirm from './src/components/SuccessConfirm/SuccessConfirm'
 import TransactionHistory from './src/components/TransactionHistory/TransactionHistory';
 import LoanHistory from './src/components/LoanHistory/LoanHistory';
+import Header from './src/components/Header/Header';
 
 const Stack = createStackNavigator();
 
 const fetchFonts = () => {
   return Font.loadAsync({
-    'open-sans': require('./assets/fonts/Gilroy-Light.otf'),
-    'open-sans-bold': require('./assets/fonts/Gilroy-ExtraBold.otf')
+    'gilroy-light': require('./assets/fonts/Gilroy-Light.otf'),
+    'gilroy-regular': require('./assets/fonts/Gilroy-Regular.ttf'),
+    'gilroy-medium': require('./assets/fonts/Gilroy-Medium.ttf'),
+    'gilroy-bold': require('./assets/fonts/Gilroy-Bold.ttf'),
+    'gilroy-extra-bold': require('./assets/fonts/Gilroy-ExtraBold.otf'),
+    'montserrat-medium': require('./assets/fonts/Montserrat-Medium.ttf'),
+    'montserrat-semi-bold': require('./assets/fonts/Montserrat-SemiBold.ttf')
   });
 }
 
@@ -59,6 +65,7 @@ export default function App() {
         <Stack.Screen name="Wallet" component={Wallet} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="Investment" component={Investment} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="Loans" component={Loans} options={{headerShown: false}}></Stack.Screen>
+        <Stack.Screen name="LoanHistory" component={LoanHistory} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="NewLoans" component={NewLoans} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="CorporateBorrow" component={CorporateBorrow} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="RetailBorrow" component={RetailBorrow} options={{ headerShown: false }}></Stack.Screen>
@@ -68,11 +75,11 @@ export default function App() {
         <Stack.Screen name="RetailConfirmation" component={RetailConfirmation} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="PinVerification" component={PinVerification} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="SuccessConfirm" component={SuccessConfirm} options={{ headerShown: false }}></Stack.Screen>
-        <Stack.Screen name="LoanHistory" component={LoanHistory} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="LoginOptions" component={LoginOptions} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="TransactionPin" component={TransactionPin} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="AccountOptions" component={AccountOptions} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="TransactionHistory" component={TransactionHistory} options={{ headerShown: false }}></Stack.Screen>
+        {/* <Stack.Screen name="Header" component={Header} options={{ headerShown: false }} ></Stack.Screen> */}
       </Stack.Navigator>
 
       {/* <View style={styles.container}>

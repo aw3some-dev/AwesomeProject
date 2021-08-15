@@ -1,181 +1,112 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   headerContent: {
-    marginBottom: 20,
+    marginBottom: 30,
   },
   header: {
     fontSize: 20,
-    width: 150,
-    marginTop: 5,
-    marginLeft: 30,
-    fontFamily: "open-sans-bold",
-    color: '#ffffff'
-  },
-
-  header1: {
-    fontSize: 20,
-    width: 150,
-    // marginTop: 5,
-    marginBottom: 10,
-    // marginLeft: 5,
-    fontFamily: "open-sans-bold",
-    color: 'rgb(66, 65, 65)'
+    fontFamily: 'montserrat-semi-bold',
+    color: '#000000'
   },
   subHeader: {
     fontSize: 14,
-    fontFamily: "open-sans",
+    fontFamily: 'gilroy-light',
   },
-
-  backHeader: {
-    fontSize: 14,
-    fontFamily: "open-sans",
-    marginRight: 10
-  },
-
   card: {
-    backgroundColor: "#ffffff",
-    height: 220,
-    width: "100%",
-    borderRadius: 8,
-    textAlign: 'center',
-    // justifyContent: 'center'
-  },
-
-  card1: {
-    backgroundColor: "#ffffff",
-    height: 50,
-    width: "100%",
-    borderRadius: 8,
-    textAlign: 'center',
-    // justifyContent: 'center'
-    marginTop: 20
-  },
-  cardIcon1: {
-    width: 30,
-    height: 30,
-    backgroundColor: "#ccc",
-    borderRadius: 50,
-    justifyContent: "center",
-    alignItems: "center",
-    marginLeft: 45,
-    marginRight: 20,
-    marginTop: 20
-  },
-
-  cardIcon2: {
-    width: 30,
-    height: 30,
-    backgroundColor: "#ccc",
-    borderRadius: 50,
-    justifyContent: "center",
-    alignItems: "center",
-    marginLeft: 40,
-    marginRight: 20,
-    marginTop: 20
-  },
-
-  cardIcon3: {
-    width: 90,
-    height: 35,
-    backgroundColor: "#0A84FF",
-    // backgroundColor: "#ccc",
-    borderRadius: 20,
-    justifyContent: "center",
-    alignItems: "center",
-    marginLeft: 10,
-    marginRight: 4,
-    marginTop: 20
-  },
-
-  cardIcon4: {
-    width: 90,
-    height: 35,
-    backgroundColor: "#ccc",
-    borderRadius: 20,
-    justifyContent: "center",
-    alignItems: "center",
-    // marginLeft: 40,
-    marginRight: 5,
-    marginTop: 20
-  },
-
-  cardIcon5: {
-    width: 90,
-    height: 35,
-    backgroundColor: "#ccc",
-    borderRadius: 20,
-    justifyContent: "center",
-    alignItems: "center",
-    // marginLeft: 40,
-    // marginRight: 10,
-    marginTop: 20
-  },
-  cardContent: {
-    width: 180,
-    // flex: 1,
-    // backgroundColor: 'royalblue'
-  },
-  cardHeader: {
-    fontSize: 15,
-    // fontWeight: '700',
-    fontFamily: "open-sans-bold",
-  },
-  cardSubHeader: {
-    fontSize: 12,
-    fontWeight: "400",
-    fontFamily: "open-sans",
-  },
-
-  vector:{
-    justifyContent: "center",
-    alignItems: "center",
-    height: 12,
-    width: 20,
-    marginRight: 20
-    
-  },
-
-  bar: {
-    // backgroundColor: 'rgb(66, 65, 65)',
-    backgroundColor: 'black',
+    backgroundColor: '#ffffff',
     width: '100%',
-    height: 90,
-    // padding: 60,
-    // padding/Top: 10,
-    marginBottom: 15,
-    flexDirection: "row",
+    borderRadius: 8,
+    paddingVertical: 20,
+    paddingHorizontal: 15,
+    marginBottom: 20
+    // justifyContent: 'center'
+  },
+
+  calcWrapper: {
     alignItems: 'center',
-    borderRadius: 5
-    // justifyContent: "center"
-},
-
-picker:{
-  fontSize: 12,
-},
-
-profileFooter: {
-  flexDirection: "row",
-  justifyContent: "center",
-  alignItems: "center",
-  backgroundColor: "#0A84FF",
-  padding: 10,
-  borderRadius: 4,
-  width: 255,
-  height: 48,
-  marginLeft: 20,  
-  marginTop: 5,
-},
-
-input: {
-  height: 50,
-  // width: '100%',
-  margin: 12,
-  borderWidth: 1,
-  padding: 10,
-  borderColor: 'rgb(222, 233, 243);',
-  backgroundColor: '#ffffff'
-},
+    justifyContent: 'center',
+    marginBottom: 40
+  },
+  calcRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    width: '85%',
+  },
+  calcIcon: {
+    width: 30,
+    height: 30,
+    backgroundColor: '#0000001A',
+    borderRadius: 50,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  figure: {
+    fontFamily: 'gilroy-bold',
+    fontSize: 24
+  },
+  // increaseIcon: {
+  //   width: 30,
+  //   height: 30,
+  //   backgroundColor: '#ccc',
+  //   borderRadius: 50,
+  //   justifyContent: 'center',
+  //   alignItems: 'center'
+  // },
+  pillsWrapper: {
+    width: '85%', 
+    flexDirection: 'row',
+    justifyContent: 'space-between'
+  },
+  pill: {
+    width: 80,
+    paddingVertical: 7,
+    paddingHorizontal: 5,
+    backgroundColor: '#0A84FF',
+    borderRadius: 17,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  pillText: {
+    color: '#ffffff', 
+    textAlign: 'center',
+    fontFamily: 'gilroy-light',
+    fontSize: 12
+  },
+  cardFooterTitle: {
+    fontFamily: 'gilroy-medium',
+    fontSize: 12,
+    color: '#777777'
+    // fontWeight: '700',
+  },
+  cardFooterBody: {
+    fontSize: 14,
+    fontFamily: 'gilroy-medium',
+    // fontWeight: '400',
+  },
+  inputContainer: {
+    marginBottom: 20
+  },
+  input: {
+    height: 50,
+    width: '100%',
+    padding: 10,
+    borderRadius: 4,
+    borderWidth: 1,
+    marginBottom: 15,
+    borderColor: 'rgb(222, 233, 243)',
+    backgroundColor: '#ffffff',
+    fontFamily: 'gilroy-regular'
+  },
+  button: {
+    justifyContent: 'center',
+    backgroundColor: '#0A84FF',
+    padding: 10,
+    borderRadius: 4,
+    width: '100%',
+    height: 48
+  },
 
 });
 

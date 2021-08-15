@@ -6,11 +6,11 @@ const styles = StyleSheet.create({
     },
     baseText: {
         color: '#ffffff',
-        fontFamily: 'open-sans',
+        fontFamily: 'gilroy-light',
     },
     fadedText: {
         color: '#ffffff52',
-        fontFamily: 'open-sans',
+        fontFamily: 'gilroy-regular',
     },
     profileWrapper: {
         // borderWidth: 1,
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     profileText: {
         color: 'white',
         fontSize: 12,
-        fontFamily: 'open-sans',
+        fontFamily: 'gilroy-light',
     },
     balanceView: {
         marginBottom: 40
@@ -87,12 +87,13 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around'
     },
     contentTitle: {
-        fontFamily: 'open-sans-bold',
-        fontSize: 14
+        fontFamily: 'gilroy-medium',
+        fontSize: 12,
+        textAlign: 'center'
     },
     contentBody: {
-        fontFamily: 'open-sans',
-        fontSize: 12,
+        fontFamily: 'gilroy-medium',
+        fontSize: 10,
         textAlign: 'center'
     }
 });

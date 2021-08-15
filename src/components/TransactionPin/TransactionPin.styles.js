@@ -9,16 +9,16 @@ const styles = StyleSheet.create({
         fontSize: 18,
         width: 150,
         marginBottom: 10,
-        fontFamily: 'open-sans-bold',
+        fontFamily: 'gilroy-extra-bold',
     },
     subHeader: {
         fontSize: 12,
-        fontFamily: 'open-sans',
+        fontFamily: 'gilroy-light',
     },
 
     backHeader: {
         fontSize: 14,
-        fontFamily: "open-sans",
+        fontFamily: "gilroy-light",
         color: "gray",
         marginRight: 10
       },
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
         paddingTop: 5,
         paddingBottom: 5,
         paddingLeft: 10,
-        fontFamily: 'open-sans',
+        fontFamily: 'gilroy-light',
     },
 });
 

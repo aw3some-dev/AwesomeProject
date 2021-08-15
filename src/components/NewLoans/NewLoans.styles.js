@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   headerContent: {
@@ -9,77 +9,66 @@ const styles = StyleSheet.create({
     width: 150,
     marginTop: 35,
     marginLeft: 40,
-    fontFamily: "open-sans-bold",
+    fontFamily: 'gilroy-extra-bold',
     color: '#ffffff'
   },
   subHeader: {
     fontSize: 14,
-    fontFamily: "open-sans",
+    fontFamily: 'gilroy-light',
   },
-
-  backHeader: {
-    fontSize: 14,
-    fontFamily: "open-sans",
-    marginRight: 10
-  },
-
   card: {
-    backgroundColor: "rgba(255, 255, 255, 1)",
-    paddingTop: 10,
-    paddingLeft: 20,
-    paddingBottom: 10,
+    backgroundColor: 'rgba(255, 255, 255, 1)',
+    paddingVertical: 20,
+    paddingHorizontal: 20,
     borderWidth: 1,
-    borderColor: "rgba(147, 147, 147, .3)",
-    borderStyle: "solid",
-    flex: 0.1,
-    justifyContent: "space-between",
-    alignItems: "center",
-    marginBottom: 30,
-    flexDirection: "row",
+    borderColor: 'rgba(147, 147, 147, .3)',
+    borderStyle: 'solid',
+    // flex: 0.1,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 30
+  },
+  mainContent: {
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    alignItems: 'center'
+  },
+  sideContent: {
+
   },
   cardIcon: {
     width: 30,
     height: 30,
-    backgroundColor: "#ccc",
+    backgroundColor: '#ccc',
     borderRadius: 50,
-    justifyContent: "center",
-    alignItems: "center",
-    marginRight: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginRight: 15,
   },
   cardContent: {
-    width: 180,
+    // width: 180,
     // flex: 1,
     // backgroundColor: 'royalblue'
   },
   cardHeader: {
     fontSize: 15,
     // fontWeight: '700',
-    fontFamily: "open-sans-bold",
+    fontFamily: 'gilroy-medium',
   },
   cardSubHeader: {
     fontSize: 12,
-    fontWeight: "400",
-    fontFamily: "open-sans",
+    // fontWeight: '400',
+    fontFamily: 'gilroy-light',
   },
 
   vector:{
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
     height: 12,
     width: 20,
-    marginRight: 20
-    
-  },
-
-  bar: {
-    backgroundColor: 'black',
-    width: '100%',
-    height: 90,
-    // padding: 60,
-    paddingTop: 10,
-    marginBottom: 20,
-    flexDirection: "row"
-},
+    marginRight: 20 
+  }
 
 });
 

@@ -1,42 +1,44 @@
 import React, { useState, useRef } from 'react';
-import { SafeAreaView, View, Text, Image, TextInput } from 'react-native';
-import styles from './SuccessConfirm.styles';
-import { StyleSheet } from 'react-native';
+import { SafeAreaView, View, Text, Image, TextInput, StyleSheet } from 'react-native';
+
 import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
+
+import styles from './SuccessConfirm.styles';
+import Header from '../Header/Header';
 
 const containerStyles = StyleSheet.create({
     container: {
-        height: '100%',
+        height: '80%',
         width: '100%',
-        paddingTop: 80,
-        paddingLeft: 40,
-        paddingRight: 40,
-        fontFamily: 'Open Sans'
+        paddingVertical: 20,
+        paddingHorizontal: 20,
+        justifyContent: 'center'
     }
-})
+});
 
 const successConfirm = ({ navigation }) => {
     return (
         <View>
-            <View style={styles.container}>
-                <View style={styles.backgroundContainer}>
-                    <Image source={require('../../../assets/Rectangle211.png')} resizeMode='cover' style={styles.circle} />
-                    {/* <Image style={styles.check} source={require('../../../assets/check.png')} /> */}
+            <Header nav={navigation} title="Confirmation" returnNavLink="RetailDetailsPage" />
+
+            <View style={containerStyles.container}>
+                <View style={styles.imageContainer}>
+                    <Image source={require('../../../assets/success.png')} style={styles.successImage} />
                 </View>
-            </View>
 
-            <View>
-                <Text style={styles.header}>Request Successful</Text>
-                <Text style={styles.subHeader}>Thank you for your interest, a relationship manager will get in touch with you shortly</Text>
-            </View>
+                <View style={styles.headerContent}>
+                    <Text style={styles.header}>Request Successful</Text>
+                    <Text style={styles.subHeader}>Thank you for your interest, a relationship manager will get in touch with you shortly</Text>
+                </View>
 
-            <TouchableWithoutFeedback onPress={() => navigation.navigate('Loans', {name: 'Loans'})}>
-                    <View style={styles.profileFooter}>
-                        <Text style={{ fontFamily: 'open-sans-bold', fontSize: 18, color: '#ffffff', textAlign: 'center' }}>
+                <TouchableWithoutFeedback onPress={() => navigation.navigate('Loans', { name: 'Loans' })}>
+                    <View style={styles.button}>
+                        <Text style={{ fontFamily: 'gilroy-extra-bold', fontSize: 18, color: '#ffffff', textAlign: 'center' }}>
                             Done
                         </Text>
                     </View>
                 </TouchableWithoutFeedback>
+            </View>
         </View>
 
 
@@ -47,7 +49,7 @@ const successConfirm = ({ navigation }) => {
         // </View>
 
 
-    )
+    );
 }
 
 export default successConfirm

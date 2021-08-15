@@ -8,11 +8,11 @@ const styles = StyleSheet.create({
         fontSize: 18,
         width: 150,
         marginBottom: 10,
-        fontFamily: 'open-sans-bold'
+        fontFamily: 'gilroy-extra-bold'
     },
     subHeader: {
         fontSize: 12,
-        fontFamily: 'open-sans'
+        fontFamily: 'gilroy-light'
     },
 
     card: {
@@ -46,12 +46,12 @@ const styles = StyleSheet.create({
     cardHeader: {
         fontSize: 14,
         // fontWeight: '700',
-        fontFamily: 'open-sans-bold'
+        fontFamily: 'gilroy-extra-bold'
     },
     cardSubHeader: {
         fontSize: 12,
         fontWeight: '400',
-        fontFamily: 'open-sans'
+        fontFamily: 'gilroy-light'
     }
 });
 

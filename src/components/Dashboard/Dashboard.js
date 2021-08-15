@@ -29,18 +29,23 @@ const dashboard = ({ navigation }) => {
                     </View>
 
                     <View style={styles.balanceView}>
-                        <Text style={[styles.fadedText, { fontSize: 11 }]}>BALANCE</Text>
-                        <Text style={[styles.baseText, { fontSize: 20, fontFamily: 'open-sans-bold' }]}>NGN 10,000,000.00</Text>
+                        <Text style={[styles.fadedText, { fontSize: 12 }]}>BALANCE</Text>
+                        <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                            <Text style={[styles.baseText, { fontSize: 26, fontFamily: 'gilroy-bold', marginRight: 40 }]}>
+                                NGN 10,000,000.00
+                            </Text>
+                            <Image source={require('../../../assets/eye-slash-white.png')} />
+                        </View>
                     </View>
 
                     <View style={styles.profileFooter}>
                         <View>
-                            <Text style={[styles.fadedText, { fontSize: 11 }]}>MONTHLY REPAYMENT</Text>
-                            <Text style={[styles.baseText, { fontSize: 18, fontFamily: 'open-sans-bold' }]}>10,000</Text>
+                            <Text style={[styles.fadedText, { fontSize: 12 }]}>MONTHLY REPAYMENT</Text>
+                            <Text style={[styles.baseText, { fontSize: 18, fontFamily: 'gilroy-medium' }]}>10,000</Text>
                         </View>
 
                         <View style={styles.walletLink}>
-                            <Text style={[styles.baseText, { fontSize: 11, fontFamily: 'open-sans' }]}>Top up Wallet</Text>
+                            <Text style={[styles.baseText, { fontSize: 12, fontFamily: 'gilroy-medium' }]}>Top up Wallet</Text>
                         </View>
                     </View>
                 </View>
@@ -50,7 +55,7 @@ const dashboard = ({ navigation }) => {
                 <TouchableWithoutFeedback onPress={() => navigation.navigate('Wallet', { name: 'Wallet' })}>
                     <View style={styles.dashboardItem}>
                         <Image source={require('../../../assets/wallet.png')}
-                            style={{ width: 35, height: 35 }} />
+                            style={{ width: 40, height: 40, marginBottom: 25 }} />
 
                         <View style={{ alignItems: 'center' }}>
                             <Text style={styles.contentTitle}>Wallet</Text>
@@ -62,7 +67,7 @@ const dashboard = ({ navigation }) => {
                 <TouchableWithoutFeedback onPress={() => navigation.navigate('Investment', { name: 'Investment' })}>
                     <View style={styles.dashboardItem}>
                         <Image source={require('../../../assets/invest.png')}
-                            style={{ width: 35, height: 35 }} />
+                            style={{ width: 40, height: 40, marginBottom: 25 }} />
                         <View style={{ alignItems: 'center' }}>
                             <Text style={styles.contentTitle}>Investment</Text>
                             <Text style={styles.contentBody}>Send money to friends</Text>
@@ -70,10 +75,10 @@ const dashboard = ({ navigation }) => {
                     </View>
                 </TouchableWithoutFeedback>
 
-                <TouchableWithoutFeedback onPress={() => navigation.navigate('Loans', {name: 'Loans'})}>
+                <TouchableWithoutFeedback onPress={() => navigation.navigate('Loans', { name: 'Loans' })}>
                     <View style={styles.dashboardItem}>
                         <Image source={require('../../../assets/apply.png')}
-                        style={{ width: 35, height: 35 }} />
+                            style={{ width: 40, height: 40, marginBottom: 25 }} />
                         <View style={{ alignItems: 'center' }}>
                             <Text style={styles.contentTitle}>Apply for loan</Text>
                             <Text style={styles.contentBody}>Borrow money</Text>
@@ -83,7 +88,7 @@ const dashboard = ({ navigation }) => {
 
                 <View style={styles.dashboardItem}>
                     {/* <Image source={require('../../../assets/wallet.png')}
-                        style={{ width: 35, height: 35 }} /> */}
+                        style={{ width: 40, height: 40 }} /> */}
 
                     <View style={{ alignItems: 'center', marginTop: 40 }}>
                         <Text style={styles.contentTitle}>Space for AD</Text>
@@ -95,17 +100,17 @@ const dashboard = ({ navigation }) => {
             <View style={styles.navBar}>
                 <View style={styles.navItem}>
                     <Image source={require('../../../assets/home.png')} />
-                    <Text style={[styles.baseText, { fontSize: 11, fontFamily: 'open-sans', color: '#043171' }]}>Home</Text>
+                    <Text style={[styles.baseText, { fontSize: 11, fontFamily: 'gilroy-light', color: '#043171' }]}>Home</Text>
                 </View>
                 <TouchableWithoutFeedback onPress={() => navigation.navigate('TransactionHistory', { name: 'TransactionHistory' })}>
                     <View style={styles.navItem}>
                         <Image source={require('../../../assets/history.png')} />
-                        <Text style={[styles.baseText, { fontSize: 11, fontFamily: 'open-sans', color: '#777777' }]}>History</Text>
+                        <Text style={[styles.baseText, { fontSize: 11, fontFamily: 'gilroy-light', color: '#777777' }]}>History</Text>
                     </View>
                 </TouchableWithoutFeedback>
                 <View style={styles.navItem}>
                     <Image source={require('../../../assets/user-circle.png')} />
-                    <Text style={[styles.baseText, { fontSize: 11, fontFamily: 'open-sans', color: '#777777' }]}>Profile</Text>
+                    <Text style={[styles.baseText, { fontSize: 11, fontFamily: 'gilroy-light', color: '#777777' }]}>Profile</Text>
                 </View>
             </View>
         </View>

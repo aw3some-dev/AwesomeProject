@@ -1,106 +1,90 @@
 import React from 'react';
-import { View, Text, Image, TouchableWithoutFeedback } from 'react-native';
-import { StyleSheet } from 'react-native';
+import { View, Text, Image, TouchableWithoutFeedback, StyleSheet } from 'react-native';
+
 import styles from './LoanHistory.styles';
+import Header from '../Header/Header';
 
 const containerStyles = StyleSheet.create({
     container: {
         height: '100%',
         width: '100%',
-        paddingTop: 80,
-        paddingLeft: 40,
-        paddingRight: 40,
-        fontFamily: 'Open Sans'
+        paddingVertical: 20,
+        paddingHorizontal: 20
     }
-})
+});
+
+const transactions = [
+    { type: 'success', title: 'Housing loan', date: 'November 16, 2020', amount: 'N350.00', status: 'Approved' },
+    { type: 'failure', title: 'School loan', date: 'November 16, 2020', amount: 'N350.00', status: 'Pending' },
+    { type: 'success', title: 'Housing loan', date: 'November 16, 2020', amount: 'N350.00', status: 'Approved' },
+    { type: 'success', title: 'Housing loan', date: 'November 16, 2020', amount: 'N350.00', status: 'Approved' },
+    { type: 'success', title: 'Housing loan', date: 'November 16, 2020', amount: 'N350.00', status: 'Approved' },
+];
+
+const successImg = require('../../../assets/incoming.png');
+const failureImg = require('../../../assets/failure.png');
 
 const loanHistory = ({ navigation }) => {
     return (
-        <View style={containerStyles.container}>
-            <View style={styles.headerContent}>
-                <View style={styles.bar}>
-                    <TouchableWithoutFeedback onPress={() => navigation.navigate('Loans', { name: 'Loans' })}>
-                        <View>
-                            <Image source={require('../../../assets/back.png')}
-                                style={{ height: 20, width: 40, marginTop: 10 }}
-                            />
-                        </View>
-                    </TouchableWithoutFeedback>
+        <View>
+            <Header nav={navigation} title="Loan History" returnNavLink="Loans" />
 
+            <View style={containerStyles.container}>
+                <View style={styles.headerContent}>
                     <Text style={styles.header}>Loan History</Text>
+                    <Text style={styles.subHeader}>MY LOANS</Text>
                 </View>
 
                 <View>
+                    {
+                        transactions.map(trans => {
+                            return (
+                                <TouchableWithoutFeedback>
+                                    <View style={styles.listItem}>
+                                        <View style={styles.listItemDetails}>
+                                            <Image
+                                                source={trans.type === 'success' ? successImg : failureImg}
+                                                style={{ width: 45, height: 45, marginRight: 10 }}
+                                            />
 
-                    <Text style={styles.header1}>Loan History</Text>
+                                            <View>
+                                                <Text style={[styles.baseHeaderText]}>{trans.title}</Text>
+                                                <Text style={[styles.baseText]}>{trans.date}</Text>
+                                            </View>
+                                        </View>
 
-                    <Text style={{ ...styles.fadedText, marginBottom: 30 }}>MY LOANS</Text>
+                                        <View>
+                                            <Text 
+                                                style={[styles.baseText, { color: trans.type === 'success' ? '#2DA74C' : '#FAA51E' }]}>
+                                                {trans.amount}
+                                            </Text>
+                                            <Text style={[styles.baseText, { color: '#1D1D1D6B' }]}>{trans.status}</Text>
+                                        </View>
+                                    </View>
+                                </TouchableWithoutFeedback>
+                            );
+                        })
+                    }
 
-                    <View style={styles.listItem}>
-                        <View style={styles.listItemDetails}>
-                            <Image
-                                source={require('../../../assets/incoming.png')}
-                                style={{ width: 45, height: 45, marginRight: 10 }}
-                            />
-
-                            <View>
-                                <Text style={[styles.baseHeaderText]}>Incoming funds</Text>
-                                <Text style={[styles.baseText]}>November 16, 2020</Text>
-                            </View>
-                        </View>
-
-                        <Text style={[styles.baseText, { color: '#2DA74C' }]}>N350.00</Text>
-                    </View>
-                    <View style={styles.listItem}>
-                        <View style={styles.listItemDetails}>
-                            <Image
-                                source={require('../../../assets/incoming.png')}
-                                style={{ width: 45, height: 45, marginRight: 10 }}
-                            />
-
-                            <View>
-                                <Text style={[styles.baseHeaderText]}>Incoming funds</Text>
-                                <Text style={[styles.baseText]}>November 16, 2020</Text>
-                            </View>
-                        </View>
-
-                        <Text style={[styles.baseText, { color: '#2DA74C' }]}>N350.00</Text>
-                    </View>
-                    <View style={styles.listItem}>
-                        <View style={styles.listItemDetails}>
-                            <Image
-                                source={require('../../../assets/incoming.png')}
-                                style={{ width: 45, height: 45, marginRight: 10 }}
-                            />
-
-                            <View>
-                                <Text style={[styles.baseHeaderText]}>Incoming funds</Text>
-                                <Text style={[styles.baseText]}>November 16, 2020</Text>
-                            </View>
-                        </View>
-
-                        <Text style={[styles.baseText, { color: '#2DA74C' }]}>N350.00</Text>
-                    </View>
-                    <View style={styles.listItem}>
-                        <View style={styles.listItemDetails}>
-                            <Image
-                                source={require('../../../assets/incoming.png')}
-                                style={{ width: 45, height: 45, marginRight: 10 }}
-                            />
-
-                            <View>
-                                <Text style={[styles.baseHeaderText]}>Incoming funds</Text>
-                                <Text style={[styles.baseText]}>November 16, 2020</Text>
-                            </View>
-                        </View>
-
-                        <Text style={[styles.baseText, { color: '#2DA74C' }]}>N350.00</Text>
-                    </View>
                 </View>
             </View>
-
         </View>
+
+
     );
 };
 
 export default loanHistory;
+
+
+{/* <View style={styles.bar}>
+<TouchableWithoutFeedback onPress={() => navigation.navigate('Loans', { name: 'Loans' })}>
+    <View>
+        <Image source={require('../../../assets/back.png')}
+            style={{ height: 20, width: 40, marginTop: 10 }}
+        />
+    </View>
+</TouchableWithoutFeedback>
+
+<Text style={styles.header}>Loan History</Text>
+</View> */}

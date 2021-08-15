@@ -6,15 +6,15 @@ const styles = StyleSheet.create({
     },
     baseText: {
         color: '#ffffff',
-        fontFamily: 'open-sans',
+        fontFamily: 'gilroy-light',
     },
     fadedText: {
         color: '#ffffff52',
-        fontFamily: 'open-sans',
+        fontFamily: 'gilroy-light',
     },
     header: {
         fontSize: 16,
-        fontFamily: 'open-sans-bold',
+        fontFamily: 'gilroy-extra-bold',
     },
     subHeader: {
         fontSize: 14,
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     profileText: {
         color: 'white',
         fontSize: 12,
-        fontFamily: 'open-sans',
+        fontFamily: 'gilroy-light',
     },
     balanceView: {
         marginBottom: 40
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
         borderRadius: 4
     },
     dashboardHeader: {
-        fontFamily: 'open-sans',
+        fontFamily: 'gilroy-light',
         marginBottom: 20
     },    
     dashboardContent:{
@@ -85,12 +85,12 @@ const styles = StyleSheet.create({
         shadowColor: '#00000014'
     },
     contentTitle: {
-        fontFamily: 'open-sans-bold',
+        fontFamily: 'gilroy-extra-bold',
         fontSize: 14
     },
 
     contentBody: {
-        fontFamily: 'open-sans',
+        fontFamily: 'gilroy-light',
         fontSize: 12
     },
     navBar: {

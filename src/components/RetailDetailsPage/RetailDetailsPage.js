@@ -1,48 +1,34 @@
 import React, { useState, useRef } from 'react';
-import { SafeAreaView, View, Text, Image, TextInput } from 'react-native';
-import styles from './RetailDetailsPage.styles';
-import { StyleSheet } from 'react-native';
+import { SafeAreaView, View, Text, Image, TextInput, StyleSheet } from 'react-native';
 import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
+
 import { Picker } from '@react-native-picker/picker';
 
+import styles from './RetailDetailsPage.styles';
+import Header from '../Header/Header';
 
 const containerStyles = StyleSheet.create({
     container: {
         height: '100%',
         width: '100%',
-        paddingTop: 80,
-        paddingLeft: 40,
-        paddingRight: 40,
-        fontFamily: 'Open Sans'
+        paddingVertical: 20,
+        paddingHorizontal: 20
     }
-})
+});
 
 const retailDetailsPage = ({ navigation }) => {
     const [selectedOption, setSelectedOption] = useState()
     const [text, onChangeText] = useState();
 
     return (
-
         <View>
+            <Header nav={navigation} title="Retail Loan" returnNavLink="NewLoans" />
+
             <View style={containerStyles.container}>
                 <View style={styles.headerContent}>
-                    <View style={styles.bar}>
-                        <TouchableWithoutFeedback onPress={() => navigation.navigate('NewLoans', { name: 'NewLoans' })}>
-                            <View>
-                                <Image source={require('../../../assets/back.png')}
-                                    style={{ height: 20, width: 40, marginTop: 10 }}
-                                />
-                            </View>
-                        </TouchableWithoutFeedback>
-
-                        <Text style={styles.header1}>Apply for Loan</Text>
-                    </View>
-
-                    <View style = {{marginLeft: 20}}>
-                        <Text style={styles.header}>Retail Loan</Text>
-                        <Text style={styles.subHeader}>For Individuals</Text>
-                    </View>
-                </View>    
+                    <Text style={styles.header}>Retail Loans</Text>
+                    <Text style={styles.subHeader}>For individuals</Text>
+                </View>
 
                 {/* <Picker
                     selectedValue={selectedOption}
@@ -72,50 +58,62 @@ const retailDetailsPage = ({ navigation }) => {
                     <Picker.Item label="48" value="48" />
                 </Picker> */}
 
-                <SafeAreaView>
-                    <TextInput
-                        style={styles.input}
-                        onChangeText={onChangeText}
-                        placeholder="Name"
-                    />
-                </SafeAreaView>
-                <SafeAreaView>
-                    <TextInput
-                        style={styles.input}
-                        onChangeText={onChangeText}
-                        keyboardType="numeric"
-                        placeholder="Phone Number"
-                    />
-                </SafeAreaView>
-                <SafeAreaView>
-                    <TextInput
-                        style={styles.input}
-                        onChangeText={onChangeText}
-                        placeholder="Email Address"
-                    />
-                </SafeAreaView>
-                <SafeAreaView>
-                    <TextInput
-                        style={styles.input}
-                        onChangeText={onChangeText}
-                        placeholder="Location"
-                    />
-                </SafeAreaView>
-                <SafeAreaView>
-                    <TextInput
-                        style={styles.input}
-                        onChangeText={onChangeText}
-                        placeholder="Reason for loan"
-                    />
-                </SafeAreaView>
+                <View style={styles.inputContainer}>
+                    <SafeAreaView>
+                        <TextInput
+                            style={styles.input}
+                            onChangeText={onChangeText}
+                            placeholder="Name"
+                        />
+                    </SafeAreaView>
+                    <SafeAreaView>
+                        <TextInput
+                            style={styles.input}
+                            onChangeText={onChangeText}
+                            placeholder="Phone Number"
+                        />
+                    </SafeAreaView>
+                    <SafeAreaView>
+                        <TextInput
+                            style={styles.input}
+                            onChangeText={onChangeText}
+                            placeholder="Email Address"
+                        />
+                    </SafeAreaView>
+                    <SafeAreaView>
+                        <TextInput
+                            style={styles.input}
+                            onChangeText={onChangeText}
+                            value={text}
+                            placeholder="Location"
+                        />
+                    </SafeAreaView>
+                    {/* <SafeAreaView>
+                        <TextInput
+                            style={styles.input}
+                            onChangeText={onChangeText}
+                            value={text}
+                            placeholder="CAC"
+                        />
+                    </SafeAreaView> */}
+                    <SafeAreaView>
+                        <TextInput
+                            style={styles.input}
+                            onChangeText={onChangeText}
+                            value={text}
+                            placeholder="Reason for loan"
+                        />
+                    </SafeAreaView>
+                </View>
 
-                <TouchableWithoutFeedback onPress={() => navigation.navigate('RetailConfirmation', {name: 'RetailConfirmation'})}>
-                    <View style={styles.profileFooter}>
-                        <Text style={{ fontFamily: 'open-sans-bold', color: '#ffffff', textAlign: 'center' }}>
+                <TouchableWithoutFeedback onPress={() => navigation.navigate('RetailConfirmation', { name: 'RetailConfirmation' })}>
+                    <View style={styles.button}>
+                        <Text style={{ fontFamily: 'gilroy-extra-bold', color: '#ffffff', textAlign: 'center' }}>
                             Submit
                         </Text>
                     </View>
                 </TouchableWithoutFeedback>
+
             </View>
 
         </View>

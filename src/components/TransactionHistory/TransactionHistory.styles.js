@@ -15,19 +15,19 @@ const styles = StyleSheet.create({
         height: '100%',
     },
     baseText: {
-        fontFamily: 'open-sans',
+        fontFamily: 'gilroy-light',
         color: '#1D1D1D6B'
     },
     baseHeaderText: {
-        fontFamily: 'open-sans-bold',
+        fontFamily: 'gilroy-extra-bold',
         color: '#1D1D1D'
     },
     fadedText: {
         color: '#0000006B',
-        fontFamily: 'open-sans',
+        fontFamily: 'gilroy-light',
     },
     header: {
-        fontFamily: 'open-sans-bold',
+        fontFamily: 'gilroy-extra-bold',
         fontSize: 20,
         marginBottom: 20,
     },

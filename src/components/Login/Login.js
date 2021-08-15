@@ -46,7 +46,7 @@ const login = ({ navigation }) => {
                     <TextInput style={styles.inputText} />
                 </View>
 
-                <Text style={{ ...styles.subHeader, marginBottom: 70, fontFamily: 'open-sans' }}>Unlink this device</Text>
+                <Text style={{ ...styles.subHeader, marginBottom: 70, fontFamily: 'gilroy-light' }}>Unlink this device</Text>
 
                 <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', marginBottom: 65, }}>
                     <Image source={require('../../../assets/fingerprint.png')}
@@ -58,15 +58,15 @@ const login = ({ navigation }) => {
                 <View style={{ alignItems: 'center' }}>
                     <TouchableWithoutFeedback onPress={() => navigation.navigate('Dashboard', { name: 'Dashboard' })}>
                         <View style={[styles.loginBtn]}>
-                            <Text style={{ fontFamily: 'open-sans-bold', color: '#ffffff', textAlign: 'center' }}>LOGIN</Text>
+                            <Text style={{ fontFamily: 'gilroy-extra-bold', color: '#ffffff', textAlign: 'center' }}>LOGIN</Text>
                         </View>
                     </TouchableWithoutFeedback>
                 </View>
 
                 <View style={{ alignItems: 'center', marginTop: 10 }}>
-                    <Text style={{ fontFamily: 'open-sans' }}>
+                    <Text style={{ fontFamily: 'gilroy-light' }}>
                         New to NobleServe?
-                        <Text style={{ color: '#043171', fontFamily: 'open-sans' }}> Create Account</Text>
+                        <Text style={{ color: '#043171', fontFamily: 'gilroy-light' }}> Create Account</Text>
                     </Text>
                 </View>
             </View>
