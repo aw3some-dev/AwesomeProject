@@ -34,6 +34,8 @@ import LoanCalculator from './src/components/LoanCalculator/LoanCalculator';
 import ProcessLoan from './src/components/LoanCalculator/ProcessLoan/ProcessLoan';
 
 import Transfer from './src/components/Wallet/Transfers/Transfer';
+import ConfirmationDetails from './src/components/Wallet/Transfers/ConfirmationDetails/ConfirmationDetails';
+import TransferResult from './src/components/Wallet/Transfers/TransferResult/TransferResult';
 
 const Stack = createStackNavigator();
 
@@ -88,6 +90,8 @@ export default function App() {
         <Stack.Screen name="AccountOptions" component={AccountOptions} options={{ headerShown: false }}></Stack.Screen>
 
         <Stack.Screen name="Transfer" component={Transfer} options={{ headerShown: false }}></Stack.Screen>
+        <Stack.Screen name="ConfirmationDetails" component={ConfirmationDetails} options={{ headerShown: false }}></Stack.Screen>
+        <Stack.Screen name="TransferResult" component={TransferResult} options={{ headerShown: false }}></Stack.Screen>
         {/* <Stack.Screen name="Header" component={Header} options={{ headerShown: false }} ></Stack.Screen> */}
       </Stack.Navigator>
 

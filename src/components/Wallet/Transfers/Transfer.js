@@ -55,7 +55,7 @@ const transfer = ({ navigation }) => {
                     />
                 </View>
 
-                <TouchableNativeFeedback onPress={() => navigation.navigate('RetailDetailsPage', { name: 'RetailDetailsPage' })}>
+                <TouchableNativeFeedback onPress={() => navigation.navigate('ConfirmationDetails', { name: 'ConfirmationDetails' })}>
                     <View style={styles.button}>
                         <Text style={{ fontFamily: 'gilroy-extra-bold', color: '#ffffff', textAlign: 'center' }}>
                             Continue
