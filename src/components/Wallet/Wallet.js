@@ -60,6 +60,7 @@ const wallet = ({ navigation }) => {
                     <View style={styles.dashboardItem}>
                         <Image source={require('../../../assets/transfer.png')}
                             style={{ width: 45, height: 45, marginBottom: 25 }} />
+
                         <View style={{ alignItems: 'center' }}>
                             <Text style={styles.contentTitle}>Transfer</Text>
                             <Text style={styles.contentBody}>Send money to friends</Text>
@@ -70,22 +71,29 @@ const wallet = ({ navigation }) => {
                 <View style={styles.dashboardItem}>
                     <Image source={require('../../../assets/buy.png')}
                         style={{ width: 45, height: 45, marginBottom: 25 }} />
+
                     <View style={{ alignItems: 'center' }}>
                         <Text style={styles.contentTitle}>Buy airtime</Text>
                         <Text style={styles.contentBody}>MTN, Glo, 9Mobile, Airtel</Text>
                     </View>
                 </View>
-                <View style={styles.dashboardItem}>
-                    <Image source={require('../../../assets/pay.png')}
-                        style={{ width: 45, height: 45, marginBottom: 25 }} />
-                    <View style={{ alignItems: 'center' }}>
-                        <Text style={styles.contentTitle}>Pay bills</Text>
-                        <Text style={styles.contentBody}>DSTV, Electricity etc.</Text>
+
+                <TouchableNativeFeedback onPress={() => navigation.navigate('BillPayment')}>
+                    <View style={styles.dashboardItem}>
+                        <Image source={require('../../../assets/pay.png')}
+                            style={{ width: 45, height: 45, marginBottom: 25 }} />
+
+                        <View style={{ alignItems: 'center' }}>
+                            <Text style={styles.contentTitle}>Pay bills</Text>
+                            <Text style={styles.contentBody}>DSTV, Electricity etc.</Text>
+                        </View>
                     </View>
-                </View>
+                </TouchableNativeFeedback>
+
                 <View style={styles.dashboardItem}>
                     <Image source={require('../../../assets/chat.png')}
                         style={{ width: 45, height: 45, marginBottom: 25 }} />
+                        
                     <View style={{ alignItems: 'center' }}>
                         <Text style={styles.contentTitle}>Chat bot</Text>
                         <Text style={styles.contentBody}>Send money to friends</Text>

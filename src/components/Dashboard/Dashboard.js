@@ -68,6 +68,7 @@ const dashboard = ({ navigation }) => {
                     <View style={styles.dashboardItem}>
                         <Image source={require('../../../assets/invest.png')}
                             style={{ width: 40, height: 40, marginBottom: 25 }} />
+
                         <View style={{ alignItems: 'center' }}>
                             <Text style={styles.contentTitle}>Investment</Text>
                             <Text style={styles.contentBody}>Send money to friends</Text>
@@ -79,6 +80,7 @@ const dashboard = ({ navigation }) => {
                     <View style={styles.dashboardItem}>
                         <Image source={require('../../../assets/apply.png')}
                             style={{ width: 40, height: 40, marginBottom: 25 }} />
+                            
                         <View style={{ alignItems: 'center' }}>
                             <Text style={styles.contentTitle}>Apply for loan</Text>
                             <Text style={styles.contentBody}>Borrow money</Text>

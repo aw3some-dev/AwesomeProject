@@ -80,12 +80,14 @@ const styles = StyleSheet.create({
         shadowColor: '#00000014'
     },
     contentTitle: {
-        fontFamily: 'gilroy-light',
-        fontSize: 13
+        fontFamily: 'gilroy-medium',
+        fontSize: 12,
+        textAlign: 'center'
     },
     contentBody: {
-        fontFamily: 'gilroy-light',
-        fontSize: 12
+        fontFamily: 'gilroy-medium',
+        fontSize: 10,
+        textAlign: 'center'
     },
     navBar: {
         position: 'absolute',

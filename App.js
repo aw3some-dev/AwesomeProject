@@ -36,6 +36,12 @@ import ProcessLoan from './src/components/LoanCalculator/ProcessLoan/ProcessLoan
 import Transfer from './src/components/Wallet/Transfers/Transfer';
 import ConfirmationDetails from './src/components/Wallet/Transfers/ConfirmationDetails/ConfirmationDetails';
 import TransferResult from './src/components/Wallet/Transfers/TransferResult/TransferResult';
+import BillPayment from './src/components/Wallet/BillPayment/BillPayment';
+import TvSubscriptions from './src/components/Wallet/BillPayment/TvSubscriptions/TvSubscriptions';
+import AirtimeRecharge from './src/components/Wallet/BillPayment/AirtimeRecharge/AirtimeRecharge';
+import OtherBillPayments from './src/components/Wallet/BillPayment/OtherBillPayments/OtherBillPayments';
+import BillPaymentConfirmation from './src/components/Wallet/BillPayment/BillPaymentConfirmation/BillPaymentConfirmation';
+import BillPaymentResult from './src/components/Wallet/BillPayment/BillPaymentResult/BillPaymentResult';
 
 const Stack = createStackNavigator();
 
@@ -92,6 +98,13 @@ export default function App() {
         <Stack.Screen name="Transfer" component={Transfer} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="ConfirmationDetails" component={ConfirmationDetails} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="TransferResult" component={TransferResult} options={{ headerShown: false }}></Stack.Screen>
+
+        <Stack.Screen name="BillPayment" component={BillPayment} options={{ headerShown: false }}></Stack.Screen>
+        <Stack.Screen name="TvSubscriptions" component={TvSubscriptions} options={{ headerShown: false }}></Stack.Screen>
+        <Stack.Screen name="AirtimeRecharge" component={AirtimeRecharge} options={{ headerShown: false }}></Stack.Screen>
+        <Stack.Screen name="OtherBillPayments" component={OtherBillPayments} options={{ headerShown: false }}></Stack.Screen>
+        <Stack.Screen name="BillPaymentConfirmation" component={BillPaymentConfirmation} options={{ headerShown: false }}></Stack.Screen>
+        <Stack.Screen name="BillPaymentResult" component={BillPaymentResult} options={{ headerShown: false }}></Stack.Screen>
         {/* <Stack.Screen name="Header" component={Header} options={{ headerShown: false }} ></Stack.Screen> */}
       </Stack.Navigator>
 
