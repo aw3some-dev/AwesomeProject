@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 30
   },
-  successImage: {
+  resultImage: {
     height: 80,
   },
 

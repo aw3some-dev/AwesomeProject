@@ -42,12 +42,9 @@ const successConfirm = ({ navigation }) => {
         </View>
 
 
-
-
         // <View>
         //     <Image source={require('../../../assets/Rectangle211.png')} style={styles.circle} />           
         // </View>
-
 
     );
 }

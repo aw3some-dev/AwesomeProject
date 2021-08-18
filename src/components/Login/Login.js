@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TextInput, Image, TouchableWithoutFeedback } from 'react-native';
+import { View, Text, TextInput, Image, TouchableNativeFeedback } from 'react-native';
 
 import { StyleSheet } from 'react-native';
 import styles from './Login.styles';
@@ -56,11 +56,11 @@ const login = ({ navigation }) => {
 
                 {/* <Button color="#043171" title="LOGIN" /> */}
                 <View style={{ alignItems: 'center' }}>
-                    <TouchableWithoutFeedback onPress={() => navigation.navigate('Dashboard', { name: 'Dashboard' })}>
+                    <TouchableNativeFeedback onPress={() => navigation.navigate('Dashboard', { name: 'Dashboard' })}>
                         <View style={[styles.loginBtn]}>
                             <Text style={{ fontFamily: 'gilroy-extra-bold', color: '#ffffff', textAlign: 'center' }}>LOGIN</Text>
                         </View>
-                    </TouchableWithoutFeedback>
+                    </TouchableNativeFeedback>
                 </View>
 
                 <View style={{ alignItems: 'center', marginTop: 10 }}>

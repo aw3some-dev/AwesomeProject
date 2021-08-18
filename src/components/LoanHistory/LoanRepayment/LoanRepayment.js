@@ -14,6 +14,7 @@ const containerStyles = StyleSheet.create({
 });
 
 const loanRepayment = ({ navigation, route }) => {
+    console.log('Route:', route);
     return (
         <View>
             <Header nav={navigation} title="Loan History" returnNavLink="LoanHistory" />
