@@ -14,6 +14,11 @@ const containerStyles = StyleSheet.create({
 });
 
 const billPaymentConfirmation = ({ navigation }) => {
+    const navigateToResult = () => {
+        const successChance = +(Math.random().toFixed(1));
+        navigation.navigate('BillPaymentResult', { name: 'BillPaymentResult', successChance });
+    };
+
     return (
         <View>
             <Header nav={navigation} title="Confirmation" returnNavLink="BillPayment" />
@@ -55,10 +60,10 @@ const billPaymentConfirmation = ({ navigation }) => {
                 </View>
 
                 <View style={styles.buttonRow}>
-                    <TouchableNativeFeedback onPress={() => navigation.navigate('TransferResult', { name: 'TransferResult' })}>
+                    <TouchableNativeFeedback onPress={navigateToResult}>
                         <View style={[styles.button, { width: '80%' }]}>
                             <Text style={{ fontFamily: 'gilroy-extra-bold', color: '#ffffff', textAlign: 'center' }}>
-                            Continue
+                                Continue
                             </Text>
                         </View>
                     </TouchableNativeFeedback>

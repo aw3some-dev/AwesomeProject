@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, TouchableWithoutFeedback } from 'react-native';
+import { View, Text, Image, TouchableNativeFeedback } from 'react-native';
 
 import styles from './Dashboard.styles';
 import containerStyles from '../../../App.styles';
@@ -52,7 +52,7 @@ const dashboard = ({ navigation }) => {
             </View>
 
             <View style={styles.dashboardContent}>
-                <TouchableWithoutFeedback onPress={() => navigation.navigate('Wallet', { name: 'Wallet' })}>
+                <TouchableNativeFeedback onPress={() => navigation.navigate('Wallet', { name: 'Wallet' })}>
                     <View style={styles.dashboardItem}>
                         <Image source={require('../../../assets/wallet.png')}
                             style={{ width: 40, height: 40, marginBottom: 25 }} />
@@ -62,31 +62,31 @@ const dashboard = ({ navigation }) => {
                             <Text style={styles.contentBody}>Send money to friends</Text>
                         </View>
                     </View>
-                </TouchableWithoutFeedback>
+                </TouchableNativeFeedback>
 
-                <TouchableWithoutFeedback onPress={() => navigation.navigate('Investment', { name: 'Investment' })}>
+                <TouchableNativeFeedback onPress={() => navigation.navigate('Investment', { name: 'Investment' })}>
                     <View style={styles.dashboardItem}>
                         <Image source={require('../../../assets/invest.png')}
                             style={{ width: 40, height: 40, marginBottom: 25 }} />
 
                         <View style={{ alignItems: 'center' }}>
                             <Text style={styles.contentTitle}>Investment</Text>
-                            <Text style={styles.contentBody}>Send money to friends</Text>
+                            <Text style={styles.contentBody}>Target savings, investments</Text>
                         </View>
                     </View>
-                </TouchableWithoutFeedback>
+                </TouchableNativeFeedback>
 
-                <TouchableWithoutFeedback onPress={() => navigation.navigate('Loans', { name: 'Loans' })}>
+                <TouchableNativeFeedback onPress={() => navigation.navigate('Loans', { name: 'Loans' })}>
                     <View style={styles.dashboardItem}>
                         <Image source={require('../../../assets/apply.png')}
                             style={{ width: 40, height: 40, marginBottom: 25 }} />
-                            
+
                         <View style={{ alignItems: 'center' }}>
                             <Text style={styles.contentTitle}>Apply for loan</Text>
                             <Text style={styles.contentBody}>Borrow money</Text>
                         </View>
                     </View>
-                </TouchableWithoutFeedback>
+                </TouchableNativeFeedback>
 
                 <View style={styles.dashboardItem}>
                     {/* <Image source={require('../../../assets/wallet.png')}
@@ -104,12 +104,12 @@ const dashboard = ({ navigation }) => {
                     <Image source={require('../../../assets/home.png')} />
                     <Text style={[styles.baseText, { fontSize: 11, fontFamily: 'gilroy-light', color: '#043171' }]}>Home</Text>
                 </View>
-                <TouchableWithoutFeedback onPress={() => navigation.navigate('TransactionHistory', { name: 'TransactionHistory' })}>
+                <TouchableNativeFeedback onPress={() => navigation.navigate('TransactionHistory', { name: 'TransactionHistory' })}>
                     <View style={styles.navItem}>
                         <Image source={require('../../../assets/history.png')} />
                         <Text style={[styles.baseText, { fontSize: 11, fontFamily: 'gilroy-light', color: '#777777' }]}>History</Text>
                     </View>
-                </TouchableWithoutFeedback>
+                </TouchableNativeFeedback>
                 <View style={styles.navItem}>
                     <Image source={require('../../../assets/user-circle.png')} />
                     <Text style={[styles.baseText, { fontSize: 11, fontFamily: 'gilroy-light', color: '#777777' }]}>Profile</Text>

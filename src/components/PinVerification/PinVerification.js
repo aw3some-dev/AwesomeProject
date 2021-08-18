@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { View, Text, Image, TextInput, TouchableWithoutFeedback, StyleSheet } from 'react-native';
 
-import SmoothPinCodeInput from 'react-native-smooth-pincode-input';
+// import SmoothPinCodeInput from 'react-native-smooth-pincode-input';
 
 import styles from './PinVerification.styles';
 import Header from '../Header/Header';
