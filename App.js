@@ -43,6 +43,8 @@ import OtherBillPayments from './src/components/Wallet/BillPayment/OtherBillPaym
 import BillPaymentConfirmation from './src/components/Wallet/BillPayment/BillPaymentConfirmation/BillPaymentConfirmation';
 import BillPaymentResult from './src/components/Wallet/BillPayment/BillPaymentResult/BillPaymentResult';
 
+import Profile from './src/components/Profile/Profile';
+
 const Stack = createStackNavigator();
 
 const fetchFonts = () => {
@@ -105,6 +107,8 @@ export default function App() {
         <Stack.Screen name="OtherBillPayments" component={OtherBillPayments} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="BillPaymentConfirmation" component={BillPaymentConfirmation} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="BillPaymentResult" component={BillPaymentResult} options={{ headerShown: false }}></Stack.Screen>
+
+        <Stack.Screen name="Profile" component={Profile} options={{ headerShown: false }}></Stack.Screen>
         {/* <Stack.Screen name="Header" component={Header} options={{ headerShown: false }} ></Stack.Screen> */}
       </Stack.Navigator>
 
