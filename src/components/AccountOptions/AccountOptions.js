@@ -1,26 +1,28 @@
-import React from 'react';
-import { View , Text, Image, Button } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, Image, Button, Switch } from 'react-native';
 import styles from './AccountOptions.styles';
 import { StyleSheet } from 'react-native';
+import Header from '../Header/Header';
 
 
 const containerStyles = StyleSheet.create({
     container: {
         height: '100%',
         width: '100%',
-        paddingTop: 80,
-        paddingLeft: 40,
-        paddingRight: 40,
-        fontFamily: 'Open Sans'
+        paddingVertical: 20,
+        paddingHorizontal: 20,
+        flex: 0,
     }
 })
 
 const AccountOptions = ({ navigation }) => {
+    const [isEnabled, setIsEnabled] = useState(false);
+    const toggleSwitch = () => setIsEnabled(previousState => !previousState);
     return (
         <View>
+            <Header nav={navigation} title="Account Options" returnNavLink="NewLoans" />
             <View style={containerStyles.container}>
                 <View style={styles.headerContent}>
-                <Button styles={styles.backHeader} title="Back" onPress={() => navigation.navigate('TransactionPin', {name: 'TransactionPin'})}></Button>
                     <Text style={styles.header}>
                         Account Options
                     </Text>
@@ -37,9 +39,16 @@ const AccountOptions = ({ navigation }) => {
                         <Text style={styles.cardHeader}>Usman Bala</Text>
                         <Text style={styles.cardSubHeader}>01234567891</Text>
                     </View>
-                </View>
 
-                {/* <Button title="Save changes" onPress={() => navigation.navigate('TransactionPin', { name: 'TransactionPin '})}></Button> */}
+                    <Switch
+                        trackColor={{ false: "#767577", true: "#81b0ff" }}
+                        thumbColor={isEnabled ? "#ffffff" : "#f4f3f4"}
+                        ios_backgroundColor="#3e3e3e"
+                        onValueChange={toggleSwitch}
+                       value={isEnabled}
+                       style={{ alignItems: "center", marginRight: 30}}
+                    />
+                </View>
             </View>
         </View>
     );

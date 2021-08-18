@@ -1,10 +1,9 @@
 
 import React, { useState } from 'react';
 import { View, Text, Image, TextInput, TouchableWithoutFeedback } from 'react-native';
-import styles from './PinVerification.styles';
+import styles from './VerifyPhoneNumber.styles';
 import { StyleSheet } from 'react-native';
-import SmoothPinCodeInput from 'react-native-smooth-pincode-input';
-import Header from '../Header/Header'
+import Header from '../../Header/Header'
 
 
 const containerStyles = StyleSheet.create({
@@ -16,18 +15,18 @@ const containerStyles = StyleSheet.create({
     }
 })
 
-const pinVerification = ({ navigation }) => {
+const verifyPhoneNumber = ({ navigation }) => {
     const [selectedOption, setSelectedOption] = useState()
     const [text, onChangeText] = useState();
 
     return (
         <View>
-            <Header nav={navigation} title="PIN Verification" returnNavLink="NewLoans" />
+            <Header nav={navigation} title="Phone Number" returnNavLink="ChangePhoneNumber" />
             <View style={containerStyles.container}>
 
                 <View style={styles.headerContent}>
-                    <Text style={styles.header}>Verify Account</Text>
-                    <Text style={styles.subHeader}>Enter your 4 digits PIN code</Text>
+                    <Text style={styles.header}>Verify your Phone Number</Text>
+                    <Text style={styles.subHeader}>Enter the code sent to your phone number</Text>
                 </View>
 
                 <View style={styles.body}>
@@ -72,7 +71,7 @@ const pinVerification = ({ navigation }) => {
                 <TouchableWithoutFeedback onPress={() => navigation.navigate('SuccessConfirm', { name: 'SuccessConfirm' })}>
                     <View style={styles.button}>
                         <Text style={{ fontFamily: 'gilroy-extra-bold', color: '#ffffff', textAlign: 'center' }}>
-                            Verify PIN
+                            Verify Code
                         </Text>
                     </View>
                 </TouchableWithoutFeedback>
@@ -81,4 +80,4 @@ const pinVerification = ({ navigation }) => {
     )
 }
 
-export default pinVerification
+export default verifyPhoneNumber

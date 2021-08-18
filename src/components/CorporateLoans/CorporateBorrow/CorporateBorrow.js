@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { SafeAreaView, View, Text, Image, TextInput, StyleSheet } from 'react-native';
-import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
+import { SafeAreaView, View, Text, Image, TextInput, StyleSheet, TouchableWithoutFeedback} from 'react-native';
 
 import { Picker } from '@react-native-picker/picker';
 
@@ -22,7 +21,7 @@ const corporateBorrow = ({ navigation }) => {
 
     return (
         <View>
-            <Header nav={navigation} title="Corporate Loan" returnNavLink="NewLoans" />
+            <Header nav={navigation} title="Corporate Loan" returnNavLink="NewLoans"/>
 
             <View style={containerStyles.container}>
                 <View style={styles.headerContent}>

@@ -47,20 +47,53 @@ const styles = StyleSheet.create({
         height: 48
       },
 
-      card: {
+      card1: {
         backgroundColor: 'rgba(255, 255, 255, 1)',
         paddingTop: 10,
         height: 60,
         paddingLeft: 20,
-        paddingBottom: 10,
+        // paddingBottom: 10,
+        borderWidth: 1,
+        borderColor: 'rgba(147, 147, 147, .3)',
+        borderStyle: 'solid',
+        // flex: .1,
+        // justifyContent: 'space-between',
+        // alignItems: 'center',
+        marginBottom: 30,
+        // flexDirection: 'row'
+    },
+      card2: {
+        backgroundColor: 'rgba(255, 255, 255, 1)',
+        paddingTop: 10,
+        height: 60,
+        width: 90,
+        paddingLeft: 20,
+        marginRight: 10,
+        // paddingBottom: 10,
         borderWidth: 1,
         borderColor: 'rgba(147, 147, 147, .3)',
         borderStyle: 'solid',
         // flex: .1,
         justifyContent: 'space-between',
-        alignItems: 'center',
+        // alignItems: 'center',
         marginBottom: 30,
-        flexDirection: 'row'
+        // flexDirection: 'row'
+    },
+      card3: {
+        backgroundColor: 'rgba(255, 255, 255, 1)',
+        paddingTop: 10,
+        height: 60,
+        width:290,
+        paddingLeft: 20,
+        // paddingBottom: 10,
+        borderWidth: 1,
+        borderColor: 'rgba(147, 147, 147, .3)',
+        borderStyle: 'solid',
+        // flex: .1,
+        // justifyContent: 'space-between',
+        // alignItems: 'center',
+        marginBottom: 30,
+        // flexDirection: 'row'
     },
     
 });

@@ -32,7 +32,8 @@ import LoanHistory from './src/components/LoanHistory/LoanHistory';
 import LoanRepayment from './src/components/LoanHistory/LoanRepayment/LoanRepayment';
 import LoanCalculator from './src/components/LoanCalculator/LoanCalculator';
 import ProcessLoan from './src/components/LoanCalculator/ProcessLoan/ProcessLoan';
-
+import ChangePhoneNumber from './src/components/PhoneNumber/ChangePhoneNumber/ChangePhoneNumber';
+import VerifyPhoneNumber from './src/components/PhoneNumber/VerifyPhoneNumber/VerifyPhoneNumber';
 import Transfer from './src/components/Wallet/Transfers/Transfer';
 import ConfirmationDetails from './src/components/Wallet/Transfers/ConfirmationDetails/ConfirmationDetails';
 import TransferResult from './src/components/Wallet/Transfers/TransferResult/TransferResult';
@@ -66,6 +67,7 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
         {/* <Stack.Screen name="Splash" component={Splash} options={{ headerShown: false }}></Stack.Screen> */}
+        <Stack.Screen name="ChangePhoneNumber" component={ChangePhoneNumber} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} ></Stack.Screen>
         <Stack.Screen name="Dashboard" component={Dashboard} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="Wallet" component={Wallet} options={{ headerShown: false }}></Stack.Screen>
@@ -85,8 +87,9 @@ export default function App() {
         <Stack.Screen name="LoanRepayment" component={LoanRepayment} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="LoanCalculator" component={LoanCalculator} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="ProcessLoan" component={ProcessLoan} options={{ headerShown: false }}></Stack.Screen>
-        <Stack.Screen name="LoginOptions" component={LoginOptions} options={{ headerShown: false }}></Stack.Screen>
+        <Stack.Screen name="VerifyPhoneNumber" component={VerifyPhoneNumber} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="TransactionPin" component={TransactionPin} options={{ headerShown: false }}></Stack.Screen>
+        <Stack.Screen name="LoginOptions" component={LoginOptions} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="AccountOptions" component={AccountOptions} options={{ headerShown: false }}></Stack.Screen>
 
         <Stack.Screen name="Transfer" component={Transfer} options={{ headerShown: false }}></Stack.Screen>

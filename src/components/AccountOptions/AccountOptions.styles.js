@@ -2,17 +2,16 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   headerContent: {
-    marginBottom: 40,
+    marginBottom: 30,
   },
   header: {
-    fontSize: 18,
-    width: 150,
-    marginBottom: 10,
-    fontFamily: "gilroy-extra-bold",
+    fontSize: 20,
+    fontFamily: 'montserrat-semi-bold',
+    color: '#000000'
   },
   subHeader: {
-    fontSize: 12,
-    fontFamily: "gilroy-light",
+    fontSize: 14,
+    fontFamily: 'gilroy-light',
   },
 
   backHeader: {
@@ -45,19 +44,28 @@ const styles = StyleSheet.create({
     marginRight: 10,
   },
   cardContent: {
-    width: 270,
+    width: 200,
     // flex: 1,
     // backgroundColor: 'royalblue'
   },
   cardHeader: {
-    fontSize: 14,
+    fontSize: 16,
     // fontWeight: '700',
     fontFamily: "gilroy-extra-bold",
   },
   cardSubHeader: {
-    fontSize: 12,
+    fontSize: 14,
     fontWeight: "400",
     fontFamily: "gilroy-light",
+  },
+
+  button: {
+    justifyContent: 'center',
+    backgroundColor: '#0A84FF',
+    padding: 10,
+    borderRadius: 4,
+    width: '100%',
+    height: 48
   },
 });
 
