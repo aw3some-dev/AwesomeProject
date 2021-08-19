@@ -89,8 +89,6 @@ const styles = StyleSheet.create({
         top: 10
     },  
     navBar: {
-        position: 'absolute',
-        bottom: 0,
         height: 60,
         width: '100%',
         backgroundColor: '#ffffff',
