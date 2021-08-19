@@ -68,15 +68,17 @@ const wallet = ({ navigation }) => {
                     </View>
                 </TouchableNativeFeedback>
 
-                <View style={styles.dashboardItem}>
-                    <Image source={require('../../../assets/buy.png')}
-                        style={{ width: 45, height: 45, marginBottom: 25 }} />
+                <TouchableNativeFeedback>
+                    <View style={styles.dashboardItem}>
+                        <Image source={require('../../../assets/buy.png')}
+                            style={{ width: 45, height: 45, marginBottom: 25 }} />
 
-                    <View style={{ alignItems: 'center' }}>
-                        <Text style={styles.contentTitle}>Buy airtime</Text>
-                        <Text style={styles.contentBody}>MTN, Glo, 9Mobile, Airtel</Text>
+                        <View style={{ alignItems: 'center' }}>
+                            <Text style={styles.contentTitle}>Buy airtime</Text>
+                            <Text style={styles.contentBody}>MTN, Glo, 9Mobile, Airtel</Text>
+                        </View>
                     </View>
-                </View>
+                </TouchableNativeFeedback>
 
                 <TouchableNativeFeedback onPress={() => navigation.navigate('BillPayment')}>
                     <View style={styles.dashboardItem}>
@@ -93,7 +95,7 @@ const wallet = ({ navigation }) => {
                 <View style={styles.dashboardItem}>
                     <Image source={require('../../../assets/chat.png')}
                         style={{ width: 45, height: 45, marginBottom: 25 }} />
-                        
+
                     <View style={{ alignItems: 'center' }}>
                         <Text style={styles.contentTitle}>Chat bot</Text>
                         <Text style={styles.contentBody}>Send money to friends</Text>
