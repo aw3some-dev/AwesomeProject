@@ -20,7 +20,7 @@ const AccountOptions = ({ navigation }) => {
     const toggleSwitch = () => setIsEnabled(previousState => !previousState);
     return (
         <View>
-            <Header nav={navigation} title="Account Options" returnNavLink="NewLoans" />
+            <Header nav={navigation} title="Account Options" returnNavLink="Profile" />
             <View style={containerStyles.container}>
                 <View style={styles.headerContent}>
                     <Text style={styles.header}>

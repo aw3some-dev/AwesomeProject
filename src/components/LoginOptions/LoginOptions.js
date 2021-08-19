@@ -17,7 +17,7 @@ const containerStyles = StyleSheet.create({
 const loginOptions = ({ navigation }) => {
     return (
         <View>
-         <Header nav={navigation} title="Login Options" returnNavLink="NewLoans"/>
+         <Header nav={navigation} title="Login Options" returnNavLink="Profile"/>
             <View style={containerStyles.container}>
                 <View style={styles.headerContent}>
                     <Text style={styles.header}>
@@ -50,7 +50,7 @@ const loginOptions = ({ navigation }) => {
                     </View>
                 </View>
 
-                <TouchableWithoutFeedback>
+                <TouchableWithoutFeedback onPress={() => navigation.navigate('Success', {name: 'Success'})}>
                     <View style={styles.button}>
                         <Text style={{ fontFamily: 'gilroy-extra-bold',fontSize: 18, color: '#ffffff', textAlign: 'center' }}>
                             Save Changes

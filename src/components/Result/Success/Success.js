@@ -4,7 +4,7 @@ import { SafeAreaView, View, Text, Image, TextInput, StyleSheet } from 'react-na
 import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
 
 import styles from './Success.styles';
-import Header from '../Header/Header';
+import Header from '../../Header/Header';
 
 const containerStyles = StyleSheet.create({
     container: {
@@ -23,7 +23,7 @@ const success = ({ navigation }) => {
 
             <View style={containerStyles.container}>
                 <View style={styles.imageContainer}>
-                    <Image source={require('../../../assets/success.png')} style={styles.successImage} />
+                    <Image source={require('../../../../assets/success.png')} style={styles.successImage} />
                 </View>
 
                 <View style={styles.headerContent}>

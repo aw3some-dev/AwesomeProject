@@ -60,15 +60,7 @@ const verifyPhoneNumber = ({ navigation }) => {
                     </View>
                 </View>
 
-                {/* <TouchableWithoutFeedback onPress={() => navigation.navigate('SuccessConfirm', { name: 'SuccessConfirm' })}>
-                    <View style={styles.profileFooter}>
-                        <Text style={{ fontFamily: 'open-sans-bold', color: '#ffffff', textAlign: 'center' }}>
-                            Confirm
-                        </Text>
-                    </View>
-                </TouchableWithoutFeedback> */}
-
-                <TouchableWithoutFeedback onPress={() => navigation.navigate('SuccessConfirm', { name: 'SuccessConfirm' })}>
+                <TouchableWithoutFeedback onPress={() => navigation.navigate('Success', { name: 'Success' })}>
                     <View style={styles.button}>
                         <Text style={{ fontFamily: 'gilroy-extra-bold', color: '#ffffff', textAlign: 'center' }}>
                             Verify Code

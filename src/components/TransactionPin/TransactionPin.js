@@ -19,7 +19,7 @@ const containerStyles = StyleSheet.create({
 const transactionPin = ({ navigation }) => {
     return (
         <View>
-            <Header nav={navigation} title="Transaction Pin" returnNavLink="NewLoans" />
+            <Header nav={navigation} title="Transaction Pin" returnNavLink="Profile" />
             <View style={containerStyles.container}>
                 <View style={styles.headerContent}>
                     {/* <Button style={styles.backHeader} title="Back" onPress={() => navigation.navigate('LoginOptions', { name: 'LoginOptions' })}></Button> */}
@@ -36,14 +36,14 @@ const transactionPin = ({ navigation }) => {
 
                     <View>
                         <Image source={require('../../../assets/eye.png')}
-                            style={{ height: 20, width: 30, marginRight: 20 }} />
+                            style={{ height: 15, width: 23, marginRight: 20 }} />
                     </View>
                 </View>
 
                 <View style={[styles.inputField, { marginBottom: 50 }]}>
                     <TextInput style={styles.inputText} placeholder="Enter New PIN" />
                 </View>
-                <TouchableWithoutFeedback>
+                <TouchableWithoutFeedback onPress={() => navigation.navigate('Success', {name: 'Success'})}>
                     <View style={styles.button}>
                         <Text style={{ fontFamily: 'gilroy-extra-bold', fontSize: 18, color: '#ffffff', textAlign: 'center' }}>
                             Change Pin
