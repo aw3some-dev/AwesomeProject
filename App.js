@@ -76,6 +76,7 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
         {/* <Stack.Screen name="Splash" component={Splash} options={{ headerShown: false }}></Stack.Screen> */}
+        <Stack.Screen name="Profile" component={Profile} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} ></Stack.Screen>
         <Stack.Screen name="Dashboard" component={Dashboard} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="Wallet" component={Wallet} options={{ headerShown: false }}></Stack.Screen>
@@ -113,7 +114,6 @@ export default function App() {
         <Stack.Screen name="BillPaymentConfirmation" component={BillPaymentConfirmation} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="BillPaymentResult" component={BillPaymentResult} options={{ headerShown: false }}></Stack.Screen>
 
-        <Stack.Screen name="Profile" component={Profile} options={{ headerShown: false }}></Stack.Screen>
         {/* <Stack.Screen name="Header" component={Header} options={{ headerShown: false }} ></Stack.Screen> */}
       </Stack.Navigator>
 
