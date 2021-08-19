@@ -76,7 +76,6 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
         {/* <Stack.Screen name="Splash" component={Splash} options={{ headerShown: false }}></Stack.Screen> */}
-        <Stack.Screen name="Profile" component={Profile} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} ></Stack.Screen>
         <Stack.Screen name="Dashboard" component={Dashboard} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="Wallet" component={Wallet} options={{ headerShown: false }}></Stack.Screen>
@@ -99,6 +98,7 @@ export default function App() {
         <Stack.Screen name="ProcessLoan" component={ProcessLoan} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="ChangePhoneNumber" component={ChangePhoneNumber} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="VerifyPhoneNumber" component={VerifyPhoneNumber} options={{ headerShown: false }}></Stack.Screen>
+        <Stack.Screen name="Profile" component={Profile} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="LoginOptions" component={LoginOptions} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="TransactionPin" component={TransactionPin} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="AccountOptions" component={AccountOptions} options={{ headerShown: false }}></Stack.Screen>

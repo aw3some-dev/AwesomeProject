@@ -88,43 +88,54 @@ const profile = ({ navigation }) => {
                     <View style={styles.menuItem}>
                         <Image source={require('../../../assets/profile/user-guard.png')} style={styles.menuIcon} />
 
-                        <View>
-                            <Text style={styles.menuHeader}>Transaction pin</Text>
-                            <Text style={styles.menuSubHeader}>View or reset your transaction pin</Text>
-                        </View>
+                        <TouchableWithoutFeedback onPress={() => navigation.navigate('TransactionPin', { name: 'TransactionPin' })}>
+                            <View>
+                                <Text style={styles.menuHeader}>Transaction pin</Text>
+                                <Text style={styles.menuSubHeader}>View or reset your transaction pin</Text>
+                            </View>
+                        </TouchableWithoutFeedback>
 
-                        <View style={styles.sideContent}>
-                            <Image source={require('../../../assets/Vector.png')} />
-                        </View>
+                        <TouchableWithoutFeedback onPress={() => navigation.navigate('TransactionPin', { name: 'TransactionPin' })}>
+                            <View style={styles.sideContent}>
+                                <Image source={require('../../../assets/Vector.png')} />
+                            </View>
+                        </TouchableWithoutFeedback>
                     </View>
 
                     <View style={styles.menuItem}>
                         <Image source={require('../../../assets/profile/lock.png')} style={styles.menuIcon} />
+                        <TouchableWithoutFeedback onPress={() => navigation.navigate('LoginOptions', { name: 'LoginOptions' })}>
+                            <View>
+                                <Text style={styles.menuHeader}>Login options</Text>
+                                <Text style={styles.menuSubHeader}>Select prefrerred login method</Text>
+                            </View>
+                        </TouchableWithoutFeedback>
 
-                        <View>
-                            <Text style={styles.menuHeader}>Login options</Text>
-                            <Text style={styles.menuSubHeader}>Select prefrerred login method</Text>
-                        </View>
-
-                        <View style={styles.sideContent}>
-                            <Image source={require('../../../assets/Vector.png')} />
-                        </View>
+                        <TouchableWithoutFeedback onPress={() => navigation.navigate('LoginOptions', { name: 'LoginOptions' })}>
+                            <View style={styles.sideContent}>
+                                <Image source={require('../../../assets/Vector.png')} />
+                            </View>
+                        </TouchableWithoutFeedback>
                     </View>
 
                     <View style={styles.menuItem}>
                         <Image source={require('../../../assets/profile/power.png')} style={styles.menuIcon} />
 
-                        <View style={{ width: '75%' }}>
-                            <Text style={styles.menuHeader}>Account on or off</Text>
-                            <View>
-                                <Text style={styles.menuSubHeader}>Make your account active or
-                                    inactive when you want to</Text>
+                        <TouchableWithoutFeedback onPress={() => navigation.navigate('AccountOptions', { name: 'AccountOptions' })}>
+                            <View style={{ width: '75%' }}>
+                                <Text style={styles.menuHeader}>Account on or off</Text>
+                                <View>
+                                    <Text style={styles.menuSubHeader}>Make your account active or
+                                        inactive when you want to</Text>
+                                </View>
                             </View>
-                        </View>
+                        </TouchableWithoutFeedback>
 
-                        <View style={styles.sideContent}>
-                            <Image source={require('../../../assets/Vector.png')} />
-                        </View>
+                        <TouchableWithoutFeedback onPress={() => navigation.navigate('AccountOptions', { name: 'AccountOptions' })}>
+                            <View style={styles.sideContent}>
+                                <Image source={require('../../../assets/Vector.png')} />
+                            </View>
+                        </TouchableWithoutFeedback>
                     </View>
 
                     <View style={[styles.menuItem, { marginBottom: 0 }]}>

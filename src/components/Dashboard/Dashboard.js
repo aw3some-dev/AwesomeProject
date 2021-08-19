@@ -111,7 +111,7 @@ const dashboard = ({ navigation }) => {
                     </View>
                 </TouchableNativeFeedback>
 
-                <TouchableNativeFeedback onPress={() => navigation.navigate('Profile')}>
+                <TouchableNativeFeedback onPress={() => navigation.navigate('Profile', {name: 'Profile'})}>
                     <View style={styles.navItem}>
                         <Image source={require('../../../assets/user-circle.png')} />
                         <Text style={[styles.baseText, { fontSize: 11, fontFamily: 'gilroy-light', color: '#777777' }]}>Profile</Text>
