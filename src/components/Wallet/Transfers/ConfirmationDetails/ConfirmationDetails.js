@@ -51,14 +51,14 @@ const confirmationDetails = ({ navigation }) => {
                 <View style={styles.inputContainer}>
                     <Text style={styles.inputLabel}>Enter transaction pin</Text>
 
-                    <TextInput style={styles.input}></TextInput>
+                    <TextInput style={styles.input} keyboardType="numeric"></TextInput>
                 </View>
 
                 <View style={styles.buttonRow}>
                     <TouchableNativeFeedback onPress={() => navigation.navigate('TransferResult', { name: 'TransferResult' })}>
                         <View style={[styles.button, { width: '80%' }]}>
                             <Text style={{ fontFamily: 'gilroy-extra-bold', color: '#ffffff', textAlign: 'center' }}>
-                            Transfer money
+                                Transfer money
                             </Text>
                         </View>
                     </TouchableNativeFeedback>

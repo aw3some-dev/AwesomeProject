@@ -1,27 +1,23 @@
 import React from 'react';
-import { View, Text, Button, Image } from 'react-native';
+import { View, Text, Button, Image, TouchableWithoutFeedback } from 'react-native';
 
 import styles from './LoginOptions.styles';
 import { StyleSheet } from 'react-native';
+import Header from '../Header/Header';
 
 const containerStyles = StyleSheet.create({
     container: {
-        // flex: 1,
-        // backgroundColor: 'red',
-        // alignItems: 'center',
-        // justifyContent: 'center',
         height: '100%',
         width: '100%',
-        paddingTop: 80,
-        paddingLeft: 40,
-        paddingRight: 40,
-        fontFamily: 'Open Sans'
+        paddingVertical: 20,
+        paddingHorizontal: 20
     }
 });
 
 const loginOptions = ({ navigation }) => {
     return (
         <View>
+         <Header nav={navigation} title="Login Options" returnNavLink="Profile"/>
             <View style={containerStyles.container}>
                 <View style={styles.headerContent}>
                     <Text style={styles.header}>
@@ -54,7 +50,13 @@ const loginOptions = ({ navigation }) => {
                     </View>
                 </View>
 
-                <Button title="Save changes" onPress={() => navigation.navigate('TransactionPin', { name: 'TransactionPin '})}></Button>
+                <TouchableWithoutFeedback onPress={() => navigation.navigate('Success', {name: 'Success'})}>
+                    <View style={styles.button}>
+                        <Text style={{ fontFamily: 'gilroy-extra-bold',fontSize: 18, color: '#ffffff', textAlign: 'center' }}>
+                            Save Changes
+                        </Text>
+                    </View>
+                </TouchableWithoutFeedback>
             </View>
         </View>
     );
