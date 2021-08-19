@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Image, TouchableNativeFeedback } from 'react-native';
 
 import styles from './NavFooter.styles';
 
@@ -8,6 +8,8 @@ const navFooter = () => {
         <View style={styles.navBar}>
             <View style={styles.navItem}>
                 <Image source={require('../../../assets/home.png')} />
+
+                {/* <NavIcon color="black" /> */}
                 <Text style={[styles.baseText, { fontSize: 11, fontFamily: 'gilroy-light', color: '#043171' }]}>Home</Text>
             </View>
             <TouchableNativeFeedback onPress={() => navigation.navigate('TransactionHistory', { name: 'TransactionHistory' })}>

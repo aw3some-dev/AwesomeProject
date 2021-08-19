@@ -31,6 +31,63 @@ const styles = StyleSheet.create({
         fontSize: 12,
         fontFamily: 'gilroy-light',
     },
+    avatarWrapper: {
+        backgroundColor: '#ffffff',
+        paddingVertical: 10,
+        paddingHorizontal: 15,
+        height: 90,
+        borderRadius: 4,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center'
+    },
+    avatarContent: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center'
+    },
+    avatar: {
+        height: 60,
+        width: 60,
+        marginRight: 20
+    },
+    menuWrapper: {
+        paddingHorizontal: 20,
+        marginBottom: 20
+    },
+    profileMenu: {
+        backgroundColor: '#ffffff',
+        padding: 20,
+        borderRadius: 4
+    },
+    menuItem: {
+        flexDirection: 'row',
+        justifyContent: 'flex-start',
+        alignItems: 'center',
+        marginBottom: 20,
+        position: 'relative'
+    },
+    menuIcon: {
+        height: 35,
+        width: 35,
+        marginRight: 20
+    },
+    menuHeader: {
+        fontSize: 14, 
+        fontFamily: 'gilroy-medium'
+    },
+    menuSubHeader: {
+        fontSize: 12, 
+        fontFamily: 'gilroy-medium',
+        color: '#979797',
+        // flexWrap: 'wrap',
+        // flex: 3
+    },
+    sideContent: {
+        position: 'absolute',
+        right: 0,
+        top: 10
+    },  
     navBar: {
         position: 'absolute',
         bottom: 0,
