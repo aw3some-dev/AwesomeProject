@@ -100,6 +100,26 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-around'
     },
+
+    modalBody: {
+        backgroundColor: '#00000080',
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    modalContent: {
+        position: 'absolute',
+        bottom: 0,
+        height: 362,
+        width: '100%',
+        backgroundColor: '#ffffff',
+        borderRadius: 40,
+        paddingVertical: 20,
+        paddingHorizontal: 30
+    },
+    primaryBtn: {
+        
+    }
 });
 
 export default styles;

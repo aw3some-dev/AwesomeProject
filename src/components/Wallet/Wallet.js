@@ -8,16 +8,17 @@ const wallet = ({ navigation }) => {
         <View style={{ height: '100%' }}>
             <View style={containerStyles.dashboardHeader}>
                 <View>
+                <TouchableNativeFeedback onPress={() => navigation.navigate('Dashboard', { name: 'Dashboard ' })}>
                     <View style={styles.profileWrapper}>
                         <View style={styles.profile}>
                             <Image
                                 source={require('../../../assets/logo-white.png')}
                                 style={{ width: 40, height: 30, marginRight: 10 }}
                             />
-                            <View>
-                                <Text style={[styles.baseText, styles.header]}>Wallet</Text>
-                                <Text style={[styles.baseText, styles.subHeader]}>Select an option to continue</Text>
-                            </View>
+                                <View>
+                                    <Text style={[styles.baseText, styles.header]}>Wallet</Text>
+                                    <Text style={[styles.baseText, styles.subHeader]}>Select an option to continue</Text>
+                                </View>   
                         </View>
 
                         <View>
@@ -27,6 +28,7 @@ const wallet = ({ navigation }) => {
                             </TouchableWithoutFeedback>
                         </View>
                     </View>
+                </TouchableNativeFeedback>
 
                     <View style={styles.balanceView}>
                         <View>

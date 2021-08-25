@@ -9,6 +9,7 @@ const loans = ({ navigation }) => {
     <View style={{ height: '100%' }}>
       <View style={containerStyles.dashboardHeader}>
         <View style={{ width: '100%' }}>
+        <TouchableWithoutFeedback onPress={() => navigation.navigate('Dashboard', { name: 'Dashboard' })}>
           <View style={styles.profileWrapper}>
 
             <View style={styles.profile}>
@@ -30,6 +31,7 @@ const loans = ({ navigation }) => {
               </TouchableWithoutFeedback>
             </View>
           </View>
+        </TouchableWithoutFeedback>
 
           <View style={styles.cardWrapper}>
             <View style={styles.card}>
