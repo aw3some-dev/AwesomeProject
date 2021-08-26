@@ -224,11 +224,28 @@ const profile = ({ navigation }) => {
             <Modal transparent={showModal} visible={showModal} animationType="slide" onRequestClose={() => setShowModal(false)}>
                 <View style={styles.modalBody}>
                     <View style={styles.modalContent}>
-
-                        <View>
+                        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
                             <TouchableNativeFeedback>
-                                <View style={styles.primaryBtn}>
+                                <View style={styles.roundedBtn}>
+                                    <Text style={styles.roundedBtnText}>Change profile picture</Text>
+                                </View>
+                            </TouchableNativeFeedback>
+
+                            <TouchableNativeFeedback>
+                                <View style={[styles.modalButton, styles.primaryBtn]}>
                                     <Text style={styles.buttonText}>Upload from phone</Text>
+                                </View>
+                            </TouchableNativeFeedback>
+
+                            <TouchableNativeFeedback>
+                                <View style={[styles.modalButton, styles.primaryBtn]}>
+                                    <Text style={styles.buttonText}>Take Photo</Text>
+                                </View>
+                            </TouchableNativeFeedback>
+
+                            <TouchableNativeFeedback>
+                                <View style={[styles.modalButton, styles.defaultBtn, { marginTop: 30}]}>
+                                    <Text style={styles.buttonText}>Cancel</Text>
                                 </View>
                             </TouchableNativeFeedback>
                         </View>
