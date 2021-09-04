@@ -1,10 +1,10 @@
 import React from 'react';
-import { View, Text, Image, Button, TouchableWithoutFeedback } from 'react-native';
+import { View, Text, Image, Button, TouchableWithoutFeedback, TouchableNativeFeedback} from 'react-native';
 
-import styles from './Investment.styles';
+import styles from '../Investment/Investment.styles';
 import containerStyles from '../../../App.styles';
 
-const wallet = ({ navigation }) => {
+const investment = ({ navigation }) => {
     return (
         <View style={{ height: '100%' }}>
             <View style={containerStyles.dashboardHeader}>
@@ -53,8 +53,55 @@ const wallet = ({ navigation }) => {
                     </View>
                 </View>
             </View>
-
             <View style={styles.dashboardContent}>
+                <TouchableNativeFeedback onPress={() => navigation.navigate('Investment', { name: 'Investment' })}>
+                    <View style={styles.dashboardItem}>
+                        <Image source={require('../../../assets/wallet.png')}
+                            style={{ width: 40, height: 40, marginBottom: 25 }} />
+
+                        <View style={{ alignItems: 'center' }}>
+                            <Text style={styles.contentTitle}>Noble Lock</Text>
+                            {/* <Text style={styles.contentBody}>Send money to friends</Text> */}
+                        </View>
+                    </View>
+                </TouchableNativeFeedback>
+
+                <TouchableNativeFeedback onPress={() => navigation.navigate('NobleTarget', { name: 'NobleTarget' })}>
+                    <View style={styles.dashboardItem}>
+                        <Image source={require('../../../assets/invest.png')}
+                            style={{ width: 40, height: 40, marginBottom: 25 }} />
+
+                        <View style={{ alignItems: 'center' }}>
+                            <Text style={styles.contentTitle}>Noble Target</Text>
+                            <Text style={styles.contentBody}>Reach your unique individual saving goal</Text>
+                        </View>
+                    </View>
+                </TouchableNativeFeedback>
+
+                <TouchableNativeFeedback onPress={() => navigation.navigate('Loans', { name: 'Loans' })}>
+                    <View style={styles.dashboardItem}>
+                        <Image source={require('../../../assets/apply.png')}
+                            style={{ width: 40, height: 40, marginBottom: 25 }} />
+
+                        <View style={{ alignItems: 'center' }}>
+                            <Text style={styles.contentTitle}>Noble Flex</Text>
+                            {/* <Text style={styles.contentBody}>Borrow money</Text> */}
+                        </View>
+                    </View>
+                </TouchableNativeFeedback>
+
+                <View style={styles.dashboardItem}>
+                    {/* <Image source={require('../../../assets/wallet.png')}
+                        style={{ width: 40, height: 40 }} /> */}
+
+                    <View style={{ alignItems: 'center', marginTop: 40 }}>
+                        <Text style={styles.contentTitle}>Space for AD</Text>
+                        <Text style={styles.contentBody}>Learn more</Text>
+                    </View>
+                </View>
+            </View>
+
+            {/* <View style={styles.dashboardContent1}>
                 <View>
                     <Text style={styles.dashboardHeader}>MY PORTFOLIO</Text>
                 </View>
@@ -83,10 +130,10 @@ const wallet = ({ navigation }) => {
                         </View>
                     </View>
                 </View>
-            </View>
+            </View> */}
 
         </View>
     );
 }
 
-export default wallet;
+export default investment;
