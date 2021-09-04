@@ -8,16 +8,17 @@ const wallet = ({ navigation }) => {
         <View style={{ height: '100%' }}>
             <View style={containerStyles.dashboardHeader}>
                 <View>
+                <TouchableNativeFeedback onPress={() => navigation.navigate('Dashboard', { name: 'Dashboard ' })}>
                     <View style={styles.profileWrapper}>
                         <View style={styles.profile}>
                             <Image
                                 source={require('../../../assets/logo-white.png')}
                                 style={{ width: 40, height: 30, marginRight: 10 }}
                             />
-                            <View>
-                                <Text style={[styles.baseText, styles.header]}>Wallet</Text>
-                                <Text style={[styles.baseText, styles.subHeader]}>Select an option to continue</Text>
-                            </View>
+                                <View>
+                                    <Text style={[styles.baseText, styles.header]}>Wallet</Text>
+                                    <Text style={[styles.baseText, styles.subHeader]}>Select an option to continue</Text>
+                                </View>   
                         </View>
 
                         <View>
@@ -27,6 +28,7 @@ const wallet = ({ navigation }) => {
                             </TouchableWithoutFeedback>
                         </View>
                     </View>
+                </TouchableNativeFeedback>
 
                     <View style={styles.balanceView}>
                         <View>
@@ -68,15 +70,17 @@ const wallet = ({ navigation }) => {
                     </View>
                 </TouchableNativeFeedback>
 
-                <View style={styles.dashboardItem}>
-                    <Image source={require('../../../assets/buy.png')}
-                        style={{ width: 45, height: 45, marginBottom: 25 }} />
+                <TouchableNativeFeedback>
+                    <View style={styles.dashboardItem}>
+                        <Image source={require('../../../assets/buy.png')}
+                            style={{ width: 45, height: 45, marginBottom: 25 }} />
 
-                    <View style={{ alignItems: 'center' }}>
-                        <Text style={styles.contentTitle}>Buy airtime</Text>
-                        <Text style={styles.contentBody}>MTN, Glo, 9Mobile, Airtel</Text>
+                        <View style={{ alignItems: 'center' }}>
+                            <Text style={styles.contentTitle}>Buy airtime</Text>
+                            <Text style={styles.contentBody}>MTN, Glo, 9Mobile, Airtel</Text>
+                        </View>
                     </View>
-                </View>
+                </TouchableNativeFeedback>
 
                 <TouchableNativeFeedback onPress={() => navigation.navigate('BillPayment')}>
                     <View style={styles.dashboardItem}>
@@ -93,7 +97,7 @@ const wallet = ({ navigation }) => {
                 <View style={styles.dashboardItem}>
                     <Image source={require('../../../assets/chat.png')}
                         style={{ width: 45, height: 45, marginBottom: 25 }} />
-                        
+
                     <View style={{ alignItems: 'center' }}>
                         <Text style={styles.contentTitle}>Chat bot</Text>
                         <Text style={styles.contentBody}>Send money to friends</Text>

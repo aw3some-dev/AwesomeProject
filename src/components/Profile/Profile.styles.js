@@ -100,6 +100,55 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-around'
     },
+
+    modalBody: {
+        backgroundColor: '#00000080',
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    modalContent: {
+        position: 'absolute',
+        bottom: 0,
+        height: 362,
+        width: '100%',
+        backgroundColor: '#ffffff',
+        borderRadius: 40,
+        paddingVertical: 20,
+        paddingHorizontal: 30
+    },
+    modalButton: {
+        paddingVertical: 15,
+        borderRadius: 4,
+        marginBottom: 10,
+        width: '100%'
+    },
+    primaryBtn: {
+        backgroundColor: 'rgba(218, 226, 234, 0.5)',
+    },
+    defaultBtn: {
+        borderColor: '#000000',
+        borderWidth: 1
+    },
+    buttonText: {
+        textAlign: 'center',
+        fontFamily: 'montserrat-medium',
+        fontSize: 14
+    },
+    roundedBtn: {
+        borderRadius: 200,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'rgba(218, 226, 234, 0.5)',
+        width: 180,
+        paddingVertical: 10,
+        marginBottom: 30,
+        marginHorizontal: 'auto'
+    },
+    roundedBtnText: {
+        fontFamily: 'gilroy-regular',
+        fontSize: 12
+    }
 });
 
 export default styles;

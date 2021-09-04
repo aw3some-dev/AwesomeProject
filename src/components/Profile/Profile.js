@@ -1,11 +1,14 @@
-import React from 'react';
-import { View, Text, Image, ScrollView, StyleSheet, TouchableWithoutFeedback } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, Image, ScrollView, StyleSheet, TouchableWithoutFeedback, TouchableNativeFeedback, Modal } from 'react-native';
 
 import styles from './Profile.styles';
 import containerStyles from '../../../App.styles';
+import { log } from 'react-native-reanimated';
 
 
 const profile = ({ navigation }) => {
+    const [showModal, setShowModal] = useState(false);
+
     return (
         <View style={{ flex: 1 }}>
             <ScrollView>
@@ -26,21 +29,23 @@ const profile = ({ navigation }) => {
                         </View>
                     </View>
 
-                    <View style={styles.avatarWrapper}>
-                        <View style={styles.avatarContent}>
-                            <View>
-                                <Image source={require('../../../assets/avatar.png')} style={styles.avatar} />
+                    <TouchableWithoutFeedback onPress={() => setShowModal(true)}>
+                        <View style={styles.avatarWrapper}>
+                            <View style={styles.avatarContent}>
+                                <View>
+                                    <Image source={require('../../../assets/avatar.png')} style={styles.avatar} />
+                                </View>
+                                <View>
+                                    <Text style={{ fontFamily: 'montserrat-medium', fontSize: 14, color: '#000000' }}>Profile image</Text>
+                                    <Text style={{ fontFamily: 'montserrat-medium', fontSize: 12, color: '#979797' }}>Chnage profile picture</Text>
+                                </View>
                             </View>
-                            <View>
-                                <Text style={{ fontFamily: 'montserrat-medium', fontSize: 14, color: '#000000' }}>Profile image</Text>
-                                <Text style={{ fontFamily: 'montserrat-medium', fontSize: 12, color: '#979797' }}>Chnage profile picture</Text>
-                            </View>
-                        </View>
 
-                        <View>
-                            <Image source={require('../../../assets/Vector.png')} />
+                            <View>
+                                <Image source={require('../../../assets/Vector.png')} />
+                            </View>
                         </View>
-                    </View>
+                    </TouchableWithoutFeedback>
                 </View>
 
                 <View style={styles.menuWrapper}>
@@ -139,7 +144,7 @@ const profile = ({ navigation }) => {
                             </TouchableWithoutFeedback>
                         </View>
 
-                        <View style={styles.menuItem}>
+                        {/* <View style={styles.menuItem}>
                             <Image source={require('../../../assets/profile/power.png')} style={styles.menuIcon} />
 
                             <View style={{ width: '75%' }}>
@@ -153,7 +158,7 @@ const profile = ({ navigation }) => {
                             <View style={styles.sideContent}>
                                 <Image source={require('../../../assets/Vector.png')} />
                             </View>
-                        </View>
+                        </View> */}
 
                         <View style={[styles.menuItem, { marginBottom: 0 }]}>
                             <Image source={require('../../../assets/profile/info.png')} style={styles.menuIcon} />
@@ -174,7 +179,7 @@ const profile = ({ navigation }) => {
 
                 <View style={styles.menuWrapper}>
                     <View style={styles.profileMenu}>
-                        <TouchableWithoutFeedback onPress={() => navigation.navigate('Login', {name: 'Login'})}>
+                        <TouchableWithoutFeedback onPress={() => navigation.navigate('Login', { name: 'Login' })}>
                             <View style={[styles.menuItem, { marginBottom: 0 }]}>
                                 <Image source={require('../../../assets/profile/exit.png')} style={styles.menuIcon} />
 
@@ -194,7 +199,7 @@ const profile = ({ navigation }) => {
             </ScrollView>
 
             <View style={styles.navBar}>
-                <TouchableWithoutFeedback>
+                <TouchableWithoutFeedback onPress={() => navigation.navigate('Dashboard')}>
                     <View style={styles.navItem}>
                         <Image source={require('../../../assets/home.png')} />
                         <Text style={[styles.baseText, { fontSize: 11, fontFamily: 'gilroy-light', color: '#043171' }]}>Home</Text>
@@ -215,6 +220,38 @@ const profile = ({ navigation }) => {
                     </View>
                 </TouchableWithoutFeedback>
             </View>
+
+            <Modal transparent={showModal} visible={showModal} animationType="slide" onRequestClose={() => setShowModal(false)}>
+                <View style={styles.modalBody}>
+                    <View style={styles.modalContent}>
+                        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                            <TouchableNativeFeedback>
+                                <View style={styles.roundedBtn}>
+                                    <Text style={styles.roundedBtnText}>Change profile picture</Text>
+                                </View>
+                            </TouchableNativeFeedback>
+
+                            <TouchableNativeFeedback>
+                                <View style={[styles.modalButton, styles.primaryBtn]}>
+                                    <Text style={styles.buttonText}>Upload from phone</Text>
+                                </View>
+                            </TouchableNativeFeedback>
+
+                            <TouchableNativeFeedback>
+                                <View style={[styles.modalButton, styles.primaryBtn]}>
+                                    <Text style={styles.buttonText}>Take Photo</Text>
+                                </View>
+                            </TouchableNativeFeedback>
+
+                            <TouchableNativeFeedback>
+                                <View style={[styles.modalButton, styles.defaultBtn, { marginTop: 30}]}>
+                                    <Text style={styles.buttonText}>Cancel</Text>
+                                </View>
+                            </TouchableNativeFeedback>
+                        </View>
+                    </View>
+                </View>
+            </Modal>
         </View>
     );
 };
