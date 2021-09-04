@@ -44,6 +44,7 @@ import AirtimeRecharge from './src/components/Wallet/BillPayment/AirtimeRecharge
 import OtherBillPayments from './src/components/Wallet/BillPayment/OtherBillPayments/OtherBillPayments';
 import BillPaymentConfirmation from './src/components/Wallet/BillPayment/BillPaymentConfirmation/BillPaymentConfirmation';
 import BillPaymentResult from './src/components/Wallet/BillPayment/BillPaymentResult/BillPaymentResult';
+import NobleTarget from './src/components/Investment/NobleTarget/NobleTarget';
 
 import Profile from './src/components/Profile/Profile';
 
@@ -92,14 +93,15 @@ export default function App() {
         <Stack.Screen name="PinVerification" component={PinVerification} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="SuccessConfirm" component={SuccessConfirm} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="Success" component={Success} options={{ headerShown: false }}></Stack.Screen>
+        <Stack.Screen name="NobleTarget" component={NobleTarget} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="LoanHistory" component={LoanHistory} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="LoanRepayment" component={LoanRepayment} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="LoanCalculator" component={LoanCalculator} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="ProcessLoan" component={ProcessLoan} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="ChangePhoneNumber" component={ChangePhoneNumber} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="VerifyPhoneNumber" component={VerifyPhoneNumber} options={{ headerShown: false }}></Stack.Screen>
-        <Stack.Screen name="Profile" component={Profile} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="LoginOptions" component={LoginOptions} options={{ headerShown: false }}></Stack.Screen>
+        <Stack.Screen name="Profile" component={Profile} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="TransactionPin" component={TransactionPin} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="AccountOptions" component={AccountOptions} options={{ headerShown: false }}></Stack.Screen>
 
