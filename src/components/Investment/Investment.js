@@ -54,7 +54,7 @@ const investment = ({ navigation }) => {
                 </View>
             </View>
             <View style={styles.dashboardContent}>
-                <TouchableNativeFeedback onPress={() => navigation.navigate('Investment', { name: 'Investment' })}>
+                <TouchableNativeFeedback onPress={() => navigation.navigate('NobleLock', { name: 'NobleLock' })}>
                     <View style={styles.dashboardItem}>
                         <Image source={require('../../../assets/wallet.png')}
                             style={{ width: 40, height: 40, marginBottom: 25 }} />

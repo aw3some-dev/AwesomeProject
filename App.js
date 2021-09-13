@@ -45,6 +45,7 @@ import OtherBillPayments from './src/components/Wallet/BillPayment/OtherBillPaym
 import BillPaymentConfirmation from './src/components/Wallet/BillPayment/BillPaymentConfirmation/BillPaymentConfirmation';
 import BillPaymentResult from './src/components/Wallet/BillPayment/BillPaymentResult/BillPaymentResult';
 import NobleTarget from './src/components/Investment/NobleTarget/NobleTarget';
+import NobleLock from './src/components/Investment/NobleLock/NobleLock';
 
 import Profile from './src/components/Profile/Profile';
 
@@ -93,7 +94,6 @@ export default function App() {
         <Stack.Screen name="PinVerification" component={PinVerification} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="SuccessConfirm" component={SuccessConfirm} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="Success" component={Success} options={{ headerShown: false }}></Stack.Screen>
-        <Stack.Screen name="NobleTarget" component={NobleTarget} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="LoanHistory" component={LoanHistory} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="LoanRepayment" component={LoanRepayment} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="LoanCalculator" component={LoanCalculator} options={{ headerShown: false }}></Stack.Screen>
@@ -116,6 +116,9 @@ export default function App() {
         <Stack.Screen name="BillPaymentConfirmation" component={BillPaymentConfirmation} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="BillPaymentResult" component={BillPaymentResult} options={{ headerShown: false }}></Stack.Screen>
 
+
+        <Stack.Screen name="NobleTarget" component={NobleTarget} options={{ headerShown: false }}></Stack.Screen>
+        <Stack.Screen name="NobleLock" component={NobleLock} options={{ headerShown: false }}></Stack.Screen>
         {/* <Stack.Screen name="Header" component={Header} options={{ headerShown: false }} ></Stack.Screen> */}
       </Stack.Navigator>
 
