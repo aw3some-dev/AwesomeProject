@@ -2,30 +2,18 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   headerContent: {
-    marginBottom: 70
+    marginTop: 20,
+    marginBottom: 30,
   },
   header: {
     fontSize: 20,
     fontFamily: 'montserrat-semi-bold',
     color: '#000000',
-    textAlign: 'center',
-    marginBottom: 10
+    marginBottom: 20
   },
   subHeader: {
-    fontSize: 16,
-    fontFamily: 'gilroy-regular',
-    // color: '#1D1D1D6B',
-    color: 'slategray',
-    textAlign: 'center',
-    marginTop: 20
-  },
-
-  imageContainer: {
-    alignItems: 'center',
-    marginBottom: 30
-  },
-  successImage: {
-    height: 80,
+    fontSize: 14,
+    fontFamily: 'gilroy-light',
   },
 
   card: {
@@ -66,7 +54,7 @@ const styles = StyleSheet.create({
     // backgroundColor: 'royalblue'
   },
   cardHeader: {
-    fontSize:15,
+    fontSize: 15,
     // fontWeight: '700',
     fontFamily: 'gilroy-medium',
   },
@@ -76,10 +64,7 @@ const styles = StyleSheet.create({
     fontFamily: 'gilroy-light',
   },
 
-
-  
-
-
-})
+ 
+});
 
 export default styles;

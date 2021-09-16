@@ -89,7 +89,8 @@ const styles = StyleSheet.create({
     contentTitle: {
         fontFamily: 'gilroy-medium',
         fontSize: 12,
-        textAlign: 'center'
+        textAlign: 'center',
+        marginBottom: 10
     },
     contentBody: {
         fontFamily: 'gilroy-medium',

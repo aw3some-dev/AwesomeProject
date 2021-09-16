@@ -45,6 +45,9 @@ import OtherBillPayments from './src/components/Wallet/BillPayment/OtherBillPaym
 import BillPaymentConfirmation from './src/components/Wallet/BillPayment/BillPaymentConfirmation/BillPaymentConfirmation';
 import BillPaymentResult from './src/components/Wallet/BillPayment/BillPaymentResult/BillPaymentResult';
 import NobleTarget from './src/components/Investment/NobleTarget/NobleTarget';
+import PersonalOrGroupTarget from './src/components/Investment/NobleTarget/PersonalOrGroupTarget';
+import PersonalTarget from './src/components/Investment/NobleTarget/PersonalTarget/PersonalTarget';
+import PersonalTargetFinish from './src/components/Investment/NobleTarget/PersonalTarget/PersonalTargetFinish';
 
 import Profile from './src/components/Profile/Profile';
 
@@ -94,6 +97,9 @@ export default function App() {
         <Stack.Screen name="SuccessConfirm" component={SuccessConfirm} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="Success" component={Success} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="NobleTarget" component={NobleTarget} options={{ headerShown: false }}></Stack.Screen>
+        <Stack.Screen name="PersonalOrGroupTarget" component={PersonalOrGroupTarget} options={{ headerShown: false }}></Stack.Screen>
+        <Stack.Screen name="PersonalTarget" component={PersonalTarget} options={{ headerShown: false }}></Stack.Screen>
+        <Stack.Screen name="PersonalTargetFinish" component={PersonalTargetFinish} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="LoanHistory" component={LoanHistory} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="LoanRepayment" component={LoanRepayment} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="LoanCalculator" component={LoanCalculator} options={{ headerShown: false }}></Stack.Screen>
