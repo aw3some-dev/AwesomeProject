@@ -23,7 +23,7 @@ const billPaymentResult = ({ navigation, route }) => {
     const successView = (
         <View>
             <View style={styles.headerContent}>
-                <Text style={styles.header}>Bill payment successfull</Text>
+                <Text style={styles.header}>Bill payment successful</Text>
                 <Text style={styles.subHeader}>Completed successfully</Text>
             </View>
 
@@ -49,7 +49,7 @@ const billPaymentResult = ({ navigation, route }) => {
     const failureView = (
         <View>
             <View style={styles.headerContent}>
-                <Text style={styles.header}>Bill payment not successfull</Text>
+                <Text style={styles.header}>Bill payment not successful</Text>
                 <Text style={styles.subHeader}>Transaction not completed, please try again</Text>
             </View>
 

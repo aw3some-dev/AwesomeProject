@@ -12,39 +12,63 @@ const containerStyles = StyleSheet.create({
         width: '100%',
         paddingVertical: 20,
         paddingHorizontal: 20,
-        justifyContent: 'center'
+        // justifyContent: 'center'
     }
 });
 
 const nobleTarget = ({ navigation }) => {
     return (
         <View>
-            <Header nav={navigation} title="Confirmation" returnNavLink="RetailDetailsPage" />
+            <Header nav={navigation} title="Noble Target" returnNavLink="Investment" />
 
             <View style={containerStyles.container}>
-                <View style={styles.imageContainer}>
+                {/* <View style={styles.imageContainer}>
                     <Image source={require('../../../../assets/Saving1.png')} style={styles.successImage} />
-                </View>
+                </View> */}
 
                 <View style={styles.headerContent}>
-                    <Text style={styles.header}>Create a Target!</Text>
+                    {/* <Text style={styles.header}>Create a Target!</Text> */}
                     <Text style={styles.subHeader}>Save with discipline towards a specific goal or target. 
                     Earn interest every day into your NobleFlex account. Let's help you get started. </Text>
                 </View>
 
-                <TouchableWithoutFeedback onPress={() => navigation.navigate('Loans', { name: 'Loans' })}>
-                    <View style={styles.button}>
-                        <Text style={{ fontFamily: 'gilroy-extra-bold', fontSize: 18, color: '#ffffff', textAlign: 'center' }}>
-                            Create a Target
-                        </Text>
+                <TouchableWithoutFeedback onPress={() => navigation.navigate('PersonalOrGroupTarget', { name: 'PersonalOrGroupTarget' })}>
+                    <View style={styles.card}>
+                        <View style={styles.mainContent}>
+                            <View style={styles.cardIcon}>
+                                <Image source={require('../../../../assets/savings.png')}
+                                    style={{ height: 20, width: 20 }} />
+                            </View>
+
+                            <View style={styles.cardContent}>
+                                <Text style={styles.cardHeader}>Create a Target</Text>
+                            </View>
+                        </View>
+
+                        {/* <View style={styles.sideContent}>
+                            <Image source={require('../../../../assets/Vector.png')} />
+                        </View> */}
+
                     </View>
                 </TouchableWithoutFeedback>
 
-                <TouchableWithoutFeedback onPress={() => navigation.navigate('Loans', { name: 'Loans' })}>
-                    <View style={styles.button1}>
-                        <Text style={{ fontFamily: 'gilroy-extra-bold', fontSize: 18, color: '#ffffff', textAlign: 'center' }}>
-                            Join a Savings Challenge
-                        </Text>
+                <TouchableWithoutFeedback onPress={() => navigation.navigate('PersonalOrGroupTarget', { name: 'PersonalOrGroupTarget' })}>
+                    <View style={styles.card}>
+                        <View style={styles.mainContent}>
+                            <View style={styles.cardIcon}>
+                                <Image source={require('../../../../assets/savings.png')}
+                                    style={{ height: 20, width: 20 }} />
+                            </View>
+
+                            <View style={styles.cardContent}>
+                                <Text style={styles.cardHeader}>Join a savings challenge</Text>
+                            </View>
+                        </View>
+
+                        {/* <View style={styles.sideContent}>
+                            <Image source={require('../../../../assets/Vector.png')} />
+                        </View> */}
+
                     </View>
                 </TouchableWithoutFeedback>
             </View>

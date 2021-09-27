@@ -37,7 +37,7 @@ const profile = ({ navigation }) => {
                                 </View>
                                 <View>
                                     <Text style={{ fontFamily: 'montserrat-medium', fontSize: 14, color: '#000000' }}>Profile image</Text>
-                                    <Text style={{ fontFamily: 'montserrat-medium', fontSize: 12, color: '#979797' }}>Chnage profile picture</Text>
+                                    <Text style={{ fontFamily: 'montserrat-medium', fontSize: 12, color: '#979797' }}>Change profile picture</Text>
                                 </View>
                             </View>
 

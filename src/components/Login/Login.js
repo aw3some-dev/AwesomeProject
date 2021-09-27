@@ -20,7 +20,10 @@ const containerStyles = StyleSheet.create({
     }
 });
 
+
 const login = ({ navigation }) => {
+    
+
     return (
         <View style={containerStyles.container}>
             <View style={styles.loginContainer}>
@@ -37,8 +40,8 @@ const login = ({ navigation }) => {
                 </View>
 
                 <View style={styles.inputField}>
-                    <Text style={styles.inputLabel}>Email address</Text>
-                    <TextInput style={styles.inputText} placeholder="email@domain.com" />
+                    <Text style={styles.inputLabel}>User ID</Text>
+                    <TextInput style={styles.inputText} placeholder="User Id" />
                 </View>
 
                 <View style={styles.inputField}>
@@ -72,6 +75,9 @@ const login = ({ navigation }) => {
             </View>
         </View>
     );
+
 };
+
+
 
 export default login;

@@ -12,10 +12,12 @@ const styles = StyleSheet.create({
     marginBottom: 10
   },
   subHeader: {
-    fontSize: 14,
+    fontSize: 16,
     fontFamily: 'gilroy-regular',
-    color: '#1D1D1D6B',
-    textAlign: 'center'
+    // color: '#1D1D1D6B',
+    color: 'slategray',
+    textAlign: 'center',
+    marginTop: 20
   },
 
   imageContainer: {
@@ -26,29 +28,56 @@ const styles = StyleSheet.create({
     height: 80,
   },
 
-  button: {
+  card: {
+    backgroundColor: 'rgba(255, 255, 255, 1)',
+    paddingVertical: 20,
+    paddingHorizontal: 20,
+    borderWidth: 1,
+    borderColor: 'rgba(147, 147, 147, .3)',
+    borderStyle: 'solid',
+    // flex: 0.1,
     flexDirection: 'row',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
     alignItems: 'center',
-    backgroundColor: '#0A84FF',
-    padding: 10,
-    borderRadius: 4,
-    width: '100%',
-    height: 48,
-    marginBottom: 10
+    marginBottom: 30
   },
 
-  button1: {
+  mainContent: {
     flexDirection: 'row',
+    justifyContent: 'flex-start',
+    alignItems: 'center'
+  },
+  sideContent: {
+
+  },
+  cardIcon: {
+    width: 30,
+    height: 30,
+    backgroundColor: '#ccc',
+    borderRadius: 50,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#033261',
-    padding: 10,
-    borderRadius: 4,
-    borderColor: '#0A84FF',
-    width: '100%',
-    height: 48,
+    marginRight: 15,
   },
+
+  cardContent: {
+    // width: 180,
+    // flex: 1,
+    // backgroundColor: 'royalblue'
+  },
+  cardHeader: {
+    fontSize:15,
+    // fontWeight: '700',
+    fontFamily: 'gilroy-medium',
+  },
+  cardSubHeader: {
+    fontSize: 12,
+    // fontWeight: '400',
+    fontFamily: 'gilroy-light',
+  },
+
+
+  
 
 
 })
