@@ -49,6 +49,7 @@ import NobleLock from './src/components/Investment/NobleLock/NobleLock';
 import PersonalOrGroupTarget from './src/components/Investment/NobleTarget/PersonalOrGroupTarget';
 import PersonalTarget from './src/components/Investment/NobleTarget/PersonalTarget/PersonalTarget';
 import PersonalTargetFinish from './src/components/Investment/NobleTarget/PersonalTarget/PersonalTargetFinish';
+import CreateTarget from './src/components/Investment/CreateTarget/CreateTarget';
 
 import Profile from './src/components/Profile/Profile';
 
@@ -124,9 +125,9 @@ export default function App() {
         <Stack.Screen name="BillPaymentResult" component={BillPaymentResult} options={{ headerShown: false }}></Stack.Screen>
 
 
-        <Stack.Screen name="NobleTarget" component={NobleTarget} options={{ headerShown: false }}></Stack.Screen>
+        {/* <Stack.Screen name="NobleTarget" component={NobleTarget} options={{ headerShown: false }}></Stack.Screen> */}
         <Stack.Screen name="NobleLock" component={NobleLock} options={{ headerShown: false }}></Stack.Screen>
-        {/* <Stack.Screen name="Header" component={Header} options={{ headerShown: false }} ></Stack.Screen> */}
+        <Stack.Screen name="CreateTarget" component={CreateTarget} options={{ headerShown: false }} ></Stack.Screen>
       </Stack.Navigator>
 
       {/* <View style={styles.container}>

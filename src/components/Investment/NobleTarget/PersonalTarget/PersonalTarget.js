@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { SafeAreaView, View, Text, Image, TextInput, StyleSheet, TouchableWithoutFeedback, TouchableNativeFeedback, Modal, ScrollView } from 'react-native';
 import styles from './PersonalTarget.styles';
 import Header from '../../../Header/Header';
-import { SearchBar } from 'react-native-elements';
+// import { SearchBar } from 'react-native-elements';
 
 const containerStyles = StyleSheet.create({
     container: {
