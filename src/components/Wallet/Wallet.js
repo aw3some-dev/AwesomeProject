@@ -70,7 +70,7 @@ const wallet = ({ navigation }) => {
                     </View>
                 </TouchableNativeFeedback>
 
-                <TouchableNativeFeedback>
+                <TouchableNativeFeedback onPress={() => navigation.navigate('AirtimeRecharge')}>
                     <View style={styles.dashboardItem}>
                         <Image source={require('../../../assets/buy.png')}
                             style={{ width: 45, height: 45, marginBottom: 25 }} />

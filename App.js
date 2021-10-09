@@ -112,19 +112,15 @@ export default function App() {
         <Stack.Screen name="Profile" component={Profile} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="TransactionPin" component={TransactionPin} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="AccountOptions" component={AccountOptions} options={{ headerShown: false }}></Stack.Screen>
-
         <Stack.Screen name="Transfer" component={Transfer} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="ConfirmationDetails" component={ConfirmationDetails} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="TransferResult" component={TransferResult} options={{ headerShown: false }}></Stack.Screen>
-
         <Stack.Screen name="BillPayment" component={BillPayment} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="TvSubscriptions" component={TvSubscriptions} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="AirtimeRecharge" component={AirtimeRecharge} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="OtherBillPayments" component={OtherBillPayments} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="BillPaymentConfirmation" component={BillPaymentConfirmation} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="BillPaymentResult" component={BillPaymentResult} options={{ headerShown: false }}></Stack.Screen>
-
-
         {/* <Stack.Screen name="NobleTarget" component={NobleTarget} options={{ headerShown: false }}></Stack.Screen> */}
         <Stack.Screen name="NobleLock" component={NobleLock} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="CreateTarget" component={CreateTarget} options={{ headerShown: false }} ></Stack.Screen>

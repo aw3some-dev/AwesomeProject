@@ -3,6 +3,7 @@ import { View, Text, Image, TouchableNativeFeedback } from 'react-native';
 
 import styles from './Dashboard.styles';
 import containerStyles from '../../../App.styles';
+import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
 
 const dashboard = ({ navigation }) => {
     return (
@@ -11,10 +12,11 @@ const dashboard = ({ navigation }) => {
                 <View>
                     <View style={styles.profileWrapper}>
                         <View style={styles.profile}>
-                            <Image
-                                source={require('../../../assets/user-profile.png')}
-                                style={{ width: 45, height: 45, marginRight: 10 }}
-                            />
+                            <TouchableWithoutFeedback onPress={()=> navigation.navigate('Profile')}>
+                                <Image
+                                    source={require('../../../assets/user-profile.png')}
+                                    style={{ width: 45, height: 45, marginRight: 10 }} />
+                            </TouchableWithoutFeedback>
 
                             <View>
                                 <Text style={styles.profileText}>Hi Adeniran</Text>
@@ -111,7 +113,7 @@ const dashboard = ({ navigation }) => {
                     </View>
                 </TouchableNativeFeedback>
 
-                <TouchableNativeFeedback onPress={() => navigation.navigate('Profile', {name: 'Profile'})}>
+                <TouchableNativeFeedback onPress={() => navigation.navigate('Profile', { name: 'Profile' })}>
                     <View style={styles.navItem}>
                         <Image source={require('../../../assets/user-circle.png')} />
                         <Text style={[styles.baseText, { fontSize: 11, fontFamily: 'gilroy-light', color: '#777777' }]}>Profile</Text>

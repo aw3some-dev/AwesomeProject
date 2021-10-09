@@ -22,7 +22,7 @@ const containerStyles = StyleSheet.create({
 
 
 const login = ({ navigation }) => {
-    
+
 
     return (
         <View style={containerStyles.container}>
@@ -36,7 +36,7 @@ const login = ({ navigation }) => {
                     <Text style={styles.header}>
                         Welcome Back, Adeniran
                     </Text>
-                    <Text style={styles.subHeader}>Lets get you back</Text>
+                    <Text style={styles.subHeader}>Let's get you back</Text>
                 </View>
 
                 <View style={styles.inputField}>
@@ -45,7 +45,10 @@ const login = ({ navigation }) => {
                 </View>
 
                 <View style={styles.inputField}>
-                    <Text style={styles.inputLabel}>Password</Text>
+                    <View style={{flexDirection:'row', justifyContent: 'space-between'}} >
+                        <Text style={styles.inputLabel}>Password</Text>
+                        <Text style={styles.inputLabel, {color: '#043171'}}>Forgot Password?</Text>
+                    </View>
                     <TextInput style={styles.inputText} />
                 </View>
 
