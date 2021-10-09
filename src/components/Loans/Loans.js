@@ -1,37 +1,51 @@
-import React from 'react';
-import { Text, Image, Button, TouchableWithoutFeedback, View } from 'react-native';
+import React, {useState} from 'react';
+import { Text, Image, Button, TouchableWithoutFeedback, TouchableNativeFeedback, View } from 'react-native';
 import styles from './Loans.styles';
 import containerStyles from '../../../App.styles';
 // import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
 
 const loans = ({ navigation }) => {
+
+  const [showBalance, setShowBalance] = useState(true);
+
+  let accountBalance;
+
+  if (showBalance) {
+    accountBalance = 'NGN 4,000,000.00';
+  } else {
+    accountBalance = 'XXXXXXXXXXXXXXX';
+  }
+
+  const toggleAccountBalanceHandler = () => {
+    setShowBalance((previousBalanceState) => !previousBalanceState);
+  };
   return (
     <View style={{ height: '100%' }}>
       <View style={containerStyles.dashboardHeader}>
         <View style={{ width: '100%' }}>
-        <TouchableWithoutFeedback onPress={() => navigation.navigate('Dashboard', { name: 'Dashboard' })}>
-          <View style={styles.profileWrapper}>
+          <TouchableWithoutFeedback onPress={() => navigation.navigate('Dashboard', { name: 'Dashboard' })}>
+            <View style={styles.profileWrapper}>
 
-            <View style={styles.profile}>
-              <Image source={require('../../../assets/logo-white.png')}
-                style={{ width: 40, height: 30, marginRight: 10 }} />
+              <View style={styles.profile}>
+                <Image source={require('../../../assets/logo-white.png')}
+                  style={{ width: 40, height: 30, marginRight: 10 }} />
+
+                <View>
+                  <Text style={[styles.baseText, styles.header]}>Loan</Text>
+                  <Text style={[styles.baseText, styles.subHeader]}>
+                    Select an option to continue
+                  </Text>
+                </View>
+              </View>
 
               <View>
-                <Text style={[styles.baseText, styles.header]}>Loan</Text>
-                <Text style={[styles.baseText, styles.subHeader]}>
-                  Select an option to continue
-                </Text>
+                <TouchableWithoutFeedback onPress={() => navigation.navigate('Dashboard', { name: 'Dashboard' })}>
+                  <Image source={require('../../../assets/close.png')}
+                    style={{ width: 15, height: 15 }} />
+                </TouchableWithoutFeedback>
               </View>
             </View>
-
-            <View>
-              <TouchableWithoutFeedback onPress={() => navigation.navigate('Dashboard', { name: 'Dashboard' })}>
-                <Image source={require('../../../assets/close.png')}
-                  style={{ width: 15, height: 15 }} />
-              </TouchableWithoutFeedback>
-            </View>
-          </View>
-        </TouchableWithoutFeedback>
+          </TouchableWithoutFeedback>
 
           <View style={styles.cardWrapper}>
             <View style={styles.card}>
@@ -42,12 +56,14 @@ const loans = ({ navigation }) => {
 
                 <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                   <View>
-                    <Text style={styles.figure}>N4,000,000</Text>
+                    <Text style={styles.figure}>{accountBalance}</Text>
                   </View>
 
                   <View style={{ marginLeft: 0 }}>
-                    <Image source={require('../../../assets/eye-slash.png')}
-                      style={styles.eye} />
+                    <TouchableNativeFeedback onPress={toggleAccountBalanceHandler}>
+                      <Image source={require('../../../assets/eye-slash.png')}
+                        style={styles.eye} />
+                    </TouchableNativeFeedback>
                   </View>
                 </View>
               </View>

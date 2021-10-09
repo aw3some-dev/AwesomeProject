@@ -50,6 +50,10 @@ import PersonalOrGroupTarget from './src/components/Investment/NobleTarget/Perso
 import PersonalTarget from './src/components/Investment/NobleTarget/PersonalTarget/PersonalTarget';
 import PersonalTargetFinish from './src/components/Investment/NobleTarget/PersonalTarget/PersonalTargetFinish';
 import CreateTarget from './src/components/Investment/CreateTarget/CreateTarget';
+import Notifications from './src/components/Dashboard/Notifications/Notifications';
+import AccountCreation from './src/components/AccountCreation/AccountCreation';
+import UnlinkDevice from './src/components/UnlinkDevice/UnlinkDevice';
+import ChatBot from './src/components/ChatBot/ChatBot';
 
 import Profile from './src/components/Profile/Profile';
 
@@ -121,6 +125,12 @@ export default function App() {
         <Stack.Screen name="OtherBillPayments" component={OtherBillPayments} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="BillPaymentConfirmation" component={BillPaymentConfirmation} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="BillPaymentResult" component={BillPaymentResult} options={{ headerShown: false }}></Stack.Screen>
+        <Stack.Screen name="Notifications" component={Notifications} options={{ headerShown: false }}></Stack.Screen>
+        <Stack.Screen name="AccountCreation" component={AccountCreation} options={{ headerShown: false }}></Stack.Screen>
+        <Stack.Screen name="UnlinkDevice" component={UnlinkDevice} options={{ headerShown: false }}></Stack.Screen>
+        <Stack.Screen name="ChatBot" component={ChatBot} options={{ headerShown: false }}></Stack.Screen>
+
+
         {/* <Stack.Screen name="NobleTarget" component={NobleTarget} options={{ headerShown: false }}></Stack.Screen> */}
         <Stack.Screen name="NobleLock" component={NobleLock} options={{ headerShown: false }}></Stack.Screen>
         <Stack.Screen name="CreateTarget" component={CreateTarget} options={{ headerShown: false }} ></Stack.Screen>

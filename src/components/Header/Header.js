@@ -17,7 +17,8 @@ const header = ({ nav, title, returnNavLink, showCloseIcon }) => {
     return (
         <View style={styles.header}>
             <View style={styles.headerContent}>
-                <TouchableWithoutFeedback onPress={() => nav.navigate(returnNavLink, { name: returnNavLink })}>
+            {/* navigate(returnNavLink, { name: returnNavLink }) */}
+                <TouchableWithoutFeedback onPress={() => nav.goBack()}>
                     <View style={{ ...styles.testBorder, ...styles.headerIcon }}>
                         <Image source={headerIcon}
                         />

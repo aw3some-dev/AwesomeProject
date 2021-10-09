@@ -1,34 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Text, Image, Button, TouchableWithoutFeedback, TouchableNativeFeedback } from 'react-native';
 import styles from './Wallet.styles';
 import containerStyles from '../../../App.styles';
 
 const wallet = ({ navigation }) => {
+    const [showBalance, setShowBalance] = useState(true);
+
+    let accountBalance;
+
+    if (showBalance) {
+        accountBalance = 'NGN 10,000,000.00';
+    } else {
+        accountBalance = 'XXXXXXXXXXXXXXX';
+    }
+
+    const toggleAccountBalanceHandler = () => {
+        setShowBalance((previousBalanceState) => !previousBalanceState);
+    };
     return (
         <View style={{ height: '100%' }}>
             <View style={containerStyles.dashboardHeader}>
                 <View>
-                <TouchableNativeFeedback onPress={() => navigation.navigate('Dashboard', { name: 'Dashboard ' })}>
-                    <View style={styles.profileWrapper}>
-                        <View style={styles.profile}>
-                            <Image
-                                source={require('../../../assets/logo-white.png')}
-                                style={{ width: 40, height: 30, marginRight: 10 }}
-                            />
+                    <TouchableNativeFeedback onPress={() => navigation.navigate('Dashboard', { name: 'Dashboard ' })}>
+                        <View style={styles.profileWrapper}>
+                            <View style={styles.profile}>
+                                <Image
+                                    source={require('../../../assets/logo-white.png')}
+                                    style={{ width: 40, height: 30, marginRight: 10 }}
+                                />
                                 <View>
                                     <Text style={[styles.baseText, styles.header]}>Wallet</Text>
                                     <Text style={[styles.baseText, styles.subHeader]}>Select an option to continue</Text>
-                                </View>   
-                        </View>
+                                </View>
+                            </View>
 
-                        <View>
-                            <TouchableWithoutFeedback onPress={() => navigation.navigate('Dashboard', { name: 'Dashboard ' })}>
-                                <Image source={require('../../../assets/close.png')}
-                                    style={{ width: 15, height: 15 }} />
-                            </TouchableWithoutFeedback>
+                            <View>
+                                <TouchableWithoutFeedback onPress={() => navigation.navigate('Dashboard', { name: 'Dashboard ' })}>
+                                    <Image source={require('../../../assets/close.png')}
+                                        style={{ width: 15, height: 15 }} />
+                                </TouchableWithoutFeedback>
+                            </View>
                         </View>
-                    </View>
-                </TouchableNativeFeedback>
+                    </TouchableNativeFeedback>
 
                     <View style={styles.balanceView}>
                         <View>
@@ -37,12 +50,14 @@ const wallet = ({ navigation }) => {
 
                         <View style={{ flexDirection: "row" }}>
                             <View>
-                                <Text style={[styles.baseText, { fontSize: 20, fontFamily: 'gilroy-extra-bold' }]}>NGN 10,000,000.00</Text>
+                                <Text style={[styles.baseText, { fontSize: 20, fontFamily: 'gilroy-extra-bold' }]}>{accountBalance}</Text>
                             </View>
 
                             <View style={{ marginLeft: 100 }}>
-                                <Image source={require('../../../assets/eye-slash-white.png')}
-                                    style={styles.eye} />
+                                <TouchableNativeFeedback onPress={toggleAccountBalanceHandler}>
+                                    <Image source={require('../../../assets/eye-slash-white.png')}
+                                        style={styles.eye} />
+                                </TouchableNativeFeedback>
                             </View>
                         </View>
                     </View>
